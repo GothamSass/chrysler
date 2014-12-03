@@ -8,6 +8,11 @@
 	- **Beginner** - Comfortable with CSS, making the jump to SASS.
 	- **Intermediate** - Comfortable with variables, nesting, mixins.
 	- **Advanced** - I write my own extensions.
+- How you learn about us
+    - meetup.com
+    - other events (which)
+    - social media (which)
+    - word-of-mouth
 - I'm interested in helping out (checkbox)
  	- presenting
 	- teaching others
