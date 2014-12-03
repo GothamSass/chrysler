@@ -9,7 +9,7 @@ or religion. Sexual and discriminating language and imagery is not appropriate
 for any conference venue, including talks.
 
 We expect participants to follow these rules at all GothamSass events,
-including co-hosted meetups, social events and workshops. All attendees should
+including co-hosted events, social events and workshops. All attendees should
 
 Organizers will enforce this code throughout the event.
 Event participants violating these rules will be escorted from the
