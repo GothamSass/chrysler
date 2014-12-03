@@ -3,6 +3,7 @@
 - Name
 - Email
 - Github username
+- Role
 - How much do you know? (radio)
 	- **Noob** - I don't even know what a compiler is.
 	- **Beginner** - Comfortable with CSS, making the jump to SASS.
