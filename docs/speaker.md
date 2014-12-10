@@ -8,3 +8,4 @@
 - Photo
 - Level of the talk
 - Link for Slides
+- Dropdown for monthly themes
