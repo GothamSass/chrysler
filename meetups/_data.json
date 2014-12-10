@@ -1,0 +1,267 @@
+[
+    {
+        "meetupeventbriteLink": "http://www.meetup.com/codecrewny/",
+        "hostName": "Jamal O'Garro",
+        "hostEmail": "jamal.ogarro@gmail.com",
+        "location": "New York, NY",
+        "hostContactLink": "http://www.meetup.com/codecrewny/members/48157942/"
+    },
+    {
+        "meetupeventbriteLink": "http://www.eventbrite.com/e/front-porch-front-end-web-developer-conference-tickets-7546779621?aff=es2",
+        "hostName": "Chris Williams",
+        "location": "Dallas, TX",
+        "hostContactLink": "http://www.eventbrite.com/e/front-porch-front-end-web-developer-conference-tickets-7546779621?aff=es2"
+    },
+    {
+        "meetupeventbriteLink": "http://www.meetup.com/how-to-javascript/",
+        "hostName": "Zohar Babin",
+        "location": "New York, NY",
+        "hostContactLink": "http://www.meetup.com/how-to-javascript/members/8032448/"
+    },
+    {
+        "meetupeventbriteLink": "http://www.meetup.com/NYC-Codecademy-Group/",
+        "hostName": "Allan Zhang",
+        "location": "New York, NY",
+        "hostContactLink": "http://www.meetup.com/NYC-Codecademy-Group/members/83950722/"
+    },
+    {
+        "meetupeventbriteLink": "http://www.meetup.com/ResponsiveWebDesign/",
+        "hostName": "Matthew Snyder",
+        "location": "New York, NY",
+        "hostContactLink": "http://www.meetup.com/ResponsiveWebDesign/members/4252563/"
+    },
+    {
+        "meetupeventbriteLink": "http://www.meetup.com/WordPressNYC/",
+        "hostName": "Steve Bruner",
+        "location": "Brooklyn, NY",
+        "hostContactLink": "http://www.meetup.com/WordPressNYC/members/5187766/"
+    },
+    {
+        "meetupeventbriteLink": "http://www.meetup.com/Front-End-Web-Development-Study-Group-General-Assembly/",
+        "hostName": "Aaron Smyth",
+        "location": "New York, NY",
+        "hostContactLink": "http://www.meetup.com/Front-End-Web-Development-Study-Group-General-Assembly/"
+    },
+    {
+        "meetupeventbriteLink": "http://www.meetup.com/squarespaceevents/",
+        "hostName": "Jessica Kausen",
+        "location": "New York, NY",
+        "hostContactLink": "http://www.meetup.com/squarespaceevents/members/92605972/"
+    },
+    {
+        "meetupeventbriteLink": "http://www.meetup.com/Metis-Product-Design/",
+        "hostName": "Metis",
+        "location": "Boston, MA",
+        "hostContactLink": "http://www.meetup.com/Metis-Product-Design/members/153187382/"
+    },
+    {
+        "meetupeventbriteLink": "http://www.meetup.com/Boston-Frontend-Developers/",
+        "hostName": "Pascal Rettig",
+        "location": "Boston, MA",
+        "hostContactLink": "http://www.meetup.com/Boston-Frontend-Developers/members/11746323/"
+    },
+    {
+        "meetupeventbriteLink": "http://www.meetup.com/FrontEnd-IL/",
+        "hostName": "Noam Kfir",
+        "location": "Tel Aviv-Yafo, Israel",
+        "hostContactLink": "http://www.meetup.com/FrontEnd-IL/members/13999026/"
+    },
+    {
+        "meetupeventbriteLink": "http://www.meetup.com/hackreactor/",
+        "hostName": "Nathan Houle",
+        "location": "San Francisco, CA",
+        "hostContactLink": "http://www.meetup.com/hackreactor/members/70230742/"
+    },
+    {
+        "meetupeventbriteLink": "http://www.meetup.com/refreshdenver/",
+        "hostName": "Michael Lockwitz",
+        "location": "Denver, CO",
+        "hostContactLink": "http://www.meetup.com/refreshdenver/members/14596510/"
+    },
+    {
+        "meetupeventbriteLink": "http://www.meetup.com/AngularJS-Toronto/",
+        "hostName": "Nick Van Weerdenburg",
+        "location": "Toronto, ON",
+        "hostContactLink": "http://www.meetup.com/AngularJS-Toronto/members/8968154/"
+    },
+    {
+        "meetupeventbriteLink": "http://www.meetup.com/designstartups/",
+        "hostName": "Nick Frost",
+        "location": "San Francisco, CA",
+        "hostContactLink": "http://www.meetup.com/designstartups/members/33183452/"
+    },
+    {
+        "meetupeventbriteLink": "http://www.meetup.com/Frontend-Meetup-Budapest/",
+        "hostName": "Fejes Anikó",
+        "location": "Budapest, Hungary",
+        "hostContactLink": "http://www.meetup.com/Frontend-Meetup-Budapest/members/4476201/"
+    },
+    {
+        "meetupeventbriteLink": "http://www.meetup.com/ChelaJS/",
+        "hostName": "Jeduan Cornejo",
+        "location": "Mexico City, Mexico",
+        "hostContactLink": "http://www.meetup.com/ChelaJS/members/41815302/"
+    },
+    {
+        "meetupeventbriteLink": "http://www.meetup.com/frontend/",
+        "hostName": "Jovena Whatmoor",
+        "location": "New York, NY",
+        "hostContactLink": "http://www.meetup.com/frontend/members/25303412/"
+    },
+    {
+        "meetupeventbriteLink": "http://www.meetup.com/Rusic-Hackday/",
+        "hostName": "Redeye",
+        "location": "Bristol, England",
+        "hostContactLink": "http://www.meetup.com/Rusic-Hackday/members/30257252/"
+    },
+    {
+        "meetupeventbriteLink": "http://www.meetup.com/TechinmotionOC/",
+        "hostName": "Mandy Walker",
+        "location": "Brighton, MA",
+        "hostContactLink": "http://www.meetup.com/TechinmotionOC/members/155376312/"
+    },
+    {
+        "meetupeventbriteLink": "http://www.meetup.com/Montreal-Front-End-Developers/",
+        "hostName": "Mark Senff",
+        "location": "Montréal, QC",
+        "hostContactLink": "http://www.meetup.com/Montreal-Front-End-Developers/members/45078302/"
+    },
+    {
+        "meetupeventbriteLink": "http://www.eventbrite.com/e/webperfdays-ny-registration-599969525?aff=es2&rank=1",
+        "hostName": "NY Web Performance Meetup team",
+        "location": "New York, NY",
+        "hostContactLink": "http://www.webperfdays.org/events/2014-newyork/index.html"
+    },
+    {
+        "meetupeventbriteLink": "http://www.eventbrite.com/e/nyc-media-lab-annual-summit-tickets-11934874531?aff=es2&rank=7",
+        "hostName": "NYC Media Lab",
+        "location": "New York, NY",
+        "hostContactLink": "http://www.eventbrite.com/e/nyc-media-lab-annual-summit-tickets-11934874531?aff=es2&rank=7"
+    },
+    {
+        "meetupeventbriteLink": "http://www.eventbrite.com/e/webvisions-chicago-2014-tickets-9665438587?aff=es2&rank=1",
+        "hostName": "WebVisions",
+        "location": "Chicago, IL",
+        "hostContactLink": "http://www.eventbrite.com/e/webvisions-chicago-2014-tickets-9665438587?aff=es2&rank=1"
+    },
+    {
+        "meetupeventbriteLink": "http://www.meetup.com/Front-end-Developers-of-Miami/",
+        "hostName": "Ernie Hsiung",
+        "location": "Miami, FL",
+        "hostContactLink": "http://www.meetup.com/Front-end-Developers-of-Miami/members/7695673/"
+    },
+    {
+        "meetupeventbriteLink": "http://www.meetup.com/nyfrontendcoders/",
+        "hostName": "Adam Bankin",
+        "location": "New York, NY",
+        "hostContactLink": "http://www.meetup.com/nyfrontendcoders/members/13538815/"
+    },
+    {
+        "meetupeventbriteLink": "http://www.meetup.com/up-front-ug/",
+        "hostName": "Kristina Schneider",
+        "location": "San Francisco, CA",
+        "hostContactLink": "http://www.meetup.com/up-front-ug/members/31775382/"
+    },
+    {
+        "meetupeventbriteLink": "http://www.meetup.com/Digital-Innovation-Meetup-London/",
+        "hostName": "Chloe Thompson",
+        "location": "London, England",
+        "hostContactLink": "http://www.meetup.com/Digital-Innovation-Meetup-London/members/84361922/"
+    },
+    {
+        "meetupeventbriteLink": "http://www.meetup.com/San-Francisco-Designer-Developer-Skill-Exchange-Meetup/",
+        "hostName": "Eric Zou",
+        "location": "San Jose, CA",
+        "hostContactLink": "http://www.meetup.com/San-Francisco-Designer-Developer-Skill-Exchange-Meetup/members/8351760/"
+    },
+    {
+        "meetupeventbriteLink": "http://www.eventbrite.com/e/big-design-conference-2014-tickets-10205696513?aff=es2&rank=1",
+        "hostName": "Big Design Events",
+        "location": "Addison, Texas",
+        "hostContactLink": "http://www.eventbrite.com/e/big-design-conference-2014-tickets-10205696513?aff=es2&rank=1"
+    },
+    {
+        "meetupeventbriteLink": "http://www.eventbrite.com/e/front-porch-front-end-web-developer-conference-tickets-7546779621?aff=es2&rank=4",
+        "hostName": "Chris Williams",
+        "location": "Dallas, TX",
+        "hostContactLink": "http://www.eventbrite.com/e/front-porch-front-end-web-developer-conference-tickets-7546779621?aff=es2&rank=4"
+    },
+    {
+        "meetupeventbriteLink": "http://www.meetup.com/AngularJS-Toronto/",
+        "hostName": "Nick Van Weerdenburg",
+        "location": "Toronto, ON",
+        "hostContactLink": "http://www.meetup.com/AngularJS-Toronto/members/8968154/"
+    },
+    {
+        "meetupeventbriteLink": "http://www.meetup.com/EBJavaScript/",
+        "hostName": "Dan",
+        "location": "Oakland, CA",
+        "hostContactLink": "http://www.meetup.com/EBJavaScript/members/13853316/"
+    },
+    {
+        "meetupeventbriteLink": "http://www.meetup.com/jsmeetup/",
+        "hostName": "Dave Nugent",
+        "location": "San Francisco, CA",
+        "hostContactLink": "http://www.meetup.com/jsmeetup/members/2642494/"
+    },
+    {
+        "meetupeventbriteLink": "http://www.meetup.com/Boulder-JS/",
+        "hostName": "Chris M.",
+        "location": "Boulder, CO",
+        "hostContactLink": "http://www.meetup.com/Boulder-JS/members/3449069/"
+    },
+    {
+        "meetupeventbriteLink": "http://www.meetup.com/Charlotte-User-Experience-Meetup-Group/",
+        "hostName": "Bermon Painter",
+        "location": "Charlotte, NC",
+        "hostContactLink": "http://www.meetup.com/Charlotte-User-Experience-Meetup-Group/members/9303285/"
+    },
+    {
+        "meetupeventbriteLink": "http://www.meetup.com/nyccssux/",
+        "hostName": "Mehboob Alam",
+        "location": "New York, NY",
+        "hostContactLink": "http://www.meetup.com/nyccssux/members/90925862/"
+    },
+    {
+        "meetupeventbriteLink": "http://www.meetup.com/AngularJS-NYC/",
+        "hostName": "Daniel Zen",
+        "location": "New York, NY",
+        "hostContactLink": "http://www.meetup.com/AngularJS-NYC/members/9988530/"
+    },
+    {
+        "meetupeventbriteLink": "http://www.meetup.com/nyc-node-js/",
+        "hostName": "Shamoon Siddiqui",
+        "location": "Monroe Township, NJ",
+        "hostContactLink": "http://www.meetup.com/nyc-node-js/members/3274357/"
+    },
+    {
+        "meetupeventbriteLink": "http://www.meetup.com/ia-54/",
+        "hostName": "Bruce Esrig",
+        "location": "Madison, NJ",
+        "hostContactLink": "http://www.meetup.com/ia-54/"
+    },
+    {
+        "meetupeventbriteLink": "http://www.meetup.com/ny-tech/",
+        "hostName": "Nate Westheimer",
+        "location": "New York, NY",
+        "hostContactLink": "http://www.meetup.com/ny-tech/members/3626321/"
+    },
+    {
+        "meetupeventbriteLink": "http://www.meetup.com/ia-14/",
+        "hostName": "Anders Ramsay",
+        "location": "New York, NY",
+        "hostContactLink": "http://www.meetup.com/ia-14/members/423763/"
+    },
+    {
+        "meetupeventbriteLink": "http://www.meetup.com/NYC-UX/",
+        "hostName": "Alex Lin",
+        "location": "New York, NY",
+        "hostContactLink": "http://www.meetup.com/NYC-UX/members/9260860/"
+    },
+    {
+        "meetupeventbriteLink": "http://www.meetup.com/EmberJS-NYC/",
+        "hostName": "Luke Melia",
+        "location": "New York, NY",
+        "hostContactLink": "http://www.meetup.com/EmberJS-NYC/members/449925/"
+    }
+]
