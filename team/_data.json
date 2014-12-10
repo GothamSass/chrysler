@@ -1,36 +1,42 @@
 {
 "1": {
     "name": "Robert Anthony Bellamy",
+    "role": "Developer",
     "twitter": "rabellamy",
     "github": "rabellamy",
     "photo": ""
   },
 "2": {
   "name": "Nicholas Frota",
+  "role": "Interface Designer",
   "twitter": "nonlinear",
   "github": "nonlinear",
   "photo": ""
   },
 "3": {
   "name": "Aisha Green",
-  "twitter": "skyfaerie",
+  "role": "Front-End Developer",
+  "twitter": "skyefaerie",
   "github": "skyfaerie",
   "photo": ""
 },
 "4": {
   "name": "Robert James",
+  "role": "Developer",
   "twitter": "bkjames",
   "github": "rmjames",
   "photo": ""
 },
 "5": {
     "name": "Adekunyle Oduye",
+    "role": "Product Designer",
     "twitter": "adekunleoduye",
     "github": "adekunleoduye",
     "photo": "https://s-media-cache-ec0.pinimg.com/avatars/adekunleoduye_1346033824_600.jpg"
   },
 "5": {
   "name": "Claudina Sarahe",
+  "role": "Front-End Developer",
   "twitter": "itsmisscs",
   "github": "misscs",
   "photo": ""
