@@ -1,6 +1,9 @@
 #Speaker Request Form
 
 - Name
+- kind of talk
+  - regular talk
+  - meetup shoutout (good neighbor policy)
 - Short Bio
 - Talk Description
 - Relevant Links
