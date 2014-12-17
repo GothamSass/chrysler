@@ -4,7 +4,7 @@
     "role": "Developer",
     "twitter": "rabellamy",
     "github": "rabellamy",
-    "photo": ""
+    "photo": "https://pbs.twimg.com/profile_images/488829281561112576/VaBLKvWY.jpeg"
   },
 "2": {
   "name": "Nicholas Frota",
@@ -18,14 +18,14 @@
   "role": "Front-End Developer",
   "twitter": "skyefaerie",
   "github": "skyfaerie",
-  "photo": ""
+  "photo": "https://pbs.twimg.com/profile_images/487299875071983616/lUCC6fIy.jpeg"
 },
 "4": {
   "name": "Robert James",
   "role": "Developer",
-  "twitter": "bkjames",
+  "twitter": "bkrjames",
   "github": "rmjames",
-  "photo": ""
+  "photo": "https://media.licdn.com/media/p/7/005/08a/131/33fafc8.jpg"
 },
 "5": {
     "name": "Adekunyle Oduye",
@@ -34,11 +34,11 @@
     "github": "adekunleoduye",
     "photo": "https://s-media-cache-ec0.pinimg.com/avatars/adekunleoduye_1346033824_600.jpg"
   },
-"5": {
+"6": {
   "name": "Claudina Sarahe",
   "role": "Front-End Developer",
   "twitter": "itsmisscs",
   "github": "misscs",
-  "photo": ""
+  "photo": "https://pbs.twimg.com/profile_images/495784294204194817/loX5dUlx.jpeg"
 },
 }

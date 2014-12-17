@@ -1,0 +1,22 @@
+#New Members Meetup Form
+
+- Name
+- Email
+- Github username
+- Role
+- How much do you know? (radio)
+	- **Noob** - I don't even know what a compiler is.
+	- **Beginner** - Comfortable with CSS, making the jump to SASS.
+	- **Intermediate** - Comfortable with variables, nesting, mixins.
+	- **Advanced** - I write my own extensions.
+- How you learn about us
+    - meetup.com
+    - other events (which)
+    - social media (which)
+    - word-of-mouth
+- I'm interested in helping out (checkbox)
+ 	- presenting
+	- teaching others
+	- mentoring
+	- writing documentation
+	- checking people in
