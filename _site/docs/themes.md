@@ -1,7 +1,6 @@
 #Monthly Themes
 
 - level-up (new years resolution)
-	- sass for designers
 	- the state of 
 		- HTML
 		- SASS
@@ -18,4 +17,11 @@
 	- Jekyll
 	- Node
 	- Knockout
-	- React
+	- Reacter
+- Sass for Designers (Spring target)
+        - typography
+        - color scheme/color manipulation
+        - lara s. 
+        - jesenia - performance for designers 
+        - 
+	
