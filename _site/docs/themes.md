@@ -4,24 +4,50 @@
 	- the state of 
 		- HTML
 		- SASS
-- Mixins, Functions and Extensions
-- Collaborations
-	- github
-	- github pages
-	- discussions
-	- issues
-	- push/pull
-- Integrations
+- Mixins, Functions
+- Extensions 
+  -  popular extentions
+  -  creating your own 
+  -  releasing extentions
+  -  abstracting extentions
+- Refactoring 
+  - when/how to refactor 
+- Enterprise: bermon, jackie 
+  - buy in 
+  - case studies 
+- nonSass preprocessors 
+  - stripe: rework css  
+  - less
+- Tools
+  - build tools: gulp, grunt, npm, bower, package managers
+  - linters, minification, concatenation
+  - sublime text
+  - macros
+  - environment management
+  - github
+		- github pages
+		- discussions
+		- issues
+		- push/pull
+- Integrations/Co-meetups
 	- Rails
 	- Angular
 	- Jekyll
 	- Node
 	- Knockout
 	- Reacter
+- frameworks
+  - twitter botstrap
+  - foundation
+  - rolling your own 
 - Sass for Designers (Spring target)
-        - typography
-        - color scheme/color manipulation
-        - lara s. 
-        - jesenia - performance for designers 
-        - 
+  - typography
+  - color scheme/color manipulation
+  - lara s. 
+  - jesenia: performance for designers
+- UI/Animations
+	- why, how, etc.
+	- css animations
+	- js animations 
+	- other 
 	
