@@ -1,2 +1,23 @@
-@import "partials/normalize.scss";
+/*********************************************************************
+ Main
+**********************************************************************/
+
+//-------------------------------------------
+// Libraries
+@import "partials/libs/normalize.scss";
+
+
+//-------------------------------------------
+// Base
 @import "partials/base.scss";
+@import "partials/typography.scss";
+
+
+//-------------------------------------------
+// Layouts
+@import "partials/layouts.scss";
+
+
+//-------------------------------------------
+// Modules
+@import "partials/modules.scss";
