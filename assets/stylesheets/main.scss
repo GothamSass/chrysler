@@ -1,6 +1,11 @@
-
+// Libraries
 @import 'vendors/normalize';
+@import 'vendors/fonts';
+
+//Base
 @import 'mixins';
 @import 'base';
+
+//Others
 @import 'layout';
 @import 'modules';
