@@ -1,0 +1,31 @@
+
+{
+  "event-1": {
+    "date": "2012-04-23T18:25:43.511Z",
+    "title": "Event 1",
+    "teaser": "Chris Eppstein, creator of Compass, talks about what's to come in Sass 3.3, and Alan Hogan on simplifying responsive web design with Sass",
+    "speakers": [
+      {
+        "name": ""
+        "photo": ""
+        "Bio": ""
+        "Social": [
+          {
+            "Twitter": ""
+            "Github": ""
+          }
+        ]
+      }
+    ]
+  },
+  "event-2": {
+    "date": "2012-04-23T18:25:43.511Z",
+    "title": "Event 2",
+    "teaser": "Chris Eppstein, creator of Compass, talks about what's to come in Sass 3.3, and Alan Hogan on simplifying responsive web design with Sass"
+  },
+  "event-3": {
+    "date": "2012-04-23T18:25:43.511Z",
+    "title": "Event 3",
+    "teaser": "Chris Eppstein, creator of Compass, talks about what's to come in Sass 3.3, and Alan Hogan on simplifying responsive web design with Sass"
+  }
+}
