@@ -1,6 +1,6 @@
 h1 Blog
 
-for post, slug in public.blog.posts._data
+- for post, slug in public.blog.posts._data
   h2: a(href="/blog/posts/#{ slug }")= post.title
   p #{post.date} by #{post.authors}
 
@@ -10,3 +10,9 @@ for post, slug in public.blog.posts._data
   - }
 
   != excerpt(partial("posts/" + slug))
+
+
+
+- var post = public.blog.posts._data.welcome;
+- post.yield = partial("welcome");
+!= partial("_decorator", post)
