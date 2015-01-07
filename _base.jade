@@ -12,7 +12,7 @@ html.no-js
     script(src='//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js')
     script window.jQuery || document.write('<script src="/assets/js/vendor/modernizr.js"><\/script>')
     script(src='/assets/js/vendor/detectizr.js')
-  body
+  body(class="#{ current.path[0] }")
     <!--[if lt IE 8]>
     p.browsehappy
       | You are using an <strong>outdated</strong> browser.
