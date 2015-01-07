@@ -1,9 +1,10 @@
 // Team
 // =====
-
+.member {
+}
 .member-photo {
   background-size: contain;
   display: block;
-  height: 50px;
-  width: 50px;
+  @include square(100px);
+  @include radius(50%);
 }

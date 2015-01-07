@@ -1,9 +1,24 @@
 .container {
-	margin: 0 auto;
+	margin: $g2 auto;
 	width: 600px;	
 }
 nav.nav {
+	@include clear;
 	ul {
 	float: right;
+	li {
+		display: inline;
+		&:not(:first-of-type):before {
+			content: " / ";
+		}
 	}
+	}
+}
+a.logo {
+	@include square(60px);
+	@include hide-text;
+	display: block;
+	float: left;
+	background-color: $c1;
+	@include radius(50%);
 }
