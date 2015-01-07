@@ -1,11 +1,28 @@
 .container {
-	margin: $g2 auto;
-	width: 600px;	
+	margin: $g1 auto;
+	max-width: 600px;	
 	@include clear;
-	
+
+}
+a {
+	text-decoration: none;
+	border-bottom: dotted 1px #666;
+	padding-bottom: 1px;
+	@include trans;
+	&:hover {
+		color: $c1;
+		border-bottom: solid 1px #666;
+	}
+		&.icon, &.icon:hover {
+		border-bottom: none;
+	}
 }
 nav.nav {
 	@include clear;
+	border-bottom: solid 1px #ccc;
+	padding-bottom: $g1;
+	height: 100px;
+	margin-bottom: 60px;
 	ul {
 		float: right;
 		li {
@@ -17,13 +34,16 @@ nav.nav {
 	}
 }
 a.logo {
-	@include square(60px);
+	@include square(150px);
 	@include hide-text;
 	display: block;
 	float: left;
-	background-color: $c1;
+	background-image: url(../logo/logo.png);
+	-webkit-background-size: contain;
+	background-size: contain;
 	@include radius(50%);
 }
 i.fa {
-	margin-right: 5px;
+	margin-right: 3px;
+	font-size: 20px;
 }

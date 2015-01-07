@@ -4,7 +4,7 @@ $f3: "Courier New", Courier, monospace;  // code font
 $g1: 10px;                       // base gap
 $c0: white;                      // bg color
 $c1: #333;                       // text color
-$c2: red;          // accent color
+$c2: #153267;          // accent color
 $c3: blue;                       // color 3
 $c4: green;                      // color 4
 $c5: yellow;                     // color 5
@@ -121,7 +121,7 @@ $device:           $ipad-max;
 h1, h2, h3, h4 {
 	font-family: $f1;
 	bg-color: $c0;
-	color: $c1;
+	color: $c2;
 }
 body {
 	font-family: $f2;
