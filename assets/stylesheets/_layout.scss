@@ -1,17 +1,19 @@
 .container {
 	margin: $g2 auto;
 	width: 600px;	
+	@include clear;
+	
 }
 nav.nav {
 	@include clear;
 	ul {
-	float: right;
-	li {
-		display: inline;
-		&:not(:first-of-type):before {
-			content: " / ";
+		float: right;
+		li {
+			display: inline;
+			&:not(:first-of-type):before {
+				content: " / ";
+			}
 		}
-	}
 	}
 }
 a.logo {
@@ -21,4 +23,7 @@ a.logo {
 	float: left;
 	background-color: $c1;
 	@include radius(50%);
+}
+i.fa {
+	margin-right: 5px;
 }
