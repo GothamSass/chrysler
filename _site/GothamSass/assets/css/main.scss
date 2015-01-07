@@ -4,20 +4,19 @@
 
 //-------------------------------------------
 // Libraries
-@import "partials/libs/normalize";
-
+//@import "libs/normalize";
 
 //-------------------------------------------
 // Base
-@import "partials/base";
-@import "partials/mixins";
+@import "base";
+@import "mixins";
 
 
 //-------------------------------------------
 // Layouts
-@import "partials/layouts";
+@import "layouts";
 
 
 //-------------------------------------------
 // Modules
-@import "partials/modules";
+@import "modules";
