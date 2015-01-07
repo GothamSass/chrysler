@@ -1,7 +1,7 @@
 h1 Blog
 
 for post, slug in public.blog.posts._data
-  h2: a(href="/posts/#{ slug }")= post.title
+  h2: a(href="/blog/posts/#{ slug }")= post.title
   p #{post.date} by #{post.authors}
 
   - function excerpt(content) {
