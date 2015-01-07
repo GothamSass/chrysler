@@ -1,0 +1,8 @@
+for member, item in public.about._data
+  article.member
+    span.member-photo(style="background-image:url(#{member.photo})")
+    h2 #{member.name}
+    p #{member.role}
+    ul
+      li #{member.twitter}
+      li #{member.github}
