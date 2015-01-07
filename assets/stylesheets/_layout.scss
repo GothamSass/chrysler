@@ -1,10 +1,35 @@
 .container {
-	margin: 0 auto;
-	width: 600px;
+	margin: 0 0.5em
 }
 
-nav.nav {
-	ul {
-	float: right;
-	}
+.banner {
+  padding: 0.5em;
+}
+
+.nav {
+  margin: 0;
+  padding: 0;
+}
+
+.nav--main {
+  display: flex;
+  justify-content: flex-end;
+
+  li {
+
+    &:first-child {
+      margin-right: auto;
+    }
+  }
+}
+
+footer {
+  background: darkgrey;
+}
+
+.ct {
+  padding: 0.5em;
+  margin: 1em 0;
+  background: whitesmoke;
+  border: 1px solid #eee;
 }
