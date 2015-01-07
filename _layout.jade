@@ -1,11 +1,10 @@
 extends _base
 
 block main
-  != partial('_nav')
+	.container
+		!= partial('_nav')
 
-  main
-
-    .content
-
-      block content
-        != yield
+		main.content
+			
+			block content
+				!= yield
