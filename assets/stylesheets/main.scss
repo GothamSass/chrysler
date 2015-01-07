@@ -1,32 +1,5 @@
-/*********************************************************************
- Main
-**********************************************************************/
-
-//-------------------------------------------
-// Libraries
-@import "partials/libs/normalize";
-
-
-//-------------------------------------------
-// Base
-@import "partials/base";
-@import "partials/mixins";
-
-
-//-------------------------------------------
-// Layouts
-@import "partials/layouts";
-
-
-//-------------------------------------------
-// Modules
-<<<<<<< HEAD
-@import "partials/modules.scss";
-
-
-//-------------------------------------------
-// Components
-@import "components/team.scss";
-=======
-@import "partials/modules";
->>>>>>> main css created
+@import 'vendors/normalize';
+@import 'mixins';
+@import 'base';
+@import 'layout';
+@import 'modules';
