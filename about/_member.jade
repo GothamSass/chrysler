@@ -3,6 +3,8 @@ for member, item in public.about._data
     span.member-photo(style="background-image:url(#{member.photo})")
     h2 #{member.name}
     p #{member.role}
-    ul
-      li #{member.twitter}
-      li #{member.github}
+
+    for identity, social in member.social
+      ul
+        li(class="#{social}")
+          a(href="http://#{social}.com") #{identity}
