@@ -38,10 +38,11 @@ a.logo {
 	@include hide-text;
 	display: block;
 	float: left;
-	background-image: url(../logo/logo.png);
+	background-color: #eee;
 	-webkit-background-size: contain;
 	background-size: contain;
 	@include radius(50%);
+	border: none;
 }
 i.fa {
 	margin-right: 3px;

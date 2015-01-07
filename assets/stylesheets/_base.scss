@@ -1,10 +1,14 @@
-$f1: Arial, Helvetica, sans-serif;                     // title font
-$f2: Arial, Helvetica, sans-serif;       // text font
+$f1: "HelveticaNeue-Light", 
+"Helvetica Neue Light", 
+"Helvetica Neue", 
+Helvetica, Arial, 
+"Lucida Grande", sans-serif;                     // title font
+$f2: $f1;       // text font
 $f3: "Courier New", Courier, monospace;  // code font
 $g1: 10px;                       // base gap
 $c0: white;                      // bg color
 $c1: #333;                       // text color
-$c2: #153267;          // accent color
+$c2: #666;          // accent color
 $c3: blue;                       // color 3
 $c4: green;                      // color 4
 $c5: yellow;                     // color 5
