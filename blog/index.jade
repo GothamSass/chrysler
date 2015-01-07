@@ -3,3 +3,10 @@ h1 Blog
 for post, slug in public.blog.posts._data
   h2: a(href="/posts/#{ slug }")= post.title
   p #{post.date} by #{post.authors}
+
+  - function excerpt(content) {
+    - if(content.indexOf("<!-- more -->") == -1) return content;
+    - else return content.split("<!-- more -->")[0];
+  - }
+
+  != excerpt(partial("posts/" + slug))

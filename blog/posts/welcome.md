@@ -1,5 +1,3 @@
-# Foo blog post
-
 Welcome to the new GothamSass website!
 
 <!-- more -->
