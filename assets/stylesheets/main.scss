@@ -4,25 +4,29 @@
 
 //-------------------------------------------
 // Libraries
-@import "partials/libs/normalize.scss";
+@import "partials/libs/normalize";
 
 
 //-------------------------------------------
 // Base
-@import "partials/base.scss";
-@import "partials/typography.scss";
+@import "partials/base";
+@import "partials/mixins";
 
 
 //-------------------------------------------
 // Layouts
-@import "partials/layouts.scss";
+@import "partials/layouts";
 
 
 //-------------------------------------------
 // Modules
+<<<<<<< HEAD
 @import "partials/modules.scss";
 
 
 //-------------------------------------------
 // Components
 @import "components/team.scss";
+=======
+@import "partials/modules";
+>>>>>>> main css created
