@@ -4,20 +4,20 @@
 
 //-------------------------------------------
 // Libraries
-@import "partials/libs/normalize.scss";
+@import "partials/libs/normalize";
 
 
 //-------------------------------------------
 // Base
-@import "partials/base.scss";
-@import "partials/typography.scss";
+@import "partials/base";
+@import "partials/mixins";
 
 
 //-------------------------------------------
 // Layouts
-@import "partials/layouts.scss";
+@import "partials/layouts";
 
 
 //-------------------------------------------
 // Modules
-@import "partials/modules.scss";
+@import "partials/modules";
