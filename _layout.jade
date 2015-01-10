@@ -5,7 +5,16 @@ block main
 
   main
 
-    .content
-
-      block content
+    .container
+      if current.path[0] === "index"
         != yield
+
+      else
+        if current.path[0] === "blog"
+          //- Show blog post
+          if current.path[1] === "posts"
+            != partial("/blog/_blog")
+          else
+            //- show blog teaser
+            != yield
+
