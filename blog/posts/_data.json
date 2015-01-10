@@ -1,7 +1,20 @@
 {
+  "post-2": {
+    "title": "Sample Post 2",
+    "date": "January 4, 2015",
+    "authors": "GothamSass Author2",
+    "description": "Sed elementum consectetur sem, lobortis viverra dolor tincidunt eu. Pellentesque nec malesuada tortor, nec rutrum est. Donec fermentum ut nunc at scelerisque. Morbi elementum, lacus at bibendum vehicula, neque felis semper urna, at auctor mi lorem nec ex."
+  },
+  "post-1": {
+    "title": "Sample Post 1",
+    "date": "January 3, 2015",
+    "authors": "GothamSass Author1",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas id tortor feugiat, mollis urna non, viverra lectus. Sed fringilla rutrum orci eu volutpat. Donec viverra enim vitae purus bibendum, quis euismod ligula ultricies."
+  },
   "welcome": {
     "title": "Welcome to GothamSass!",
-    "date": "date 2",
-    "authors": "Team GothamSass"
+    "date": "January 1, 2015",
+    "authors": "Team GothamSass",
+    "description": "GothamSass for the New Year!"
   }
 }
