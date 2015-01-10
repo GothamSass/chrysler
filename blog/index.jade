@@ -1,18 +1,11 @@
 h1 Blog
+p Some stuff we want to say about our blog.
 
-- for post, slug in public.blog.posts._data
-  h2: a(href="/blog/posts/#{ slug }")= post.title
-  p #{post.date} by #{post.authors}
-
-  - function excerpt(content) {
-    - if(content.indexOf("<!-- more -->") == -1) return content;
-    - else return content.split("<!-- more -->")[0];
-  - }
-
-  != excerpt(partial("posts/" + slug))
-
-
-
-- var post = public.blog.posts._data.welcome;
-- post.yield = partial("welcome");
-!= partial("_decorator", post)
+//- show blog teaser roll
+for post, slug in public.blog.posts._data
+  if post.layout !== false
+  article
+    h2.blog-title: a(href="/blog/posts/#{ slug }")= post.title
+    p.blog-date #{ post.date }  | #{ post.authors }
+    if post.description
+      p= post.description
