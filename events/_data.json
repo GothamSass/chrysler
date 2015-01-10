@@ -2,30 +2,85 @@
 {
   "event-1": {
     "date": "2012-04-23T18:25:43.511Z",
-    "title": "Event 1",
+    "title": "The Current state of Sass",
     "teaser": "Chris Eppstein, creator of Compass, talks about what's to come in Sass 3.3, and Alan Hogan on simplifying responsive web design with Sass",
     "speakers": [
       {
-        "name": ""
-        "photo": ""
-        "Bio": ""
-        "Social": [
-          {
-            "Twitter": ""
-            "Github": ""
-          }
+        "speaker-1" : [
+        {
+          "name": "Chris Eppstein",
+          "photo": "",
+          "bio": "I'm the creator of Compass, a stylesheet authoring framework and I'm on the core team of Sass — the stylesheet syntax upon which Compass is built. I maintain about a dozen less well known ruby libraries and rails plugins on github, and am an active contributor of patches to the many open source projects that I use.",
+          "social": [
+            {
+              "twitter": "chriseppstein",
+              "github": "chriseppstein"
+            }
+          ],
+          "topic": "The current state of Sass"
+        }
+      ],
+        "speaker-2": [
+        {
+          "name": "Natalie Weizenbaum",
+          "photo": "",
+          "bio": "Natalie Weizenbaum (@nex3) is the lead designer & developer of SassCSS, and maybe the only person who really understands the @extends feature. She also works on Dart for Google.",
+          "social": [
+            {
+              "twitter": "nex3",
+              "github": "nex3"
+            }
+          ],
+          "topic": "Sass"
+        }
         ]
       }
     ]
   },
   "event-2": {
     "date": "2012-04-23T18:25:43.511Z",
-    "title": "Event 2",
-    "teaser": "Chris Eppstein, creator of Compass, talks about what's to come in Sass 3.3, and Alan Hogan on simplifying responsive web design with Sass"
+    "title": "Lib Sass FTW!",
+    "teaser": "",
+    "speakers": [
+      {
+        "speaker-1": [
+        {
+          "name": "Hampton Catlin",
+          "photo": "",
+          "bio": "Hampton Catlin is an American computer programmer, programming language inventor, gay rights advocate, and author best known as the creator of the Sass and Haml markup languages. Catlin now sits as the Co-Founder and CEO of Team Rarebit.",
+          "social": [
+            {
+              "twitter": "hcatlin",
+              "github": "hcatlin"
+            }
+          ],
+          "topic": "Libsass"
+        }
+        ]
+      }
+    ]
   },
   "event-3": {
     "date": "2012-04-23T18:25:43.511Z",
-    "title": "Event 3",
-    "teaser": "Chris Eppstein, creator of Compass, talks about what's to come in Sass 3.3, and Alan Hogan on simplifying responsive web design with Sass"
+    "title": "Engineering the Front",
+    "teaser": "Front-end development has changed a lot — from simple in text files to a deep stack of robust engineering tools. Is this a good change? What advantages do the power tools provide, and what might we be giving up in exchange?",
+    "speakers": [
+      {
+        "speaker-1": [
+        {
+          "name": "Claudina Sarahe",
+          "photo": "",
+          "bio": "Claudina Sarahe is an entrepreneur. Her background is in front-end web development with a focus on large, scale web applications and sites. She's worked for Pop Art, The New Group, The Huffington Post, New York Road Runners, and Method. She's lead front-end development for sites such for FEI.com, Charlie Rose, PBS, Scholastic, Count Me In, and LocalVox. She lead the strategy and initial product development for Vestify, a crowdfunding web application for entrepreneurs powering the MassChallenge Global Start-Up. She was one of the founding members of UNICEF Innovation.",
+          "social": [
+            {
+              "twitter": "itsmisscs",
+              "github": "misscs"
+            }
+          ],
+          "topic": "Front-end Engineering"
+        }
+        ]
+      }
+    ]
   }
 }
