@@ -1,7 +1,7 @@
-$f1: "HelveticaNeue-Light", 
-"Helvetica Neue Light", 
-"Helvetica Neue", 
-Helvetica, Arial, 
+$f1: "HelveticaNeue-Light",
+"Helvetica Neue Light",
+"Helvetica Neue",
+Helvetica, Arial,
 "Lucida Grande", sans-serif;                     // title font
 $f2: $f1;       // text font
 $f3: "Courier New", Courier, monospace;  // code font
@@ -124,7 +124,7 @@ $device:           $ipad-max;
 
 h1, h2, h3, h4 {
 	font-family: $f1;
-	bg-color: $c0;
+	background-color: $c0;
 	color: $c2;
 }
 body {
