@@ -10,7 +10,7 @@ var paths = {
   sass: ['assets/stylesheets/**/*.scss', 'assets/stylesheets/*.scss'],
   images: 'assets/stylesheets/img/**/*',
   js: 'assets/js/**/*.js',
-  fonts: 'aseets/fonts/**/*',
+  fonts: 'assets/fonts/**/*',
 };
 
 
