@@ -1,44 +1,45 @@
 .container {
 	margin: $g1 auto;
-	max-width: 600px;
-	@include clear;
-
+	width: 600px;
 }
 
-a {
-	@include trans;
-	text-decoration: none;
-	border-bottom: dotted 1px #666;
-	padding-bottom: 1px;
-
-	&:hover {
-		color: $c1;
-		border-bottom: solid 1px #666;
-	}
-
-		&.icon, &.icon:hover {
-		border-bottom: none;
-	}
+.banner {
+  padding: 0.5em;
+  border-bottom: solid 1px #ccc;
 }
 
-nav.nav {
-	@include clear;
-	border-bottom: solid 1px #ccc;
-	padding-bottom: $g1;
-	height: 100px;
-	margin-bottom: 60px;
+.nav {
+  margin: 0;
+  padding: 0;
+}
 
-	ul {
-		float: right;
+footer {
+  @include micro-clearfix;
+}
 
-		li {
-			display: inline;
+.nav--main {
+  display: flex;
+  justify-content: flex-end;
 
-			&:not(:first-of-type):before {
-				content: " / ";
-			}
-		}
-	}
+  li {
+    margin: 0 0.5em;
+
+    &:first-child {
+      margin-right: auto;
+    }
+  }
+}
+
+
+footer {
+  background: darkgrey;
+}
+
+.ct {
+  padding: 0.5em;
+  margin: 1em 0;
+  background: whitesmoke;
+  border: 1px solid #eee;
 }
 
 a.logo {
@@ -56,4 +57,20 @@ a.logo {
 i.fa {
 	margin-right: 3px;
 	font-size: 20px;
+}
+
+a {
+	@include trans;
+	text-decoration: none;
+	border-bottom: dotted 1px #666;
+	padding-bottom: 1px;
+
+	&:hover {
+		color: $c1;
+		border-bottom: solid 1px #666;
+	}
+
+		&.icon, &.icon:hover {
+		border-bottom: none;
+	}
 }
