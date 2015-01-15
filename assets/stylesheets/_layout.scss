@@ -1,5 +1,6 @@
 .container {
-	margin: 0 0.5em
+	margin: $g1 auto;
+	width: 600px;
 }
 
 .banner {
@@ -23,6 +24,26 @@
   }
 }
 
+// nav.nav {
+// 	@include clear;
+// 	border-bottom: solid 1px #ccc;
+// 	padding-bottom: $g1;
+// 	height: 100px;
+// 	margin-bottom: 60px;
+
+// 	ul {
+// 		float: right;
+
+// 		li {
+// 			display: inline;
+
+// 			&:not(:first-of-type):before {
+// 				content: " / ";
+// 			}
+// 		}
+// 	}
+// }
+
 footer {
   background: darkgrey;
 }
@@ -32,4 +53,37 @@ footer {
   margin: 1em 0;
   background: whitesmoke;
   border: 1px solid #eee;
+}
+
+a.logo {
+	@include square(150px);
+	@include hide-text;
+	display: block;
+	float: left;
+	background-color: #eee;
+	-webkit-background-size: contain;
+	background-size: contain;
+	@include radius(50%);
+	border: none;
+}
+
+i.fa {
+	margin-right: 3px;
+	font-size: 20px;
+}
+
+a {
+	@include trans;
+	text-decoration: none;
+	border-bottom: dotted 1px #666;
+	padding-bottom: 1px;
+
+	&:hover {
+		color: $c1;
+		border-bottom: solid 1px #666;
+	}
+
+		&.icon, &.icon:hover {
+		border-bottom: none;
+	}
 }
