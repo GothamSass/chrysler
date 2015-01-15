@@ -1,4 +1,4 @@
-$f1: 'bebas_neuebook', Georgia, serif;                     // title font
+$f1: 'bebas_neuebold', Georgia, serif;                     // title font
 $f2: 'callunaregular', Helvetica, sans-serif;       // text font
 $f3: "Courier New", Courier, monospace;  // code font
 $g1: 10px;                       // base gap
@@ -120,8 +120,7 @@ $device:           $ipad-max;
 
 h1, h2, h3, h4 {
 	font-family: $f1;
-	bg-color: $c0;
-	color: $c1;
+	//color: $c1;
 }
 body {
 	font-family: $f2;
@@ -138,6 +137,28 @@ h1, h2, h3, h4 {
 	$font-family: $f1;
 	font-weight: normal;
 }
+
+h1 {
+	font-size: 4.5em;
+	margin: 0;
+}
+
+h2 {
+	font-size: 3em;
+	margin: 0.5em 0;
+}
+
+h3 {
+	font-size: 1.5em;
+	margin: 0.5em 0;
+}
+
 .hidden {
 	display: none;
+}
+
+ul {
+	list-style:none;
+	padding: 0px;
+	margin: 0;
 }
