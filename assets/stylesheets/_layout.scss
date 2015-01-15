@@ -5,6 +5,7 @@
 
 .banner {
   padding: 0.5em;
+  border-bottom: solid 1px #ccc;
 }
 
 .nav {
@@ -12,11 +13,16 @@
   padding: 0;
 }
 
+footer {
+  @include micro-clearfix;
+}
+
 .nav--main {
   display: flex;
   justify-content: flex-end;
 
   li {
+    margin: 0 0.5em;
 
     &:first-child {
       margin-right: auto;
@@ -24,25 +30,6 @@
   }
 }
 
-// nav.nav {
-// 	@include clear;
-// 	border-bottom: solid 1px #ccc;
-// 	padding-bottom: $g1;
-// 	height: 100px;
-// 	margin-bottom: 60px;
-
-// 	ul {
-// 		float: right;
-
-// 		li {
-// 			display: inline;
-
-// 			&:not(:first-of-type):before {
-// 				content: " / ";
-// 			}
-// 		}
-// 	}
-// }
 
 footer {
   background: darkgrey;

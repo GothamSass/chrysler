@@ -2,9 +2,11 @@
   width:  $width;
   height: $height;
 }
+
 @mixin square($size: 5px) {
   @include size($size, $size);
 }
+
 @mixin placeholder {
   &.placeholder                { @content }
   &:focus::-webkit-input-placeholder {
@@ -13,24 +15,27 @@
     opacity: 0;
   }
 }
+
 @mixin filter($filter: blur,$value: 10px) {
   filter: $filter+unquote('(#{$value})');
 }
+
 @mixin box($sizing: border-box) {
   box-sizing: $sizing;
 }
+
 @mixin radius($radius: 5px) {
   border-radius:         $radius;
 }
+
 @mixin radius-custom($topleft: 5px, $topright: 5px, $bottomright: 5px, $bottomleft: 5px) {
   border-top-right-radius:            $topright;
   border-bottom-right-radius:         $bottomright;
   border-bottom-left-radius:          $bottomleft;
   border-top-left-radius:             $topleft;
-  -moz-background-clip:               padding;
-  -webkit-background-clip:            padding-box;
   background-clip:                    padding-box;
 }
+
 @mixin shadow($shadow: 0 1px 3px rgba(0,0,0,.25), $mode: normal) {
   @if $mode == text {
     text-shadow:          $shadow;
@@ -39,30 +44,38 @@
     box-shadow:          $shadow;
   }
 }
+
 @mixin opacity($opacity: 40) {
   opacity:        $opacity / 100;
   filter:         "alpha(opacity=#{$opacity})";
 }
+
 @mixin trans($prop: all, $time: 300ms, $ease: ease-out) {
   transition:          $prop $time $ease;
 }
+
 @mixin rotate($rotate: 0) {
   transform:         rotate($rotate +deg);
 }
+
 @mixin scale($scale: 1) {
   transform:         scale($scale);
 }
+
 @mixin skew($skew: 0) {
   transform:         skew($skew +deg);
 }
+
 @mixin translate($left: 0, $top: 0) {
   transform:         translate($left +px, $top +px);
 }
+
 @mixin orient($orientation: landscape) {
   @media (orientation : $orientation) {
     @content;
   }
 }
+
 @mixin devicewidth($minus: 0px) {
   @media screen and (max-width: 1024px) {
     width: (1024px - $minus);
@@ -80,6 +93,7 @@
     width: (768px - $minus);
   }
 }
+
 @mixin gradient($from: white, $to: black, $height: 100%, $pie:"false") {
   background-color: $to;
   background-image: -webkit-gradient(linear, left top, left bottom, from($from), to($to));
@@ -95,6 +109,7 @@
   background-repeat: repeat-x;
   background-size: 100% $height;
 }
+
 @mixin grid($cell: 2, $gutter: 20px, $border: false, $border-color: #ccc) {
   width: 100%;
   @include box;
@@ -118,6 +133,7 @@
     }
   }
 }
+
 @mixin scroll-hint($bgcolor: black) {
   /* from http://dabblet.com/gist/2462915 */
   overflow: auto;
@@ -168,6 +184,7 @@
       background:   transparent;
     }
 }
+
 /*
 from
 http://codepen.io/chriscoyier/blog/some-mini-sass-mixins-i-like
@@ -179,26 +196,32 @@ http://codepen.io/chriscoyier/blog/some-mini-sass-mixins-i-like
   width: 100%;
   height: 100%;
 }
+
 @mixin centerer {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
 @mixin word-wrap {
   word-break:     break-word;
   hyphens:         auto;
 }
+
 @mixin ellipsis {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
+
+// not accessible :(
 @mixin hide-text {
   font: 0/0 a;
   text-shadow: none;
   color: transparent;
 }
+
 @mixin clear {
   zoom: 1;
   &:before,
@@ -210,19 +233,31 @@ http://codepen.io/chriscoyier/blog/some-mini-sass-mixins-i-like
     clear:  both;
   }
 }
+
+@mixin micro-clearfix {
+  &:after {
+    clear: both;
+    content: ' ';
+    display: block;
+  }
+}
+
 @mixin cover {
     background-size: cover !important;
 }
+
 @mixin only($only: mac) {
       html.#{$only} & {
         @content
       }
 }
+
 @mixin unless($unless: mac) {
       html:not(.#{$unless}) & {
         @content
       }
 }
+
 @mixin media($device: ipad, $scope: strict, $variation: mini) {
   @if $device == "ipad" {
     @if $scope == "min" {
