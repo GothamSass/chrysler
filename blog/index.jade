@@ -4,8 +4,15 @@ p Some stuff we want to say about our blog.
 //- show blog teaser roll
 for post, slug in public.blog.posts._data
   if post.layout !== false
-  article
-    h2.blog-title: a(href="/blog/posts/#{ slug }")= post.title
-    p.blog-date #{ post.date }  | #{ post.authors }
-    if post.description
-      p= post.description
+
+    article.h-entry
+      h1.p-name= post.title
+      p
+        | Published by&nbsp;
+        a.p-author.h-card(href='http://example.com') #{ post.authors }
+        &nbsp;|&nbsp;
+        time.dt-published(datetime='2013-06-13 12:00:00') #{ post.date }
+        a.p-author
+
+      if post.description
+        p.p-summary= post.description
