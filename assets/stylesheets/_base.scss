@@ -1,6 +1,6 @@
 $f1: 'bebas_neuebold', Georgia, serif;                     // title font
-$f2: 'callunaregular', Helvetica, sans-serif;       // text font
-$f3: "Courier New", Courier, monospace;  // code font
+$f2: 'abeezeeregular', Courier, monospace;      // text font
+$f3: 'callunaregular', Helvetica, sans-serif;  // code font
 $g1: 10px;                       // base gap
 $c0: white;                      // bg color
 $c1: #cc6699;                       // text color
@@ -157,8 +157,6 @@ h3 {
 	display: none;
 }
 
-ul {
-	list-style:none;
-	padding: 0px;
-	margin: 0;
-}
+ul { list-style:none; padding: 0px;margin: 0;}
+
+p {line-height: 1.5em;font-size: 1.2em;}
