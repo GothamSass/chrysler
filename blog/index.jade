@@ -6,7 +6,7 @@ for post, slug in public.blog.posts._data
   if post.layout !== false
 
     article.h-entry
-      h1.p-name= post.title
+      h1.p-name: a(href="/blog/posts/#{ slug }")= post.title
       p
         | Published by&nbsp;
         a.p-author.h-card(href='http://example.com') #{ post.authors }
