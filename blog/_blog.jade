@@ -1,5 +1,14 @@
-article.post
-  h1.blog-title= title
-  h2.blog-date= date
-  != yield
+article.h-entry
+  h1.p-name= title
+  p
+    | Published by
+    a.p-author.h-card(href='http://example.com')= authors
+    |  on
+
+    time.dt-published(datetime='2013-06-13 12:00:00')= date
+
+  p.p-summary
+    != yield
+
   != partial("_blog-nav")
+
