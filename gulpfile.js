@@ -36,19 +36,18 @@ gulp.task('serve', function () {
     /**
      * Watch for scss changes, tell BrowserSync to refresh css
      */
-    gulp.watch(paths.sass, function () {
-      reload(paths.css, {stream: true});
-    });
-
+    gulp.watch(paths.sass, ['lint',reload]);
   })
 });
+
 
 /**
  * Lint files
  */
 gulp.task('lint', function() {
   gulp.src(paths.sass)
-    .pipe(scsslint());
+    .pipe(scsslint())
+    .pipe(reload({stream: true}));
 });
 
 
@@ -56,4 +55,4 @@ gulp.task('lint', function() {
  * Default task, running just `gulp` will compile the sass,
  * compile the harp site, launch BrowserSync & watch files.
  */
-gulp.task('default', ['serve']);
+gulp.task('default', ['serve', 'lint']);
