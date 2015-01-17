@@ -1,7 +1,11 @@
-h1 Events
 
 for event, slug in public.events._data
-  div
-    span #{event.date}
-    h2 #{event.title}
-    p #{event.teaser}
+  if event.layout !== false
+    .gotham-sass--event
+      h1.event-name: a(href="/events/event/#{slug}")= event.name
+      p #{event.description}
+        time.dt-start(datetime="2013-06-30 12:00")
+          sup #{event.start_date}
+        time.dt-end(datetime="2013-06-30 18:00")
+          sup #{event.end_date}
+        span.p-location #{event.venue.name}
