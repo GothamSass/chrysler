@@ -33,10 +33,12 @@ gulp.task('serve', function () {
       notify: false
     });
 
+
     /**
      * Watch for scss changes, tell BrowserSync to refresh css
      */
     gulp.watch(paths.sass, ['lint',reload]);
+    gulp.watch(paths.templates, reload);
   })
 });
 
