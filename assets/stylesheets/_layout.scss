@@ -1,5 +1,5 @@
 .container {
-	margin: $g1 auto;
+	margin: $gap-1 auto;
 	max-width: 600px;	
 	@include clear;
 
@@ -10,7 +10,7 @@ a {
 	padding-bottom: 1px;
 	@include trans;
 	&:hover {
-		color: $c1;
+		color: $color-1;
 		border-bottom: solid 1px #666;
 	}
 		&.icon, &.icon:hover {
@@ -20,7 +20,7 @@ a {
 nav.nav {
 	@include clear;
 	border-bottom: solid 1px #ccc;
-	padding-bottom: $g1;
+	padding-bottom: $gap-1;
 	height: 100px;
 	margin-bottom: 60px;
 	ul {
