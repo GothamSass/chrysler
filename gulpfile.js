@@ -30,6 +30,7 @@ gulp.task('serve', function () {
         scroll: true
       },
       logLevel: "debug",
+      logPrefix: 'GothamSass',
       notify: false
     });
 
@@ -39,6 +40,8 @@ gulp.task('serve', function () {
      */
     gulp.watch(paths.sass, ['lint',reload]);
     gulp.watch(paths.templates, reload);
+    gulp.watch(paths.images, reload);
+    gulp.watch(paths.js, reload)
   })
 });
 
