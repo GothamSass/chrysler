@@ -1,17 +1,13 @@
-$f1: "HelveticaNeue-Light",
-"Helvetica Neue Light",
-"Helvetica Neue",
-Helvetica, Arial,
-"Lucida Grande", sans-serif;                     // title font
-$f2: $f1;       // text font
-$f3: "Courier New", Courier, monospace;  // code font
+$f1: 'bebas_neuebold', Georgia, serif;                     // title font
+$f2: 'abeezeeregular', Courier, monospace;      // text font
+$f3: 'callunaregular', Helvetica, sans-serif;  // code font
 $g1: 10px;                       // base gap
 $c0: white;                      // bg color
 $c1: #333;                       // text color
-$c2: #666;          // accent color
-$c3: blue;                       // color 3
+$c2: lighten($c1, 20%);          // accent color
+$c3: #ccc;                       // color 3
 $c4: green;                      // color 4
-$c5: yellow;                     // color 5
+$c5: yellow;                     // color
 
 /* gap variations */
 
@@ -141,6 +137,30 @@ h1, h2, h3, h4 {
 	$font-family: $f1;
 	font-weight: normal;
 }
+
 .hidden {
 	display: none;
 }
+
+h1 {
+	font-size: 4.5em;
+	margin: 0;
+}
+
+h2 {
+	font-size: 3em;
+	margin: 0.5em 0;
+}
+
+h3 {
+	font-size: 1.5em;
+	margin: 0.5em 0;
+}
+
+.hidden {
+	display: none;
+}
+
+ul { list-style:none; padding: 0px;margin: 0;}
+
+p {line-height: 1.5em;font-size: 1.2em;}

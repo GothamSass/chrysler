@@ -1,76 +1,26 @@
-.container {
-	margin: $g1 auto;
-	width: 600px;
-}
+// ----- Flex-box mixin (work in progress)
+@mixin grid($flex, $direction:column) {
+  flex-direction: $direction;
+  display:flex;
 
-.banner {
-  padding: 0.5em;
-  border-bottom: solid 1px #ccc;
-}
+  & > li {
+    flex:$flex;
+    list-style:none;
+    margin:0 1em 0 0;
+    padding: 1em;
+  }
 
-.nav {
-  margin: 0;
-  padding: 0;
-}
-
-footer {
-  @include micro-clearfix;
-}
-
-.nav--main {
-  display: flex;
-  justify-content: flex-end;
-
-  li {
-    margin: 0 0.5em;
-
-    &:first-child {
-      margin-right: auto;
-    }
+  @media all and (min-width: 480px) {
+  & {flex-direction: row;}
   }
 }
 
-
-footer {
-  background: darkgrey;
+// ----- Main Layout styles
+main{
+  max-width: 60em;
+  margin: 1em auto 0;
 }
 
-.ct {
-  padding: 0.5em;
-  margin: 1em 0;
-  background: whitesmoke;
-  border: 1px solid #eee;
-}
-
-a.logo {
-	@include square(150px);
-	@include hide-text;
-	display: block;
-	float: left;
-	background-color: #eee;
-	-webkit-background-size: contain;
-	background-size: contain;
-	@include radius(50%);
-	border: none;
-}
-
-i.fa {
-	margin-right: 3px;
-	font-size: 20px;
-}
-
-a {
-	@include trans;
-	text-decoration: none;
-	border-bottom: dotted 1px #666;
-	padding-bottom: 1px;
-
-	&:hover {
-		color: $c1;
-		border-bottom: solid 1px #666;
-	}
-
-		&.icon, &.icon:hover {
-		border-bottom: none;
-	}
+.content {
+  margin:0 auto;
 }

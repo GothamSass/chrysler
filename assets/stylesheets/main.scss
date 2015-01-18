@@ -1,5 +1,12 @@
-@import 'vendors/normalize'; // @@@ TODO import this via bower
+// Libraries
+@import 'vendors/normalize'; // TODO import this via bower
+@import 'vendors/fonts';
+
+//Base
 @import 'mixins';
 @import 'base';
+
+//Others
 @import 'layout';
 @import 'modules';
+@import 'style-guide';
