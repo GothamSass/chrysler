@@ -6,13 +6,17 @@ for post, slug in public.blog.posts._data
   if post.layout !== false
 
     article.h-entry
-      h1.p-name: a(href="/blog/posts/#{ slug }")= post.title
-      p
-        | Published by&nbsp;
-        a.p-author.h-card(href='http://example.com') #{ post.authors }
-        &nbsp;|&nbsp;
-        time.dt-published(datetime='2013-06-13 12:00:00') #{ post.date }
-        a.p-author
+      - console.log("post.properties ", post.properties)
 
-      if post.description
-        p.p-summary= post.description
+      h1.p-name= post.properties.name
+      p
+        | Published by
+        a.p-author.h-card(href='http://example.com') W. Developer
+        |      on
+        time.dt-published(datetime='2013-06-13 12:00:00')
+          | 13
+          sup th
+          |  June 2013
+      p.p-summary In which I extoll the virtues of using microformats.
+      .e-content
+        p Blah blah blah
