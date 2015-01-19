@@ -4,19 +4,16 @@ p Some stuff we want to say about our blog.
 //- show blog teaser roll
 for post, slug in public.blog.posts._data
   if post.layout !== false
-
     article.h-entry
-      - console.log("post.properties ", post.properties)
-
-      h1.p-name= post.properties.name
+      a.u-url(href= "#{ post[0].properties.permalink[0].url }")
+        h1.p-name= post[0].properties.name
       p
         | Published by
-        a.p-author.h-card(href='http://example.com') W. Developer
-        |      on
-        time.dt-published(datetime='2013-06-13 12:00:00')
-          | 13
-          sup th
-          |  June 2013
-      p.p-summary In which I extoll the virtues of using microformats.
-      .e-content
-        p Blah blah blah
+        =' '
+        a.p-author.h-card(href= post[0].properties.author[0].properties.url)= post[0].properties.author[0].properties.name
+        |  on
+        =' '
+        time.dt-published= post[0].properties.published
+
+      p.p-summary= post[0].properties.summary
+
