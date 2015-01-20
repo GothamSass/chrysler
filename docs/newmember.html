@@ -34,23 +34,23 @@ to improve your experience.</p><![endif]-->
     <form action="https://docs.google.com/a/nicholasfrota.com/forms/d/1rhpAznYkSs0hK57_bvTp_VBSTwI5VQBDCjcxWTEoSuM/formResponse" method="POST" id="ss-form" target="_self" onsubmit="">
       <div class="input">
         <label>First Name</label>
-        <input type="text" name="entry.301873594" id="entry_301873594" aria-label="First Name" placeholder="First Name">
+        <input class="text" type="text" name="entry.301873594" id="entry_301873594" aria-label="First Name" placeholder="First Name">
       </div>
       <div class="input">
         <label>Last Name</label>
-        <input type="text" name="entry.1067686928" id="entry_1067686928" aria-label="Last Name" placeholder="Last Name">
+        <input class="text" type="text" name="entry.1067686928" id="entry_1067686928" aria-label="Last Name" placeholder="Last Name">
       </div>
       <div class="input">
         <label>Email Address</label>
-        <input type="email" name="entry.996689570" id="entry_996689570" aria-label="Email Address" placeholder="Email Address">
+        <input class="text" type="email" name="entry.996689570" id="entry_996689570" aria-label="Email Address" placeholder="Email Address">
       </div>
       <div class="input">
         <label>Github</label>
-        <input type="url" name="entry.359816927" id="entry_359816927" aria-label="Github" placeholder="Github">
+        <input class="text" type="url" name="entry.359816927" id="entry_359816927" aria-label="Github" placeholder="Github">
       </div>
-
-      <div class="input">
-        <label>I am a</label>
+      <div class="grid three">
+        <div class="cell">
+        <h2>I am a</h2>
         <label>
           <input type="radio" name="entry.526636229" value="Developer" id="group_526636229_1" role="radio" aria-label="Developer">
           Developer
@@ -68,28 +68,32 @@ to improve your experience.</p><![endif]-->
           Hybrid
         </label>
       </div>
-
-      <div class="input">
-        <label>Sasspertise</label>
+        <div class="cell">
+        <h2>Sasspertise</h2>
         <label>
           <input type="radio" name="entry.433233740" value="N00b - what&#39;s a compiler?" id="group_433233740_1" role="radio" aria-label="N00b - what&#39;s a compiler?">
-          N00b - what&#39;s a compiler?
+          N00b
+          <p class="sig">what&#39;s a compiler?</p>
         </label>
         <label>
           <input type="radio" name="entry.433233740" value="Beginner - I know css, diving into sass" id="group_433233740_2" role="radio" aria-label="Beginner - I know css, diving into sass">
-          Beginner - I know css, diving into sass
+          Beginner
+          <p class="sig">I know css, diving into sass</p>
         </label>
         <label>
           <input type="radio" name="entry.433233740" value="Intermediate - I&#39;m using mixins, variables, and nesting" id="group_433233740_3" role="radio" aria-label="Intermediate - I&#39;m using mixins, variables, and nesting">
-          Intermediate - I&#39;m using mixins, variables, and nesting
+          Intermediate
+          <p class="sig">I&#39;m using mixins, variables, and nesting</p>
         </label>
         <label>
           <input type="radio" name="entry.433233740" value="Advanced - I write my own extensions" id="group_433233740_4" role="radio" aria-label="Advanced - I write my own extensions">
-          Advanced - I write my own extensions
+          Advanced
+          <p class="sig">I write my own extensions</p>
         </label>
       </div>
-      <div class="input">
-        <label>Team Player! I&#39;m interested in helping out by...</label>
+        <div class="cell">
+        <h2>Team Player!</h2>
+        <p>I&#39;m interested in helping out by...</p>
         <label>
           <input type="checkbox" name="entry.906000925" value="presenting" id="group_906000925_1" role="checkbox">
           presenting
@@ -110,6 +114,7 @@ to improve your experience.</p><![endif]-->
           <input type="checkbox" name="entry.906000925" value="checking people in" id="group_906000925_5" role="checkbox">
           checking people in </label>
         </div>
+      </div>
         <input type="hidden" name="draftResponse" value="[,,&quot;5012310611071694470&quot;]
         ">
         <input type="hidden" name="pageHistory" value="0">
