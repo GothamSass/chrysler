@@ -1,6 +1,34 @@
+// brand variables
+// make sure most of your rules point to that
+
+// Fonts
+$font-title: "HelveticaNeue-Light", "Helvetica Neue Light",
+"Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+$font-text: $font-title;
+$font-mono: "Courier New", Courier, monospace;
+$font-icon: FontAwesome;
+
+// Gap
+$gap-1: 10px;
+
+// Colors
+$color-0: white;
+$color-1: #333;
+$color-2: #666;
+$color-3: blue;
+$color-4: green;
+$color-5: yellow;
+
+// universal rules (try not to change it, and update often)
 
 @import 'vendors/normalize';
-@import 'mixins';
 @import 'base';
+@import 'mixins';
+@import 'colors';
+@import 'colortest';
+@import 'animate';
+
+// project rules (feel free to edit)
+
 @import 'layout';
 @import 'modules';

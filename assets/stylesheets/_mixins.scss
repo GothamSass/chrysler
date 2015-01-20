@@ -12,12 +12,26 @@
   &::-moz-placeholder          { @content }
   &:-ms-input-placeholder      { @content }
   &:focus::-webkit-input-placeholder {
-    transition: all 0.5s 0.1s ease; 
+    transition: all 0.5s 0.1s ease;
     text-indent: -50%;
     opacity: 0;
   }
 }
-@mixin filter($filter: blur,$value: 10px) { 
+@mixin disable($type: link) {
+  @if $type == "select" {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-user-drag: none;
+    user-drag: none;
+  }
+  @else if $type == "link" {
+    pointer-events: none;
+    cursor: default;
+  }
+}
+@mixin filter($filter: blur,$value: 10px) {
   -webkit-filter: $filter+unquote('(#{$value})');
   -moz-filter: $filter+unquote('(#{$value})');
   -ms-filter: $filter+unquote('(#{$value})');
@@ -47,16 +61,16 @@
   border-bottom-right-radius:         $bottomright;
   border-bottom-left-radius:          $bottomleft;
   border-top-left-radius:             $topleft;
-  -moz-background-clip:               padding; 
-  -webkit-background-clip:            padding-box; 
-  background-clip:                    padding-box; 
+  -moz-background-clip:               padding;
+  -webkit-background-clip:            padding-box;
+  background-clip:                    padding-box;
 }
 @mixin shadow($shadow: 0 1px 3px rgba(0,0,0,.25), $mode: normal) {
   @if $mode == text {
     -webkit-text-shadow:  $shadow;
     -moz-text-shadow:     $shadow;
     text-shadow:          $shadow;
-  } 
+  }
   @else {
     -webkit-box-shadow:  $shadow;
     -moz-box-shadow:     $shadow;
@@ -106,7 +120,7 @@
 }
 @mixin orient($orientation: landscape) {
   @media (orientation : $orientation) {
-    @content;  
+    @content;
   }
 }
 @mixin devicewidth($minus: 0px) {
@@ -189,7 +203,7 @@
   background-repeat: no-repeat;
   background-color: $bgcolor;
   background-size: 100% 40px, 100% 40px, 100% 14px, 100% 14px;
-  
+
   /* Opera doesn't support this in the shorthand */
   background-attachment: local, local, scroll, scroll;
 }
@@ -197,19 +211,19 @@
 @mixin reset($type: all) {
   @if $type == margin {
       margin:       0px !important;
-    } 
+    }
     @else if $type == padding {
       padding:       0px !important;
-    } 
+    }
     @else if $type == border {
       border:       none;
-    } 
+    }
     @else if $type == bg {
       background:   transparent;
-    } 
+    }
     @else if $type == list {
       list-style: none;
-    } 
+    }
     @else {
       margin:       0px !important;
       padding:       0px !important;
@@ -218,7 +232,7 @@
     }
 }
 /*
-from 
+from
 http://codepen.io/chriscoyier/blog/some-mini-sass-mixins-i-like
 */
 @mixin coverer {
@@ -252,7 +266,7 @@ http://codepen.io/chriscoyier/blog/some-mini-sass-mixins-i-like
 }
 @mixin clear {
   zoom: 1;
-  &:before, 
+  &:before,
   &:after {
     display:  table;
     content:  "";
@@ -279,90 +293,92 @@ http://codepen.io/chriscoyier/blog/some-mini-sass-mixins-i-like
 }
 @mixin media($device: ipad, $scope: strict, $variation: mini) {
   @if $device == "ipad" {
-    @if $scope == "min" {
-      @media only screen and 
-      (max-width : 768px) { 
+    @if $scope == "portrait" {
+      @media only screen and
+      (max-width : 768px) {
        @content
      }
-   } 
-   @else if $scope == "all" {
-    @media only screen and 
-    (max-width : 1024px) { 
+   }
+   @else if $scope == "landscape" {
+    @media only screen and
+    (max-width : 1024px) {
      @content
    }
- } 
+ }
  @else {
-  @media only screen and 
-  (min-device-width : 768px) and 
-  (max-device-width : 1024px) { 
+  @media only screen and
+  (min-device-width : 768px) and
+  (max-device-width : 1024px) {
    @content
  }
 }
-} 
+}
 @else if $device == "iphone5" {
-  @if $scope == "min" {
-    @media only screen and 
-    (max-width : 320px) { 
+  @if $scope == "portrait" {
+    @media only screen and
+    (max-width : 320px) {
      @content
    }
- } 
- @else if $scope == "all" {
-  @media only screen and 
-  (max-width : 568px) { 
-   @content
  }
-} 
-@else {
-  @media only screen and 
-  (min-device-width : 320px) and 
-  (max-device-width : 568px) { 
+ @else if $scope == "landscape" {
+  @media only screen and
+  (max-width : 568px) {
    @content
  }
 }
-} 
-@else if $device == "iphone6" {
-  @if $scope == "min" {
-    @media only screen and 
-    (max-width : 375px) { 
-     @content
-   }
- } 
- @else if $scope == "all" {
-  @media only screen and 
-  (max-width : 667px) { 
+@else {
+  @media only screen and
+  (min-device-width : 320px) and
+  (max-device-width : 568px) {
    @content
  }
-} 
+}
+}
+@else if $device == "iphone6" {
+  @if $scope == "portrait" {
+    @media only screen and
+    (min-width: 375px) {
+     @content
+   }
+ }
+ @else if $scope == "landscape" {
+  @media only screen and
+  (max-width : 667px) {
+   @content
+ }
+}
 @else {
-  @media only screen and 
-  (min-device-width : 375px) and 
-  (max-device-width : 667px) { 
+  @media only screen and
+  (min-device-width: 375px) and
+  (max-device-width: 667px) {
    @content
  }
 }
 }
 @else if $device == "iphone4" {
-  @if $scope == "min" {
-    @media only screen and 
-    (max-width : 320px) { 
+  @if $scope == "portrait" {
+    @media only screen and
+    (max-width : 320px) {
      @content
    }
- } 
- @else if $scope == "all" {
-  @media only screen and 
-  (max-width : 480px) { 
-   @content
  }
-} 
-@else {
-  @media only screen and 
-  (min-device-width : 320px) and 
-  (max-device-width : 480px) { 
+ @else if $scope == "landscape" {
+  @media only screen and
+  (max-width : 480px) {
    @content
  }
 }
-} 
 @else {
-
+  @media only screen and
+  (min-device-width : 320px) and
+  (max-device-width : 480px) {
+   @content
+ }
+}
+}
+@else {
+@media screen and ($scope +-width: $device) {
+  @content
+}
 }
 }
