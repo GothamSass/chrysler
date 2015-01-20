@@ -23,6 +23,8 @@
     -webkit-user-select: none;
     -ms-user-select: none;
     user-select: none;
+  }
+  @else if $type == "drag" {
     -webkit-user-drag: none;
     user-drag: none;
   }
@@ -168,7 +170,7 @@
     padding: 0px;
     @include box;
     &:not(:last-of-type) {
-          padding-right: ($gutter / 2);
+      padding-right: ($gutter / 2);
     }
     &:not(:first-of-type) {
       padding-left: ($gutter / 2);
@@ -210,26 +212,26 @@
 
 @mixin reset($type: all) {
   @if $type == margin {
-      margin:       0px !important;
-    }
-    @else if $type == padding {
-      padding:       0px !important;
-    }
-    @else if $type == border {
-      border:       none;
-    }
-    @else if $type == bg {
-      background:   transparent;
-    }
-    @else if $type == list {
-      list-style: none;
-    }
-    @else {
-      margin:       0px !important;
-      padding:       0px !important;
-      border:       none;
-      background:   transparent;
-    }
+    margin:       0px !important;
+  }
+  @else if $type == padding {
+    padding:       0px !important;
+  }
+  @else if $type == border {
+    border:       none;
+  }
+  @else if $type == bg {
+    background:   transparent;
+  }
+  @else if $type == list {
+    list-style: none;
+  }
+  @else {
+    margin:       0px !important;
+    padding:       0px !important;
+    border:       none;
+    background:   transparent;
+  }
 }
 /*
 from
@@ -276,20 +278,48 @@ http://codepen.io/chriscoyier/blog/some-mini-sass-mixins-i-like
   }
 }
 @mixin cover {
-      -webkit-background-size: cover !important;
-    -moz-background-size: cover !important;
-    -o-background-size: cover !important;
-    background-size: cover !important;
+  -webkit-background-size: cover !important;
+  -moz-background-size: cover !important;
+  -o-background-size: cover !important;
+  background-size: cover !important;
 }
 @mixin only($only: mac) {
-      html.#{$only} & {
-        @content
-      }
+  html.#{$only} & {
+    @content
+  }
 }
 @mixin unless($unless: mac) {
-      html:not(.#{$unless}) & {
-        @content
-      }
+  html:not(.#{$unless}) & {
+    @content
+  }
+}
+@mixin font-face(
+  $title,
+  $file: $title,
+  $weight: normal,
+  $style: normal,
+  $path: '../fonts/',
+  $stretch : normal,
+  $text-transform: normal) {
+  @font-face {
+    font-family: '#{$title}';
+    src: url('#{$path}#{$file}.eot');
+    src: url('#{$path}#{$file}.eot?#iefix') format('embedded-opentype'),
+    url('#{$path}#{$file}.woff') format('woff'),
+    url('#{$path}#{$file}.ttf') format('truetype'),
+    url('#{$path}#{$file}.svg##{$title}') format('svg');
+    font-weight: $weight;
+    font-style: $style;
+    font-stretch: $stretch;
+    text-transform: $text-transform;
+  }
+  // Chrome for Windows rendering fix: http://www.adtrak.co.uk/blog/font-face-chrome-rendering/
+   @media screen and (-webkit-min-device-pixel-ratio: 0) {
+     @font-face {
+       font-family: $title;
+         src: url('#{$path}+#{$file}.svg##{$title}') format('svg');
+     }
+   }
 }
 @mixin media($device: ipad, $scope: strict, $variation: mini) {
   @if $device == "ipad" {
@@ -337,7 +367,7 @@ http://codepen.io/chriscoyier/blog/some-mini-sass-mixins-i-like
 @else if $device == "iphone6" {
   @if $scope == "portrait" {
     @media only screen and
-    (min-width: 375px) {
+    (max-width : 375px) {
      @content
    }
  }
@@ -349,8 +379,8 @@ http://codepen.io/chriscoyier/blog/some-mini-sass-mixins-i-like
 }
 @else {
   @media only screen and
-  (min-device-width: 375px) and
-  (max-device-width: 667px) {
+  (min-device-width : 375px) and
+  (max-device-width : 667px) {
    @content
  }
 }
@@ -377,8 +407,8 @@ http://codepen.io/chriscoyier/blog/some-mini-sass-mixins-i-like
 }
 }
 @else {
-@media screen and ($scope +-width: $device) {
-  @content
-}
+  @media screen and ($scope +-width: $device) {
+    @content
+  }
 }
 }
