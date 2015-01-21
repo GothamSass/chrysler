@@ -1,10 +1,18 @@
 article.h-entry
-  h1.p-name= title
+  a.u-url(href= "")
+    h1.p-name= properties.name
   p
-    | Published by&nbsp;
-    a.p-author.h-card(href='http://example.com')= authors
-    |  on&nbsp;
-    time.dt-published(datetime='2013-06-13 12:00:00')= date
+    | Published by
+    =' '
+    a.p-author.h-card(href= properties.author[0].properties.url)= properties.author[0].properties.name
+    =' '
+    time.dt-published= properties.published
 
-  p.e-content
+  .e-content
     != yield
+
+  .p-category
+    = properties.category[0].category
+    =' '
+    = properties.category[0].tags
+
