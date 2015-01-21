@@ -1,6 +1,39 @@
 .style-guide{
-	.logo ul{@include grid(33%);}
+	.logo ul{@include grid(50%);}
 	.fontFamily ul {@include grid(33%);}
+  .colors ul {@include grid(33%);}
 
 }
 
+.colors ul {
+  li {
+    &:first-child{background:$c-prime;
+      &:after{
+        content: "#{$c-prime}";
+        font-size: 42px;
+        color: white;
+      }
+    }
+    &:nth-child(2){background:$c-sec;
+      &:after{
+        content: "#{$c-sec}";
+        font-size: 42px;
+        color: white;
+      }
+    }
+    &:nth-child(3){background:$c-tert;
+      &:after{
+        content: "#{$c-tert}";
+        font-size: 42px;
+        color: white;
+      }
+    }
+    &:nth-child(4){background:$c-quat;
+      &:after{
+        content: "#{$c-quat}";
+        font-size: 42px;
+        color: white;
+      }
+    }
+  }
+}
