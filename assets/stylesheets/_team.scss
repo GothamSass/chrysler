@@ -1,0 +1,44 @@
+.members {
+	.member {
+		
+	}
+}
+.team {
+	article.member {
+		float: left;
+		width: (100% / 3);
+		@include box;
+		padding: 10px;
+		text-align: center;
+		border-left: solid 1px #ccc;
+		border-top: solid 1px #ccc;
+
+		&:nth-of-type(3n+1) {
+			border-left: none;
+		}
+		&:first-of-type, &:nth-of-type(2), &:nth-of-type(3) {
+			border-top: none;
+		}
+		h3 {
+			@include ellipsis;
+			@include reset(all);
+
+		}
+		p {
+			margin-top: 0;
+		}
+		a {
+			&:not(:first-of-type) {
+				margin-left: 10px;
+			}
+		}
+	}
+}
+
+.member-photo {
+	background-size: contain;
+	display: block;
+	margin: 0 auto 10px auto;
+	@include square(100px);
+	@include radius(50%);
+}
