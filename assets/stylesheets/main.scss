@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // brand variables
 // make sure most of your rules point to that
 
@@ -22,6 +23,10 @@ $color-5: yellow;
 // universal rules (try not to change it, and update often)
 
 @import 'vendors/normalize';
+=======
+@import 'vendors/normalize'; // @@@ TODO import this via bower
+@import 'mixins';
+>>>>>>> fc3b74ce40ad3fe894f8899f8576a19a7223e596
 @import 'base';
 @import 'mixins';
 @import 'colors';
@@ -31,7 +36,11 @@ $color-5: yellow;
 // project rules (feel free to edit)
 
 @import 'layout';
+<<<<<<< HEAD
 @import 'team';
 @import 'form';
 @import 'buttons';
 @import 'typography';
+=======
+@import 'modules';
+>>>>>>> fc3b74ce40ad3fe894f8899f8576a19a7223e596

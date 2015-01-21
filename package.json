@@ -1,0 +1,32 @@
+{
+  "name": "Chrysler",
+  "version": "0.0.1",
+  "description": "Website for GothamSass",
+  "main": "index.jade",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GothamSass/chrysler.git"
+  },
+  "dependencies": {
+    "harp": ">=0.14.0"
+  },
+  "keywords": [
+    "sass",
+    "new",
+    "york",
+    "gotham",
+    "event"
+  ],
+  "author": "",
+  "license": "CC",
+  "bugs": {
+    "url": "https://github.com/GothamSass/chrysler/issues"
+  },
+  "homepage": "https://github.com/GothamSass/chrysler"
+}
