@@ -1,4 +1,4 @@
-.container {
+.container, footer.footer {
   margin: $gap-1 auto;
   max-width: 600px;
   @include clear;
@@ -16,6 +16,9 @@ a {
     &.icon, &.icon:hover {
     border-bottom: none;
   }
+}
+footer.footer {
+border-top: solid 1px #ccc;
 }
 nav.nav {
   @include clear;
@@ -50,8 +53,7 @@ i.fa {
   font-size: 20px;
 }
 p.sig {
-      margin: 0;
-      font-size: 90%;
-      font-style: italic;
-
+  margin: 0;
+  font-size: 90%;
+  font-style: italic;
 }
