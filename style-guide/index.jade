@@ -5,15 +5,20 @@ ul.style-guide
         h2 Colors
         ul
           li
-
+            code
+              $c-prime
           li
-
+            code
+              $c-sec
           li
-
+            code
+              $c-tert
           li
+            code
+              $c-prime
 
       section.logo
-        h2 logo
+        h2 Logo
         ul
           li
             img(src='../assets/logo/logo.svg')
@@ -32,8 +37,10 @@ ul.style-guide
             h1 Page Heading
             h2 Section Heading
             h3 Sub-Section Heading
+            p
+             a(href='#') Link
           li
-             p ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam culpa, tempora soluta consequatur saepe autem eum, quisquam nam ipsam explicabo iusto magnam expedita voluptatem error asperiores et incidunt harum quam rerum dolorum illo voluptatibus corporis necessitatibus. At optio sequi fugiat, ad autem et aliquam placeat recusandae accusantium dolores nisi, voluptas est ipsam eligendi repellendus. Ipsa laborum ut reprehenderit quibusdam nulla minima, deleniti dicta minus nisi, similique nemo, odit eos eum voluptas tenetur, praesentium aliquam. Accusamus a consequatur earum ratione ab qui libero. Perferendis fugit, numquam nobis, in, mollitia porro iure aspernatur cupiditate molestiae, ratione accusantium perspiciatis saepe recusandae repellat earum.
+             p ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam culpa, tempora soluta consequatur saepe autem eum, quisquam nam ipsam explicabo iusto magnam expedita voluptatem error asperiores et incidunt harum quam rerum dolorum illo voluptatibus corporis necessitatibus.
       //- section
       //-   h2 List Items
       //-   ul
@@ -49,5 +56,26 @@ ul.style-guide
       //-   ul
       //-     li Title
       //-     li Body
-      //- section
-      //-   h2 Forms
+      section.button
+        h2 Buttons
+          ul
+            li
+              button.btn.btn-prime Primary Button
+            li
+              button.btn.btn-sect Secondary Button
+            li
+              button.btn.btn-tert Tertiary Button
+      section
+        h2 Forms
+        ul
+          li
+             span.input.input--ichiro
+              input#input-25.input__field.input__field--ichiro(type='text')
+              label.input__label.input__label--ichiro(for='input-25')
+                span.input__label-content.input__label-content--ichiro Input
+            span.input.input--ichiro
+              textarea#textarea-25.input__field.input__field--ichiro(type='text')
+              label.input__label.input__label--ichiro(for='textarea-25')
+                span.input__label-content.input__label-content--ichiro Textarea
+          li
+

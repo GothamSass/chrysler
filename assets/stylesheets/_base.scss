@@ -1,7 +1,7 @@
 //fonts
-$title: 'bebas_neuebold', Georgia, serif;
-$body: 'abeezeeregular', Courier, monospace;
-$code: 'callunaregular', Helvetica, sans-serif;
+$f-title: 'bebas_neuebook', Georgia, serif;
+$f-body: 'abeezeeregular', Courier, monospace;
+$f-code: 'callunaregular', Helvetica, sans-serif;
 
 //colors
 $c-prime:#cc6699;
@@ -18,54 +18,22 @@ $c3: #ccc;                       // color 3
 $c4: green;                      // color 4
 $c5: yellow;                     // color
 
-/* gap variations */
-
-$g2: ($g1 * 2);
-$g3: ($g1 * 3);
-$g4: ($g1 * 4);
-$g5: ($g1 * 5);
-$g6: ($g1 * 6);
-$g7: ($g1 * 7);
-$g8: ($g1 * 8);
-$g9: ($g1 * 9);
-$g10: ($g1 * 10);
-$g11: ($g1 * 11);
-$g12: ($g1 * 12);
-
-/* breakpoints */
-
-$iphone5-min:      320px;
-$iphone6-min:      375px;
-$iphone2G4S-max:   480px;
-$iphone6plus-min:  540px;
-$iphone5-max:      568px;
-$iphone6-max:      667px;
-$ipad-min:         768px;
-$iphone6plus-max:  960px;
-$screen-lg:        1200px;
-$ipad-max:         1024px;
-$device:           $ipad-max;
-
 /* base rules */
 
 h1, h2, h3, h4 {
-	font-family: $title;
 	color: $c-sec;
+	font-weight: normal;
 }
 body {
-	font-family: $body;
+	font-family: $f-body;
 }
 :focus {
 	outline-color: transparent;
 	outline-style: none;
 }
 a {
-	color: $c-sec;
+	color: $c-prime;
 	@include trans;
-}
-h1, h2, h3, h4 {
-	$font-family: $title;
-	font-weight: normal;
 }
 
 .hidden {
@@ -75,16 +43,21 @@ h1, h2, h3, h4 {
 h1 {
 	font-size: 4.5em;
 	margin: 0;
+	font-family: $f-title;
 }
 
 h2 {
 	font-size: 3em;
 	margin: 0.5em 0;
+	color:#036;
 }
 
 h3 {
 	font-size: 1.5em;
 	margin: 0.5em 0;
+	font-weight: bold;
+	color:#3D4049;
+	text-transform: uppercase;
 }
 
 .hidden {
@@ -95,6 +68,14 @@ img {
 	width: 100%;
 }
 
-ul { list-style:none; padding: 0px;margin: 0;}
+ul {
+	list-style:none;
+	padding: 0em;
+	margin: 0;
+}
 
-p {line-height: 1.5em;font-size: 1.2em; color:$c-sec;}
+p {
+	line-height: 1.5em;
+	font-size: 1.2em;
+	color:#3D4049;
+}
