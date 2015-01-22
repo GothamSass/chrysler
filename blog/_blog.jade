@@ -2,7 +2,7 @@
 
 article.h-entry
   a.u-url(href= "")
-    h1.p-name= properties.name
+    h2.p-name= properties.name
   p
     | Published by
     =' '
@@ -23,3 +23,9 @@ article.h-entry
     =' '
     = properties.category[0].tags
 
+
+  h3 About the Author
+  each author, index in properties.author
+    p
+      a.p-author.h-card(href= properties.author[index].properties.url)= properties.author[index].properties.name
+    p= properties.author[index].properties.description
