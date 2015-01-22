@@ -10,9 +10,16 @@ for post, slug in public.blog.posts._data
       p
         | Published by
         =' '
-        a.p-author.h-card(href= post.properties.author[0].properties.url)= post.properties.author[0].properties.name
+
+        each author, index in post.properties.author
+          a.p-author.h-card(href= post.properties.author[index].properties.url)= post.properties.author[index].properties.name
+          =' '
+
         |  on
         =' '
         time.dt-published= post.properties.published
 
       p.p-summary= post.properties.summary
+
+
+

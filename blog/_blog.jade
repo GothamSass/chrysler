@@ -1,12 +1,19 @@
+- console.log('author[1]', properties.author )
+
 article.h-entry
   a.u-url(href= "")
     h1.p-name= properties.name
   p
     | Published by
     =' '
-    a.p-author.h-card(href= properties.author[0].properties.url)= properties.author[0].properties.name
+
+    each author, index in properties.author
+      a.p-author.h-card(href= properties.author[index].properties.url)= properties.author[index].properties.name
+      =' '
+
     =' '
     time.dt-published= properties.published
+
 
   .e-content
     != yield
