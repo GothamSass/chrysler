@@ -1,9 +1,8 @@
 
-for event, slug in public.events._data
+for event, slug in public.events.event._data
   if event.layout !== false
-    eventName = event.name.replace(/\s+/g, '-').toLowerCase()
     .gotham-sass--event
-      h1.event-name: a(href="/events/#{eventName}")= event.name
+      h1.event-name: a(href="/events/event/#{slug}")= event.name
       p #{event.description}
         time.dt-start(datetime="2013-06-30 12:00")
           sup #{event.start_date}
