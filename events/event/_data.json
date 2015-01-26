@@ -1,3 +1,4 @@
+
 {
   "event-1": {
     "name": "The Current State of Sass",
@@ -10,8 +11,8 @@
       "address_2": null,
       "city": "New York"
     },
-    "sponsors": {
-      "sponsor-1": {
+    "sponsors": [
+      {
         "name": "Pivotal Labs",
         "description": "Short description about sponsor",
         "logo": null,
@@ -21,9 +22,9 @@
           "hash": "#pivotalrocks"
         }
       }
-    },
-    "speakers": {
-      "speaker-1": {
+    ],
+    "speakers": [
+      {
         "name": "Chris Eppstein",
         "photo": {
           "path": null,
@@ -37,75 +38,17 @@
         "title": "title of the speaker's presentation",
         "description": "this is a longer description for a speaker's topic if we have multiple speakers"
       },
-      "speaker-2": {
-        "name": "Chris Eppstein 2",
+      {
+        "speaker_name": "Chris Eppstein 2",
         "photo": {
           "path": null,
           "alt": null
         },
         "bio": "I'm the creator of [compass-style](compass-style.org)Compass, a stylesheet authoring framework and I'm on the core team of Sass — the stylesheet syntax upon which Compass is built. I maintain about a dozen less well known ruby libraries and rails plugins on github, and am an active contributor of patches to the many open source projects that I use.",
-        "social": {
-          "twitter": "chriseppstein",
-          "github": "chriseppstein"
-        },
-        "title": "title of the speaker's presentation",
-        "description": "this is a longer description for a speaker's topic if we have multiple speakers"
+        "social": null,
+        "title": null,
+        "description": null
       }
-    }
-  },
-  "event-2": {
-    "name": "Our second event holler",
-    "description":"Chris Eppstein, creator of Compass, talks about what's to come in Sass 3.3, and Alan Hogan on simplifying responsive web design with Sass",
-    "start_date": "2012-04-23T18:25:43.511Z",
-    "end_date": "2012-04-23T18:25:43.511Z",
-    "venue": {
-      "name": "Pivotal Labs",
-      "address_1": "625 Avenue of Americas, 2nd Floor",
-      "address_2": null,
-      "city": "New York"
-    },
-    "sponsors": {
-      "sponsor-1": {
-        "name": "Pivotal Labs",
-        "description": "Short description about sponsor",
-        "logo": null,
-        "url": "http://pivotal.com",
-        "social": {
-          "twitter": "pivotalnyc",
-          "hash": "#pivotalrocks"
-        }
-      }
-    },
-    "speakers": {
-      "speaker-1": {
-        "name": "Chris Eppstein",
-        "photo": {
-          "path": null,
-          "alt": null
-        },
-        "bio": "I'm the creator of [compass-style](compass-style.org)Compass, a stylesheet authoring framework and I'm on the core team of Sass — the stylesheet syntax upon which Compass is built. I maintain about a dozen less well known ruby libraries and rails plugins on github, and am an active contributor of patches to the many open source projects that I use.",
-        "social": {
-          "twitter": "chriseppstein",
-          "github": "chriseppstein"
-        },
-        "title": "title of the speaker's presentation",
-        "description": "this is a longer description for a speaker's topic if we have multiple speakers"
-      },
-      "speaker-2": {
-        "name": "Chris Eppstein 2",
-        "photo": {
-          "path": null,
-          "alt": null
-        },
-        "bio": "I'm the creator of [compass-style](compass-style.org)Compass, a stylesheet authoring framework and I'm on the core team of Sass — the stylesheet syntax upon which Compass is built. I maintain about a dozen less well known ruby libraries and rails plugins on github, and am an active contributor of patches to the many open source projects that I use.",
-        "social": {
-          "twitter": "chriseppstein",
-          "github": "chriseppstein"
-        },
-        "title": "title of the speaker's presentation",
-        "description": "this is a longer description for a speaker's topic if we have multiple speakers"
-      }
-    }
+    ]
   }
-
 }
