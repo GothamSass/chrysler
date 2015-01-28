@@ -2,7 +2,6 @@
   margin: $gap-1 auto;
   max-width: 600px;
   @include clear;
-
 }
 a {
   text-decoration: none;
@@ -13,12 +12,12 @@ a {
     color: $color-1;
     border-bottom: solid 1px #666;
   }
-    &.icon, &.icon:hover {
+  &.icon, &.icon:hover {
     border-bottom: none;
   }
 }
 footer.footer {
-border-top: solid 1px #ccc;
+  border-top: solid 1px #ccc;
 }
 nav.nav {
   @include clear;
