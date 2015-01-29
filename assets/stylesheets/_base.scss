@@ -1,80 +1,8 @@
-// gap variations
-
-$gap-2: $gap-1 * 2;
-$gap-3: $gap-1 * 3;
-$gap-4: $gap-1 * 4;
-$gap-5: $gap-1 * 5;
-$gap-6: $gap-1 * 6;
-$gap-7: $gap-1 * 7;
-$gap-8: $gap-1 * 8;
-$gap-9: $gap-1 * 9;
-$gap-10: $gap-1 * 10;
-$gap-11: $gap-1 * 11;
-$gap-12: $gap-1 * 12;
-$gap-13: $gap-1 * 13;
-$gap-14: $gap-1 * 14;
-$gap-15: $gap-1 * 15;
-$gap-16: $gap-1 * 16;
-$gap-17: $gap-1 * 17;
-$gap-18: $gap-1 * 18;
-$gap-19: $gap-1 * 19;
-$gap-20: $gap-1 * 20;
-
 // base rules
 
 h1, h2, h3, h4 {
-  font-family: $font-title;
-  color: $color-1;
-$f1: "HelveticaNeue-Light",
-"Helvetica Neue Light",
-"Helvetica Neue",
-Helvetica, Arial,
-"Lucida Grande", sans-serif;                     // title font
-$f2: $f1;       // text font
-$f3: "Courier New", Courier, monospace;  // code font
-$g1: 10px;                       // base gap
-$c0: white;                      // bg color
-$c1: #333;                       // text color
-$c2: #666;          // accent color
-$c3: blue;                       // color 3
-$c4: green;                      // color 4
-$c5: yellow;                     // color 5
-
-/* gap variations */
-
-$g2: ($g1 * 2);
-$g3: ($g1 * 3);
-$g4: ($g1 * 4);
-$g5: ($g1 * 5);
-$g6: ($g1 * 6);
-$g7: ($g1 * 7);
-$g8: ($g1 * 8);
-$g9: ($g1 * 9);
-$g10: ($g1 * 10);
-$g11: ($g1 * 11);
-$g12: ($g1 * 12);
-
-
-/* breakpoints */
-
-$iphone5-min:      320px;
-$iphone6-min:      375px;
-$iphone2G4S-max:   480px;
-$iphone6plus-min:  540px;
-$iphone5-max:      568px;
-$iphone6-max:      667px;
-$ipad-min:         768px;
-$iphone6plus-max:  960px;
-$screen-lg:        1200px;
-$ipad-max:         1024px;
-$device:           $ipad-max;
-
-/* base rules */
-
-h1, h2, h3, h4 {
-	font-family: $f1;
-	color: $c2;
-	background: purple;
+	font-family: $font-text;
+	color: $color-2;
 }
 
 body {
@@ -89,11 +17,7 @@ body {
 
 a {
   color: $color-2;
-  -webkit-transition:  all 300ms ease-out;
-  -moz-transition:     all 300ms ease-out;
-  -ms-transition:      all 300ms ease-out;
-  -o-transition:       all 300ms ease-out;
-  transition:          all 300ms ease-out;
+  transition: all 300ms ease-out;
 }
 
 h1, h2, h3, h4 {
