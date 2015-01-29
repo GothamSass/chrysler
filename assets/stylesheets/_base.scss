@@ -25,6 +25,56 @@ $gap-20: $gap-1 * 20;
 h1, h2, h3, h4 {
   font-family: $font-title;
   color: $color-1;
+$f1: "HelveticaNeue-Light",
+"Helvetica Neue Light",
+"Helvetica Neue",
+Helvetica, Arial,
+"Lucida Grande", sans-serif;                     // title font
+$f2: $f1;       // text font
+$f3: "Courier New", Courier, monospace;  // code font
+$g1: 10px;                       // base gap
+$c0: white;                      // bg color
+$c1: #333;                       // text color
+$c2: #666;          // accent color
+$c3: blue;                       // color 3
+$c4: green;                      // color 4
+$c5: yellow;                     // color 5
+
+/* gap variations */
+
+$g2: ($g1 * 2);
+$g3: ($g1 * 3);
+$g4: ($g1 * 4);
+$g5: ($g1 * 5);
+$g6: ($g1 * 6);
+$g7: ($g1 * 7);
+$g8: ($g1 * 8);
+$g9: ($g1 * 9);
+$g10: ($g1 * 10);
+$g11: ($g1 * 11);
+$g12: ($g1 * 12);
+
+
+/* breakpoints */
+
+$iphone5-min:      320px;
+$iphone6-min:      375px;
+$iphone2G4S-max:   480px;
+$iphone6plus-min:  540px;
+$iphone5-max:      568px;
+$iphone6-max:      667px;
+$ipad-min:         768px;
+$iphone6plus-max:  960px;
+$screen-lg:        1200px;
+$ipad-max:         1024px;
+$device:           $ipad-max;
+
+/* base rules */
+
+h1, h2, h3, h4 {
+	font-family: $f1;
+	color: $c2;
+	background: purple;
 }
 
 body {

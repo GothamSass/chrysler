@@ -2,7 +2,7 @@
   "name": "Chrysler",
   "version": "0.0.1",
   "description": "Website for GothamSass",
-  "main": "index.jade",
+  "main": "gulpfile.js",
   "directories": {
     "doc": "docs"
   },
@@ -23,10 +23,17 @@
     "gotham",
     "event"
   ],
-  "author": "",
+  "author": "GothamSass Organizers",
   "license": "CC",
   "bugs": {
     "url": "https://github.com/GothamSass/chrysler/issues"
   },
-  "homepage": "https://github.com/GothamSass/chrysler"
+  "homepage": "https://github.com/GothamSass/chrysler",
+  "devDependencies": {
+    "browser-sync": "^1.9.0",
+    "gulp": "^3.8.10",
+    "gulp-cached": "^1.0.2",
+    "gulp-scss-lint": "^0.1.4",
+    "scsslint": "0.0.3"
+  }
 }
