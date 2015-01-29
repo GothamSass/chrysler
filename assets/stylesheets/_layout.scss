@@ -1,52 +1,103 @@
-.container, footer.footer {
-  margin: $gap-1 auto;
-  max-width: 600px;
-  @include clear;
+$header-top: 170px;
+$header: 100px;
+$width: 600px;
 
+.container, footer.footer {
+  margin: 0 auto;
+  @include media(600px, max) {
+    padding: 0 $gap-1;
+  }
+  max-width: $width;
+  @include clear;
 }
 a {
   text-decoration: none;
-  border-bottom: dotted 1px #666;
+  border-bottom: dotted 1px $color-2;
   padding-bottom: 1px;
   @include trans;
   &:hover {
     color: $color-1;
-    border-bottom: solid 1px #666;
+    border-bottom: solid 1px $color-1;
   }
-    &.icon, &.icon:hover {
+  &.icon, &.icon:hover {
     border-bottom: none;
   }
 }
 footer.footer {
-border-top: solid 1px #ccc;
+  border-top: solid 1px $color-1;
+}
+.content {
+  @include trans;
+  margin-top: ($header-top + 20px);
+  @include only(trans) {
+    margin-top: ($header + 20px);
+  }
 }
 nav.nav {
   @include clear;
-  border-bottom: solid 1px #ccc;
+  position: fixed;
+  padding-top: 10px;
+
+  @include only(trans) {
+    padding-top: 5px;
+    @include shadow(0px 5px 0px rgba(0, 0, 0, .05));
+  }
+  width: $width;
+  @include media(600px, max) {
+    width: 100%;
+    padding-left: $gap-1 !important;
+    right: 0px;
+  }
+  background-color: $color-0;
+  border-bottom: solid 1px $color-1;
   padding-bottom: $gap-1;
-  height: 100px;
-  margin-bottom: 60px;
-  ul {
-    float: right;
+  @include trans;
+  height: ($header-top * .75);
+  @include only(trans) {
+   height: ($header * .75);
+ }
+ ul {
+  float: right;
+  @include media(600px, max) {
+    margin-top: 0;
+    margin-right: 10px;
     li {
+      text-align: right;
+      &:last-of-type {
+        margin-top: 5px;
+
+      }
+    }
+  }
+  li {
+    @include media(600px, min) {
       display: inline;
       &:not(:first-of-type):before {
         content: " / ";
       }
     }
+
   }
 }
+}
 a.logo {
-  @include square(150px);
+  @include square($header-top);
+  @include only(trans) {
+    @include square($header);
+  }
   background-image: url(../img/logo.png);
   @include hide-text;
   display: block;
   float: left;
+  @include media(600px, max) {
+    margin-left: 5px;
+  }
   background-color: #eee;
   -webkit-background-size: contain;
   background-size: contain;
   @include radius(50%);
   border: none;
+  @include shadow(1px 1px 0px $color-1);
 }
 i.fa {
   margin-right: 3px;
@@ -56,4 +107,31 @@ p.sig {
   margin: 0;
   font-size: 90%;
   font-style: italic;
+}
+
+footer.footer {
+  padding: $gap-1;
+  a {
+    background-color: $color-1;
+    color: white;
+    margin-right: 2px;
+    text-align: center;
+    display: inline-block;
+    @include radius(50%);
+    i {
+      font-size: 20px;
+      padding: 8px 0 0 4px;
+    }
+    @include square(35px);
+    @include media(600px, max) {
+      i {
+        font-size: 15px;
+        padding: 5px 0 0 3px;
+      }
+      @include square(25px);
+    }
+    &:hover {
+      background-color: $color-2;
+    }
+  }
 }
