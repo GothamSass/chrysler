@@ -32,6 +32,7 @@
   "devDependencies": {
     "browser-sync": "^1.9.0",
     "gulp": "^3.8.10",
+    "gulp-cached": "^1.0.2",
     "gulp-scss-lint": "^0.1.4",
     "scsslint": "0.0.3"
   }
