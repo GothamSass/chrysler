@@ -2,129 +2,80 @@
   width:  $width;
   height: $height;
 }
+
 @mixin square($size: 5px) {
   @include size($size, $size);
 }
+
 @mixin placeholder {
   &.placeholder                { @content }
-  &::-webkit-input-placeholder { @content }
-  &:-moz-placeholder           { @content }
-  &::-moz-placeholder          { @content }
-  &:-ms-input-placeholder      { @content }
   &:focus::-webkit-input-placeholder {
     transition: all 0.5s 0.1s ease;
     text-indent: -50%;
     opacity: 0;
   }
 }
-@mixin disable($type: link) {
-  @if $type == "select" {
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-  }
-  @else if $type == "drag" {
-    -webkit-user-drag: none;
-    user-drag: none;
-  }
-  @else if $type == "link" {
-    pointer-events: none;
-    cursor: default;
-  }
-}
+
 @mixin filter($filter: blur,$value: 10px) {
-  -webkit-filter: $filter+unquote('(#{$value})');
-  -moz-filter: $filter+unquote('(#{$value})');
-  -ms-filter: $filter+unquote('(#{$value})');
-  -o-filter: $filter+unquote('(#{$value})');
   filter: $filter+unquote('(#{$value})');
 }
+
 @mixin box($sizing: border-box) {
   box-sizing: $sizing;
-  -moz-box-sizing: $sizing;
-  -webkit-box-sizing: $sizing;
 }
+
 @mixin radius($radius: 5px) {
-  -webkit-border-radius: $radius;
-  -moz-border-radius:    $radius;
   border-radius:         $radius;
 }
+
 @mixin radius-custom($topleft: 5px, $topright: 5px, $bottomright: 5px, $bottomleft: 5px) {
-  -webkit-border-top-right-radius:    $topright;
-  -webkit-border-bottom-right-radius: $bottomright;
-  -webkit-border-bottom-left-radius:  $bottomleft;
-  -webkit-border-top-left-radius:     $topleft;
-  -moz-border-radius-topright:        $topright;
-  -moz-border-radius-bottomright:     $bottomright;
-  -moz-border-radius-bottomleft:      $bottomleft;
-  -moz-border-radius-topleft:         $topleft;
   border-top-right-radius:            $topright;
   border-bottom-right-radius:         $bottomright;
   border-bottom-left-radius:          $bottomleft;
   border-top-left-radius:             $topleft;
-  -moz-background-clip:               padding;
-  -webkit-background-clip:            padding-box;
   background-clip:                    padding-box;
 }
+
 @mixin shadow($shadow: 0 1px 3px rgba(0,0,0,.25), $mode: normal) {
   @if $mode == text {
-    -webkit-text-shadow:  $shadow;
-    -moz-text-shadow:     $shadow;
     text-shadow:          $shadow;
   }
   @else {
-    -webkit-box-shadow:  $shadow;
-    -moz-box-shadow:     $shadow;
     box-shadow:          $shadow;
   }
 }
+
 @mixin opacity($opacity: 40) {
   opacity:        $opacity / 100;
   filter:         "alpha(opacity=#{$opacity})";
-  -khtml-opacity: $opacity / 100;
-  -moz-opacity:   $opacity / 100;
 }
+
 @mixin trans($prop: all, $time: 300ms, $ease: ease-out) {
-  -webkit-transition:  $prop $time $ease;
-  -moz-transition:     $prop $time $ease;
-  -ms-transition:      $prop $time $ease;
-  -o-transition:       $prop $time $ease;
   transition:          $prop $time $ease;
 }
+
 @mixin rotate($rotate: 0) {
-  -webkit-transform: rotate($rotate +deg);
-  -moz-transform:    rotate($rotate +deg);
-  -ms-transform:     rotate($rotate +deg);
-  -o-transform:      rotate($rotate +deg);
   transform:         rotate($rotate +deg);
 }
+
 @mixin scale($scale: 1) {
-  -webkit-transform: scale($scale);
-  -moz-transform:    scale($scale);
-  -ms-transform:     scale($scale);
-  -o-transform:      scale($scale);
   transform:         scale($scale);
 }
+
 @mixin skew($skew: 0) {
-  -webkit-transform: skew($skew +deg);
-  -moz-transform:    skew($skew +deg);
-  -ms-transform:     skew($skew +deg);
-  -o-transform:      skew($skew +deg);
   transform:         skew($skew +deg);
 }
+
 @mixin translate($left: 0, $top: 0) {
-  -webkit-transform: translate($left +px, $top +px);
-  -moz-transform:    translate($left +px, $top +px);
-  -ms-transform:     translate($left +px, $top +px);
-  -o-transform:      translate($left +px, $top +px);
   transform:         translate($left +px, $top +px);
 }
+
 @mixin orient($orientation: landscape) {
   @media (orientation : $orientation) {
     @content;
   }
 }
+
 @mixin devicewidth($minus: 0px) {
   @media screen and (max-width: 1024px) {
     width: (1024px - $minus);
@@ -142,6 +93,7 @@
     width: (768px - $minus);
   }
 }
+
 @mixin gradient($from: white, $to: black, $height: 100%, $pie:"false") {
   background-color: $to;
   background-image: -webkit-gradient(linear, left top, left bottom, from($from), to($to));
@@ -155,11 +107,9 @@
     -pie-background: linear-gradient(90deg, $from,$to);
   }
   background-repeat: repeat-x;
-  -webkit-background-size: 100% $height;
-  -moz-background-size: 100% $height;
-  -o-background-size: 100% $height;
   background-size: 100% $height;
 }
+
 @mixin grid($cell: 2, $gutter: 20px, $border: false, $border-color: #ccc) {
   width: 100%;
   @include box;
@@ -170,7 +120,7 @@
     padding: 0px;
     @include box;
     &:not(:last-of-type) {
-      padding-right: ($gutter / 2);
+          padding-right: ($gutter / 2);
     }
     &:not(:first-of-type) {
       padding-left: ($gutter / 2);
@@ -183,6 +133,7 @@
     }
   }
 }
+
 @mixin scroll-hint($bgcolor: black) {
   /* from http://dabblet.com/gist/2462915 */
   overflow: auto;
@@ -212,27 +163,28 @@
 
 @mixin reset($type: all) {
   @if $type == margin {
-    margin:       0px !important;
-  }
-  @else if $type == padding {
-    padding:       0px !important;
-  }
-  @else if $type == border {
-    border:       none;
-  }
-  @else if $type == bg {
-    background:   transparent;
-  }
-  @else if $type == list {
-    list-style: none;
-  }
-  @else {
-    margin:       0px !important;
-    padding:       0px !important;
-    border:       none;
-    background:   transparent;
-  }
+      margin:       0px !important;
+    }
+    @else if $type == padding {
+      padding:       0px !important;
+    }
+    @else if $type == border {
+      border:       none;
+    }
+    @else if $type == bg {
+      background:   transparent;
+    }
+    @else if $type == list {
+      list-style: none;
+    }
+    @else {
+      margin:       0px !important;
+      padding:       0px !important;
+      border:       none;
+      background:   transparent;
+    }
 }
+
 /*
 from
 http://codepen.io/chriscoyier/blog/some-mini-sass-mixins-i-like
@@ -244,28 +196,32 @@ http://codepen.io/chriscoyier/blog/some-mini-sass-mixins-i-like
   width: 100%;
   height: 100%;
 }
+
 @mixin centerer {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
 @mixin word-wrap {
   word-break:     break-word;
-  -webkit-hyphens: auto;
-  -moz-hyphens:    auto;
   hyphens:         auto;
 }
+
 @mixin ellipsis {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
+
+// not accessible :(
 @mixin hide-text {
   font: 0/0 a;
   text-shadow: none;
   color: transparent;
 }
+
 @mixin clear {
   zoom: 1;
   &:before,
@@ -277,59 +233,40 @@ http://codepen.io/chriscoyier/blog/some-mini-sass-mixins-i-like
     clear:  both;
   }
 }
+
+@mixin micro-clearfix {
+  &:after {
+    clear: both;
+    content: ' ';
+    display: block;
+  }
+}
+
 @mixin cover {
-  -webkit-background-size: cover !important;
-  -moz-background-size: cover !important;
-  -o-background-size: cover !important;
-  background-size: cover !important;
+    background-size: cover !important;
 }
+
 @mixin only($only: mac) {
-  html.#{$only} & {
-    @content
-  }
+      html.#{$only} & {
+        @content
+      }
 }
+
 @mixin unless($unless: mac) {
-  html:not(.#{$unless}) & {
-    @content
-  }
+      html:not(.#{$unless}) & {
+        @content
+      }
 }
-@mixin font-face(
-  $title,
-  $file: $title,
-  $weight: normal,
-  $style: normal,
-  $path: '../fonts/',
-  $stretch : normal,
-  $text-transform: normal) {
-  @font-face {
-    font-family: '#{$title}';
-    src: url('#{$path}#{$file}.eot');
-    src: url('#{$path}#{$file}.eot?#iefix') format('embedded-opentype'),
-    url('#{$path}#{$file}.woff') format('woff'),
-    url('#{$path}#{$file}.ttf') format('truetype'),
-    url('#{$path}#{$file}.svg##{$title}') format('svg');
-    font-weight: $weight;
-    font-style: $style;
-    font-stretch: $stretch;
-    text-transform: $text-transform;
-  }
-  // Chrome for Windows rendering fix: http://www.adtrak.co.uk/blog/font-face-chrome-rendering/
-   @media screen and (-webkit-min-device-pixel-ratio: 0) {
-     @font-face {
-       font-family: $title;
-         src: url('#{$path}+#{$file}.svg##{$title}') format('svg');
-     }
-   }
-}
+
 @mixin media($device: ipad, $scope: strict, $variation: mini) {
   @if $device == "ipad" {
-    @if $scope == "portrait" {
+    @if $scope == "min" {
       @media only screen and
       (max-width : 768px) {
        @content
      }
    }
-   @else if $scope == "landscape" {
+   @else if $scope == "all" {
     @media only screen and
     (max-width : 1024px) {
      @content
@@ -344,13 +281,13 @@ http://codepen.io/chriscoyier/blog/some-mini-sass-mixins-i-like
 }
 }
 @else if $device == "iphone5" {
-  @if $scope == "portrait" {
+  @if $scope == "min" {
     @media only screen and
     (max-width : 320px) {
      @content
    }
  }
- @else if $scope == "landscape" {
+ @else if $scope == "all" {
   @media only screen and
   (max-width : 568px) {
    @content
@@ -365,13 +302,13 @@ http://codepen.io/chriscoyier/blog/some-mini-sass-mixins-i-like
 }
 }
 @else if $device == "iphone6" {
-  @if $scope == "portrait" {
+  @if $scope == "min" {
     @media only screen and
     (max-width : 375px) {
      @content
    }
  }
- @else if $scope == "landscape" {
+ @else if $scope == "all" {
   @media only screen and
   (max-width : 667px) {
    @content
@@ -386,13 +323,13 @@ http://codepen.io/chriscoyier/blog/some-mini-sass-mixins-i-like
 }
 }
 @else if $device == "iphone4" {
-  @if $scope == "portrait" {
+  @if $scope == "min" {
     @media only screen and
     (max-width : 320px) {
      @content
    }
  }
- @else if $scope == "landscape" {
+ @else if $scope == "all" {
   @media only screen and
   (max-width : 480px) {
    @content
@@ -407,8 +344,6 @@ http://codepen.io/chriscoyier/blog/some-mini-sass-mixins-i-like
 }
 }
 @else {
-  @media screen and ($scope +-width: $device) {
-    @content
-  }
+
 }
 }

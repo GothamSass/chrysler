@@ -1,37 +1,31 @@
-// brand variables
-// make sure most of your rules point to that
+// Main Manifest
+// ==============
 
-// Fonts
-$font-title: "HelveticaNeue-Light", "Helvetica Neue Light",
-"Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-$font-text: $font-title;
-$font-mono: "Courier New", Courier, monospace;
-$font-icon: FontAwesome;
-
-// Gap
-$gap-1: 10px;
-
-// Colors
-$color-0: white;
-$color-1: #BF699A;
-$color-2: #666;
-$color-3: #ccc;
-$color-4: green;
-$color-5: yellow;
-
-// universal rules (try not to change it, and update often)
-
-@import 'vendors/normalize';
+@import 'vendors/normalize'; // @@@ use via bower
+@import 'base/fonts.config';
+@import 'base/colors.config';
+@import 'base/scale.config';
 @import 'base';
-@import 'mixins';
-@import 'colors';
-@import 'colortest';
-@import 'animate';
 
-// project rules (feel free to edit)
+
+// Plugins
+// -------
+@import 'plugins/mixins'; // @@@ abstract this out into smaller helper files
+@import 'plugins/animate';
+@import 'plugins/colors';
+@import 'plugins/colortest';
+
+
+
+// Layout
+// ------
 
 @import 'layout';
-@import 'team';
-@import 'form';
-@import 'buttons';
-@import 'typography';
+
+// Components
+// ----------
+@import 'components/team';
+@import 'components/form';
+@import 'components/buttons';
+
+
