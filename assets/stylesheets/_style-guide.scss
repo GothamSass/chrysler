@@ -7,36 +7,49 @@
 
 }
 
+// Needs to be Refactored in mixins - AO
 .colors ul {
   li {
       text-align: center;
       color:white;
     &:first-child{background:$c-prime;
       &:after{
-        //content: "#{$c-prime}";
-        //font-size: 42px;
-        color: white;
+        content: "$c-prime \A #{$c-prime}";
+        white-space: pre;
+        font-size: 1.2em;
+        color: $c-white;
       }
     }
     &:nth-child(2){background:$c-sec;
-      &:after{
-        //content: "#{$c-sec}";
-        //font-size: 42px;
-        color: white;
+       &:after{
+        content: "$c-sec \A #{$c-sec}";
+        white-space: pre;
+        font-size: 1.2em;
+        color: $c-white;
       }
     }
     &:nth-child(3){background:$c-tert;
-      &:after{
-        //content: "#{$c-tert}";
-        //font-size: 42px;
-        color: white;
+       &:after{
+        content: "$c-tert \A #{$c-tert}";
+        white-space: pre;
+        font-size: 1.2em;
+        color: $c-white;
       }
     }
     &:nth-child(4){background:$c-quat;
-      &:after{
-        //content: "#{$c-quat}";
-        //font-size: 42px;
-        color: white;
+       &:after{
+        content: "$c-quat \A #{$c-quat}";
+        white-space: pre;
+        font-size: 1.2em;
+        color: $c-white;
+      }
+    }
+     &:nth-child(5){background:$c-qui;
+       &:after{
+        content: "$c-qui \A #{$c-qui}";
+        white-space: pre;
+        font-size: 1.2em;
+        color: $c-white;
       }
     }
   }
@@ -44,4 +57,10 @@
 
 .button ul {
   @include grid(50%);
+}
+
+.icon {
+  max-width: 4em;
+  margin: 0 auto;
+  display: block;
 }

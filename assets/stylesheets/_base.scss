@@ -5,10 +5,11 @@ $f-code: 'callunaregular', Helvetica, sans-serif;
 
 //colors
 $c-prime:#cc6699;
-$c-sec:#6b717f;
-$c-tert:#d2e1dd;
-$c-quat:#808c99;
-
+$c-sec:#036;
+$c-tert:#6b717f;
+$c-quat:#d2e1dd;
+$c-qui:#808c99;
+$c-white: #ffffff;
 
 $g1: 10px;                       // base gap
 $c0: white;                      // bg color
@@ -21,7 +22,7 @@ $c5: yellow;                     // color
 /* base rules */
 
 h1, h2, h3, h4 {
-	color: $c-sec;
+	color: $c-tert;
 	font-weight: normal;
 }
 body {
