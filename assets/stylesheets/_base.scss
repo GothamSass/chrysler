@@ -1,69 +1,30 @@
-$f1: "HelveticaNeue-Light",
-"Helvetica Neue Light",
-"Helvetica Neue",
-Helvetica, Arial,
-"Lucida Grande", sans-serif;                     // title font
-$f2: $f1;       // text font
-$f3: "Courier New", Courier, monospace;  // code font
-$g1: 10px;                       // base gap
-$c0: white;                      // bg color
-$c1: #333;                       // text color
-$c2: #666;          // accent color
-$c3: blue;                       // color 3
-$c4: green;                      // color 4
-$c5: yellow;                     // color 5
-
-/* gap variations */
-
-$g2: ($g1 * 2);
-$g3: ($g1 * 3);
-$g4: ($g1 * 4);
-$g5: ($g1 * 5);
-$g6: ($g1 * 6);
-$g7: ($g1 * 7);
-$g8: ($g1 * 8);
-$g9: ($g1 * 9);
-$g10: ($g1 * 10);
-$g11: ($g1 * 11);
-$g12: ($g1 * 12);
-
-
-/* breakpoints */
-
-$iphone5-min:      320px;
-$iphone6-min:      375px;
-$iphone2G4S-max:   480px;
-$iphone6plus-min:  540px;
-$iphone5-max:      568px;
-$iphone6-max:      667px;
-$ipad-min:         768px;
-$iphone6plus-max:  960px;
-$screen-lg:        1200px;
-$ipad-max:         1024px;
-$device:           $ipad-max;
-
-/* base rules */
+// base rules
 
 h1, h2, h3, h4 {
-	font-family: $f1;
-	color: $c2;
-	background: purple;
+	font-family: $font-text;
+	color: $color-2;
 }
+
 body {
-	font-family: $f2;
+  font-family: $font-text;
+  background-color: $color-0;
 }
+
 :focus {
-	outline-color: transparent;
-	outline-style: none;
+  outline-color: transparent;
+  outline-style: none;
 }
+
 a {
-	color: $c2;
-	@include trans;
+  color: $color-2;
+  transition: all 300ms ease-out;
 }
+
 h1, h2, h3, h4 {
-	$font-family: $f1;
-	font-weight: normal;
+  $font-family: $font-title;
+  font-weight: normal;
 }
+
 .hidden {
-	display: none;
+  display: none;
 }

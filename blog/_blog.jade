@@ -1,0 +1,31 @@
+- console.log('author[1]', properties.author )
+
+article.h-entry
+  a.u-url(href= "")
+    h2.p-name= properties.name
+  p
+    | Published by
+    =' '
+
+    each author, index in properties.author
+      a.p-author.h-card(href= properties.author[index].properties.url)= properties.author[index].properties.name
+      =' '
+
+    =' '
+    time.dt-published= properties.published
+
+
+  .e-content
+    != yield
+
+  .p-category
+    = properties.category[0].category
+    =' '
+    = properties.category[0].tags
+
+
+  h3 About the Author
+  each author, index in properties.author
+    p
+      a.p-author.h-card(href= properties.author[index].properties.url)= properties.author[index].properties.name
+    p= properties.author[index].properties.description
