@@ -13,29 +13,39 @@ for event, slug in public.events.event._data
       if event.venue.address_2 !== null
         span.venue-address-2 #{event.venue.address_2}
       span.venue-city #{event.venue.city}
-    .speakers
-      each speaker, index in event.speakers
-        .speaker
-          span.speaker-name #{event.speakers[index].name}
-
-            if event.speakers[index].photo.path !== null
-              if event.speakers[index].photo.alt === null
-                alt = ''
-              else
-                alt = event.speakers[index].photo.alt
-              img(src="#{event.speakers[index].photo.path}", alt="#{alt}")
-            else
-
-          p.bio #{event.speakers[index].bio}
-
-          .social
-            span.twitter #{event.speakers[index].social.twitter}
-            span.github #{event.speakers[index].social.github}
-
 
     //- content
     p.content
       != yield
+
+    .speakers
+      each speaker, index in event.speakers
+        .speaker
+          h3.talk-title #{event.speakers[index].title}
+          p.talk-description #{event.speakers[index].description}
+          span.speaker-name #{event.speakers[index].name}
+
+          if event.speakers[index].photo.path !== null
+            if event.speakers[index].photo.alt === null
+              alt = ''
+            else
+              alt = event.speakers[index].photo.alt
+            img(src="#{event.speakers[index].photo.path}", alt="#{alt}")
+          else
+
+          p.bio #{event.speakers[index].bio}
+          .social
+            span.twitter #{event.speakers[index].social.twitter}
+            span.github #{event.speakers[index].social.github}
+
+    .sponsors
+      h4 Sponsors
+      each sponsor, delta in event.sponsors
+        .sponsor
+          span.sponsor-name: a(href="#{event.sponsors[delta].url}")= event.sponsors[delta].name
+
+
+
 
 
 
