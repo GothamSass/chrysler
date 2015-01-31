@@ -1,0 +1,47 @@
+{
+  "results": [
+  {
+    "status": "past",
+    "visibility": "public",
+    "maybe_rsvp_count": 0,
+      "venue": {
+        "id": 5081682,
+        "zip": "10013",
+        "lon": -74.001755,
+        "repinned": false,
+        "name": "New Work City",
+        "state": "NY",
+        "address_1": "412 Broadway (2nd Floor)",
+        "lat": 40.71891,
+        "city": "New York",
+        "country": "us"
+      },
+    "id": "59606862",
+    "utc_offset": -14400000,
+    "time": 1334703600000,
+    "waitlist_count": 0,
+    "announced": true,
+    "updated": 1338341260000,
+    "yes_rsvp_count": 46,
+    "created": 1333777215000,
+    "event_url": "http://www.meetup.com/gothamsass/events/59606862/",
+    "description": "<p>CSS Preprocessors <a href=\"http://environmentsforhumans.com/2012/css-summit/\">are</a> <a href=\"http://www.alistapart.com/articles/getting-started-with-sass/\">all</a> <a href=\"http://jeffcroft.com/blog/2012/jan/31/on-css-preprocessors/\">the rage</a> these days and they should be. Designing and developing web based user experiences is growing both more challenge and more exciting. CSS, our trusty friend, is inflexible, static, and unwieldy for today's needs. CSS Preprocessors fill the void and open up a whole new arsenal of tools for designers and developers.</p> <p> </p> <p>So whether you are an advanced user, beginner, or <a href=\"http://nathanborror.com/posts/2009/nov/30/sass-isnt-me/\">sceptic</a>, come to the first meetup for NYC Sass/Compass user group. We are planning on keeping this a monthly meeting and will have the next two at New Work City.</p> <p> </p> <p>We have an open format planned for the first meeting. We want to cover what you want, so let us know. We'll review the suggestions and post the format at the end of next week. And while ideally this kickoff should have you convinced why we pick Sass over LESS, we will be happy to have a lightening talk on the subject.</p> <p> </p> <p>Future meetings will eventual evolve to more structured presentation format. If you are using Sass &amp; Compass and want to talk about your work and approach, please reach out to CS.</p> <p>If there's a better day/date to consider for next month's meetup, let us know.</p> <p> </p> <p><b>Speaker list:</b></p> <p>Scott Kellum wrote Sass Modular Scale, contributes to Sassy Math, and is currently working on Singularity. Scott works at Roger Black Studio on Treesaver. Mason Wendell is a Coding Designer. He's the creator behind Survival Kit, a contributor to TheSassWay and runs the Philadelphia Sass Meetup. Mason is Creative Director at Zivtech. Sam Richard is the creator of Aura, A Sass+Compass based Responsive Website framework built with Modular Scale and Susy. He's a contributor to Sassy Math. Sam works at WorkHabit Claudina Sarahe is an independent consultant currently working with web based startups on product design and development. She speaks on Sass and Compass and uses it for all her work. She recently completed the new Studio Daniel Libeskind. <b><br/></b></p>",
+    "name": "Syntactic Awesomeness! Debut of NYC Sass & Compass Monthly Meetup",
+    "headcount": 0,
+    "rating": {
+      "count": 14,
+      "average": 4.929999828338623
+      },
+    "group": {
+      "id": 3610272,
+      "created": 1333597165000,
+      "group_lat": 40.720001220703125,
+      "name": "New York Sass & Compass Meetup",
+      "group_lon": -73.98999786376953,
+      "join_mode": "open",
+      "urlname": "gothamsass",
+      "who": "Sasstronauts"
+    }
+  }
+  ]
+}
