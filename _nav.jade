@@ -1,13 +1,16 @@
-nav(role="navigation", class="banner")
+nav.nav.main-nav(role="navigation", class="banner")
 
-  ul.nav.nav--main
-    li
-      a.logo(href="/") Home
-    li
-      a(href="/about") About
+  a.logo(href="/") GothamSass
+  ul
+    //- li
+    //-   a(href="/about") About
     li
       a(href="/events") Events
     li
-      a(href="/resources") Resources <i class="fa fa-rss"></i>
+      a(href="/resources") Resources
     li
       a(href="/sponsors") Sponsors
+    li
+      a.icon(href="/rss")
+        i.fa.fa-rss
+
