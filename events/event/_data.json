@@ -12,20 +12,22 @@
       "city": "New York"
     },
     "sponsors": {
-      "name": "Pivotal Labs",
-      "description": "Short description about sponsor",
-      "logo": null,
-      "url": "http://pivotal.com",
-      "social": {
-        "twitter": "pivotalnyc",
-        "hash": "#pivotalrocks"
+      "sponsor-1": {
+        "name": "Pivotal Labs",
+        "description": "Short description about sponsor",
+        "logo": null,
+        "url": "http://pivotal.com",
+        "social": {
+          "twitter": "pivotalnyc",
+          "hash": "#pivotalrocks"
+        }
       }
     },
     "speakers": {
       "speaker-1": {
         "name": "Chris Eppstein",
         "photo": {
-          "path": "test",
+          "path": null,
           "alt": null
         },
         "bio": "I'm the creator of [compass-style](compass-style.org)Compass, a stylesheet authoring framework and I'm on the core team of Sass — the stylesheet syntax upon which Compass is built. I maintain about a dozen less well known ruby libraries and rails plugins on github, and am an active contributor of patches to the many open source projects that I use.",
@@ -47,8 +49,8 @@
           "twitter": "chriseppstein",
           "github": "chriseppstein"
         },
-        "title": null,
-        "description": null
+        "title": "title of the speaker's presentation",
+        "description": "this is a longer description for a speaker's topic if we have multiple speakers"
       }
     }
   }

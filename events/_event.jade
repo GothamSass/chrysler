@@ -34,7 +34,6 @@ for event, slug in public.events.event._data
           else
 
           p.bio #{event.speakers[index].bio}
-
           .social
             span.twitter #{event.speakers[index].social.twitter}
             span.github #{event.speakers[index].social.github}
@@ -44,6 +43,3 @@ for event, slug in public.events.event._data
       each sponsor, delta in event.sponsors
         .sponsor
           span.sponsor-name: a(href="#{event.sponsors[delta].url}")= event.sponsors[delta].name
-
-
-
