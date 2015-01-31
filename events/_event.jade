@@ -2,11 +2,13 @@
 for event, slug in public.events.event._data
 
   if current.source === slug
+
     h1 #{event.name}
     time.dt-start(datetime="2013-06-30 12:00")
       sup #{event.start_date}
     time.dt-end(datetime="2013-06-30 18:00")
       sup #{event.end_date}
+
     .venue
       span.name #{event.venue.name}
       span.venue-address-1 #{event.venue.address_1}
