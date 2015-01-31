@@ -12,44 +12,44 @@
   li {
       text-align: center;
       color:white;
-    &:first-child{background:$c-prime;
+    &:first-child{background:$color-prime;
       &:after{
-        content: "$c-prime \A #{$c-prime}";
+        content: "$color-prime \A #{$color-prime}";
         white-space: pre;
         font-size: 1.2em;
-        color: $c-white;
+        color: $color-white;
       }
     }
-    &:nth-child(2){background:$c-sec;
+    &:nth-child(2){background:$color-sec;
        &:after{
-        content: "$c-sec \A #{$c-sec}";
+        content: "$color-sec \A #{$color-sec}";
         white-space: pre;
         font-size: 1.2em;
-        color: $c-white;
+        color: $color-white;
       }
     }
-    &:nth-child(3){background:$c-tert;
+    &:nth-child(3){background:$color-tert;
        &:after{
-        content: "$c-tert \A #{$c-tert}";
+        content: "$color-tert \A #{$color-tert}";
         white-space: pre;
         font-size: 1.2em;
-        color: $c-white;
+        color: $color-white;
       }
     }
-    &:nth-child(4){background:$c-quat;
+    &:nth-child(4){background:$color-quat;
        &:after{
-        content: "$c-quat \A #{$c-quat}";
+        content: "$color-quat \A #{$color-quat}";
         white-space: pre;
         font-size: 1.2em;
-        color: $c-white;
+        color: $color-white;
       }
     }
-     &:nth-child(5){background:$c-qui;
+     &:nth-child(5){background:$color-qui;
        &:after{
-        content: "$c-qui \A #{$c-qui}";
+        content: "$color-qui \A #{$color-qui}";
         white-space: pre;
         font-size: 1.2em;
-        color: $c-white;
+        color: $color-white;
       }
     }
   }

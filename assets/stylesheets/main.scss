@@ -1,12 +1,30 @@
-// Libraries
-@import 'vendors/normalize'; // TODO import this via bower
-@import 'base/fonts';
+// Main Manifest
+// ==============
 
-//Base
-@import 'mixins';
+@import 'vendors/normalize'; // @@@ use via bower
+@import 'base/fonts.config';
+@import 'base/colors.config';
+@import 'base/scale.config';
+
+
+// Plugins
+// -------
+@import 'plugins/mixins'; // @@@ abstract this out into smaller helper files
+@import 'plugins/animate';
+@import 'plugins/colors';
+@import 'plugins/colortest';
+
 @import 'base';
 
-//Others
+
+// Layout
+// ------
+
 @import 'layout';
-@import 'modules';
-@import 'style-guide';
+
+// Components
+// ----------
+@import 'components/team';
+@import 'components/form';
+@import 'components/buttons';
+
