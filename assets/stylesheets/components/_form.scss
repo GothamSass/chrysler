@@ -1,10 +1,15 @@
-label, input.text, select, textarea {
-display: block;
+label,
+.text,
+select,
+textarea {
+  display: block;
 }
 
-input.text, select, textarea {
-  width: 100%;
+.text,
+select,
+textarea {
   padding: $gap-1;
+  width: 100%;
 }
 
 .input {
@@ -20,16 +25,18 @@ form .grid {
   label {
     padding: 5px 0;
   }
-  p.sig {
+
+  .sig {
     margin-left: 25px;
   }
 }
 
-input[type="radio"], inputinput[type="checkbox"] {
+[type="radio"],
+[type="checkbox"] {
   margin-left: 5px;
 }
 
-input[type="submit"] {
-   padding: $gap-1;
-   float: right;
+[type="submit"] {
+  float: right;
+  padding: $gap-1;
 }

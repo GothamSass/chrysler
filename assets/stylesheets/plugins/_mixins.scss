@@ -1,5 +1,5 @@
 @mixin size($width: 5px, $height: 5px) {
-  width:  $width;
+  width: $width;
   height: $height;
 }
 
@@ -8,15 +8,16 @@
 }
 
 @mixin placeholder {
-  &.placeholder                { @content }
+  &.placeholder { @content }
   &:focus::-webkit-input-placeholder {
-    transition: all 0.5s 0.1s ease;
-    text-indent: -50%;
     opacity: 0;
+    text-indent: -50%;
+    transition: all .5s .1s ease;
+
   }
 }
 
-@mixin filter($filter: blur,$value: 10px) {
+@mixin filter($filter: blur, $value: 10px) {
   filter: $filter+unquote('(#{$value})');
 }
 
@@ -25,49 +26,48 @@
 }
 
 @mixin radius($radius: 5px) {
-  border-radius:         $radius;
+  border-radius: $radius;
 }
 
 @mixin radius-custom($topleft: 5px, $topright: 5px, $bottomright: 5px, $bottomleft: 5px) {
-  border-top-right-radius:            $topright;
-  border-bottom-right-radius:         $bottomright;
-  border-bottom-left-radius:          $bottomleft;
-  border-top-left-radius:             $topleft;
-  background-clip:                    padding-box;
+  border-top-right-radius: $topright;
+  border-bottom-right-radius: $bottomright;
+  border-bottom-left-radius: $bottomleft;
+  border-top-left-radius: $topleft;
+  background-clip: padding-box;
 }
 
-@mixin shadow($shadow: 0 1px 3px rgba(0,0,0,.25), $mode: normal) {
+@mixin shadow($shadow: 0 1px 3px rgba(0, 0, 0, .25), $mode: normal) {
   @if $mode == text {
-    text-shadow:          $shadow;
-  }
-  @else {
-    box-shadow:          $shadow;
+    text-shadow: $shadow;
+  } @else {
+    box-shadow: $shadow;
   }
 }
 
 @mixin opacity($opacity: 40) {
-  opacity:        $opacity / 100;
-  filter:         "alpha(opacity=#{$opacity})";
+  opacity: $opacity / 100;
+  filter: 'alpha(opacity=#{$opacity})';
 }
 
 @mixin trans($prop: all, $time: 300ms, $ease: ease-out) {
-  transition:          $prop $time $ease;
+  transition: $prop $time $ease;
 }
 
 @mixin rotate($rotate: 0) {
-  transform:         rotate($rotate +deg);
+  transform: rotate($rotate +deg);
 }
 
 @mixin scale($scale: 1) {
-  transform:         scale($scale);
+  transform: scale($scale);
 }
 
 @mixin skew($skew: 0) {
-  transform:         skew($skew +deg);
+  transform: skew($skew +deg);
 }
 
 @mixin translate($left: 0, $top: 0) {
-  transform:         translate($left +px, $top +px);
+  transform: translate($left +px, $top +px);
 }
 
 @mixin orient($orientation: landscape) {
@@ -76,7 +76,7 @@
   }
 }
 
-@mixin devicewidth($minus: 0px) {
+@mixin devicewidth($minus: 0) {
   @media screen and (max-width: 1024px) {
     width: (1024px - $minus);
   }
@@ -94,7 +94,7 @@
   }
 }
 
-@mixin gradient($from: white, $to: black, $height: 100%) {
+@mixin gradient($from: #fff, $to: #000, $height: 100%) {
   background-color: $to;
   background-image: linear-gradient($from, $to);
   background-repeat: repeat-x;
@@ -105,45 +105,47 @@
   width: 100%;
   @include box;
   @include clear;
-  & > .cell, & > li, & > dt, & > section {
-    float: left;
-    width: (100% / $cell);
-    padding: 0px;
+  > .cell,
+  & > li,
+  & > dt,
+  & > section {
     @include box;
+    float: left;
+    padding: 0;
+    width: (100% / $cell);
+
     &:not(:last-of-type) {
-          padding-right: ($gutter / 2);
+      padding-right: ($gutter / 2);
     }
+
     &:not(:first-of-type) {
       padding-left: ($gutter / 2);
     }
+
     @media screen and (max-width: 767px) {
-      width: 100% !important;
+      @include reset;
       display: block;
       float: none;
-      @include reset;
+      width: 100% !important;
     }
   }
 }
 
-@mixin scroll-hint($bgcolor: black) {
-  /* from http://dabblet.com/gist/2462915 */
+/* from http://dabblet.com/gist/2462915 */
+@mixin scroll-hint($bgcolor: #000) {
   overflow: auto;
-  background:
-  /* Shadow covers */
-  linear-gradient($bgcolor 30%, rgba(255,255,255,0)),
-  linear-gradient(rgba(255,255,255,0), $bgcolor 90%) 0 100%,
+  background: linear-gradient($bgcolor 30%, rgba(255, 255, 255, 0)),
+  linear-gradient(rgba(255, 255, 255, 0), $bgcolor 90%) 0 100%,
 
   /* Shadows */
-  radial-gradient(50% 0, farthest-side, rgba(0,0,0,.2), rgba(0,0,0,0)),
-  radial-gradient(50% 100%,farthest-side, rgba(0,0,0,.2), rgba(0,0,0,0)) 0 100%;
-  background:
-  /* Shadow covers */
-  linear-gradient($bgcolor 30%, rgba(255,255,255,0)),
-  linear-gradient(rgba(255,255,255,0), $bgcolor 90%) 0 100%,
+  radial-gradient(50% 0, farthest-side, rgba(0, 0, 0, .2), rgba(0, 0, 0, 0)),
+  radial-gradient(50% 100%, farthest-side, rgba(0, 0, 0, .2), rgba(0, 0, 0, 0)) 0 100%;
+  background: linear-gradient($bgcolor 30%, rgba(255, 255, 255, 0)),
+  linear-gradient(rgba(255, 255, 255, 0), $bgcolor 90%) 0 100%,
 
   /* Shadows */
-  radial-gradient(farthest-side at 50% 0, rgba(0,0,0,.5), rgba(0,0,0,0)),
-  radial-gradient(farthest-side at 50% 100%, rgba(0,0,0,.5), rgba(0,0,0,0)) 0 100%;
+  radial-gradient(farthest-side at 50% 0, rgba(0, 0, 0, .5), rgba(0, 0, 0, 0)),
+  radial-gradient(farthest-side at 50% 100%, rgba(0, 0, 0, .5), rgba(0, 0, 0, 0)) 0 100%;
   background-repeat: no-repeat;
   background-color: $bgcolor;
   background-size: 100% 40px, 100% 40px, 100% 14px, 100% 14px;
@@ -154,25 +156,20 @@
 
 @mixin reset($type: all) {
   @if $type == margin {
-      margin:       0px !important;
-    }
-    @else if $type == padding {
-      padding:       0px !important;
-    }
-    @else if $type == border {
-      border:       none;
-    }
-    @else if $type == bg {
-      background:   transparent;
-    }
-    @else if $type == list {
-      list-style: none;
-    }
-    @else {
-      margin:       0px !important;
-      padding:       0px !important;
-      border:       none;
-      background:   transparent;
+    margin: 0 !important;
+  } @else if $type == padding {
+    padding: 0 !important;
+  } @else if $type == border {
+    border: 0;
+  } @else if $type == bg {
+    background: transparent;
+  } @else if $type == list {
+    list-style: none;
+  } @else {
+    background: transparent;
+    border: 0;
+    margin: 0 !important;
+    padding: 0 !important;
     }
 }
 
@@ -196,8 +193,8 @@ http://codepen.io/chriscoyier/blog/some-mini-sass-mixins-i-like
 }
 
 @mixin word-wrap {
-  word-break:     break-word;
-  hyphens:         auto;
+  word-break: break-word;
+  hyphens: auto;
 }
 
 @mixin ellipsis {
@@ -215,13 +212,15 @@ http://codepen.io/chriscoyier/blog/some-mini-sass-mixins-i-like
 
 @mixin clear {
   zoom: 1;
+
   &:before,
   &:after {
-    display:  table;
-    content:  "";
+    content: '';
+    display: table;
   }
+
   &:after {
-    clear:  both;
+    clear: both;
   }
 }
 
@@ -234,107 +233,102 @@ http://codepen.io/chriscoyier/blog/some-mini-sass-mixins-i-like
 }
 
 @mixin cover {
-    background-size: cover !important;
+  background-size: cover !important;
 }
 
 @mixin only($only: mac) {
-      html.#{$only} & {
-        @content
-      }
+  html.#{$only} & {
+    @content
+  }
 }
 
 @mixin unless($unless: mac) {
-      html:not(.#{$unless}) & {
-        @content
+  html:not(.#{$unless}) & {
+    @content
       }
 }
 
 @mixin media($device: ipad, $scope: strict, $variation: mini) {
-  @if $device == "ipad" {
-    @if $scope == "min" {
+  @if $device == 'ipad' {
+    @if $scope == 'min' {
       @media only screen and
       (max-width : 768px) {
-       @content
+        @content
      }
    }
-   @else if $scope == "all" {
-    @media only screen and
+    @else if $scope == 'all' {
+      @media only screen and
     (max-width : 1024px) {
-     @content
+        @content
+   }
+    } @else {
+      @media only screen and
+      (min-device-width : 768px) and
+      (max-device-width : 1024px) {
+        @content
+     }
+}
+  } @else if $device == 'iphone5' {
+    @if $scope == 'min' {
+      @media only screen and
+        (max-width : 320px) {
+        @content
+       }
+     }
+    @else if $scope == 'all' {
+      @media only screen and
+      (max-width : 568px) {
+        @content
+     }
+}
+    @else {
+      @media only screen and
+      (min-device-width : 320px) and
+      (max-device-width : 568px) {
+        @content
+     }
+    }
+  } @else if $device == 'iphone6' {
+    @if $scope == 'min' {
+      @media only screen and
+      (max-width : 375px) {
+        @content
+     }
+   }
+    @else if $scope == 'all' {
+      @media only screen and
+     (max-width : 667px) {
+        @content
+ }
+}
+    @else {
+      @media only screen and
+      (min-device-width : 375px) and
+      (max-device-width : 667px) {
+        @content
+     }
+}
+  } @else if $device == 'iphone4' {
+    @if $scope == 'min' {
+      @media only screen and
+     (max-width : 320px) {
+        @content
    }
  }
- @else {
-  @media only screen and
-  (min-device-width : 768px) and
-  (max-device-width : 1024px) {
-   @content
- }
-}
-}
-@else if $device == "iphone5" {
-  @if $scope == "min" {
-    @media only screen and
-    (max-width : 320px) {
-     @content
-   }
- }
- @else if $scope == "all" {
-  @media only screen and
-  (max-width : 568px) {
-   @content
- }
-}
-@else {
-  @media only screen and
-  (min-device-width : 320px) and
-  (max-device-width : 568px) {
-   @content
- }
-}
-}
-@else if $device == "iphone6" {
-  @if $scope == "min" {
-    @media only screen and
-    (max-width : 375px) {
-     @content
-   }
- }
- @else if $scope == "all" {
-  @media only screen and
-  (max-width : 667px) {
-   @content
- }
-}
-@else {
-  @media only screen and
-  (min-device-width : 375px) and
-  (max-device-width : 667px) {
-   @content
- }
-}
-}
-@else if $device == "iphone4" {
-  @if $scope == "min" {
-    @media only screen and
-    (max-width : 320px) {
-     @content
-   }
- }
- @else if $scope == "all" {
-  @media only screen and
+    @else if $scope == 'all' {
+      @media only screen and
   (max-width : 480px) {
-   @content
+        @content
  }
 }
-@else {
-  @media only screen and
-  (min-device-width : 320px) and
-  (max-device-width : 480px) {
-   @content
+    @else {
+      @media only screen and
+        (min-device-width : 320px) and
+        (max-device-width : 480px) {
+        @content
  }
 }
-}
-@else {
+  } @else {
 
 }
 }

@@ -1,3 +1,5 @@
+//- - var m = moment().format();
+
 article.h-entry
   a.u-url(href= "")
     h2.p-name= properties.name
@@ -10,8 +12,7 @@ article.h-entry
       =' '
 
     =' '
-    time.dt-published= properties.published
-
+    time.dt-published = moment(properties.Published).toString()
 
   .e-content
     != yield

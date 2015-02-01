@@ -36,13 +36,13 @@
     @return complement($color);
   }
   @if $change == 2 {
-    @return hsl(hue(complement($color)),saturation($color),70);
+    @return hsl(hue(complement($color)), saturation($color), 70);
   }
   @if $change == 3 {
-    @return hsl(hue($color),saturation($color),30);
+    @return hsl(hue($color), saturation($color), 30);
   }
   @if $change == 4 {
-   @return hsl(hue($color),saturation($color),70);
+    @return hsl(hue($color), saturation($color), 70);
  }
 
 }
