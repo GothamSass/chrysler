@@ -1,3 +1,4 @@
+h2 Upcoming Events
 
 for event, slug in public.events.event._data
   if event.layout !== false
@@ -9,3 +10,11 @@ for event, slug in public.events.event._data
         time.dt-end(datetime="2013-06-30 18:00")
           sup #{event.end_date}
         span.p-location #{event.venue.name}
+
+
+h2 Past Events
+
+for event in public.events.past._data.results
+  .gotham-sass--event
+    h3= event.name
+    div !{event.description}
