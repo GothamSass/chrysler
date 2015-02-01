@@ -5,7 +5,7 @@ block main
     != partial('_nav')
 
     main.content
-      if current.path[0] === "index"
+      if current.path[1] === "index" || current.source === "index"
         != yield
 
       else
