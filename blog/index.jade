@@ -6,7 +6,7 @@ for post, slug in public.blog.posts._data
   if post.layout !== false
     article.h-entry
       a.u-url(href= "#{ post.properties.permalink[0].url }")
-        h1.p-name= post.properties.name
+        h2.p-name= post.properties.name
       p
         | Published by
         =' '

@@ -1,0 +1,46 @@
+nav {
+  max-width: 60em;
+  margin: 0 auto;
+
+  .logo{
+    width: 8em;
+  }
+}
+
+
+nav ul {
+  opacity: 0.5;
+  margin-top: 1em;
+  background: $color-quat;
+  display: inline-flex;
+  float: right;
+  padding: 0.5em;
+  border-radius: 3px;
+
+
+  &:hover{
+     opacity: 1;
+  }
+  li{
+    display: inline;
+    margin-right:1em;
+
+    &:last-child{
+      margin-right:0em;
+    }
+
+    a {
+      color: $color-tert;
+      text-decoration:none;
+
+      &:hover {
+        color: $color-prime;
+        text-decoration:underline;
+      }
+
+    }
+  }
+
+}
+
+
