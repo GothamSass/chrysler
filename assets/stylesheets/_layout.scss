@@ -45,18 +45,18 @@ a {
   @include trans;
 
   @include only(trans) {
-    padding-top: 5px;
+    height: ($header * .75);
+  }
+
+  @include only(trans) {
     @include shadow(0 5px 0 rgba(0, 0, 0, .05));
+    padding-top: 5px;
   }
 
   @include media(600px, max) {
     padding-left: $gap-1 !important;
     right: 0;
     width: 100%;
-  }
-
-  @include only(trans) {
-    height: ($header * .75);
   }
 
   background-color: $color-0;
@@ -133,27 +133,27 @@ a {
   padding: $gap-1;
 
   a {
+    @include radius(50%);
+    @include square(35px);
     background-color: $color-1;
     color: #fff;
     display: inline-block;
     margin-right: 2px;
     text-align: center;
 
-    @include radius(50%);
-
     i {
       font-size: 20px;
       padding: 8px 0 0 4px;
     }
 
-    @include square(35px);
+
     @include media(600px, max) {
+      @include square(25px);
+
       i {
         font-size: 15px;
         padding: 5px 0 0 3px;
       }
-
-      @include square(25px);
     }
 
     &:hover {

@@ -131,26 +131,26 @@
   }
 }
 
-/* from http://dabblet.com/gist/2462915 */
+// from http://dabblet.com/gist/2462915
 @mixin scroll-hint($bgcolor: #000) {
   overflow: auto;
   background: linear-gradient($bgcolor 30%, rgba(255, 255, 255, 0)),
   linear-gradient(rgba(255, 255, 255, 0), $bgcolor 90%) 0 100%,
 
-  /* Shadows */
+  // Shadows
   radial-gradient(50% 0, farthest-side, rgba(0, 0, 0, .2), rgba(0, 0, 0, 0)),
   radial-gradient(50% 100%, farthest-side, rgba(0, 0, 0, .2), rgba(0, 0, 0, 0)) 0 100%;
   background: linear-gradient($bgcolor 30%, rgba(255, 255, 255, 0)),
   linear-gradient(rgba(255, 255, 255, 0), $bgcolor 90%) 0 100%,
 
-  /* Shadows */
+  // Shadows
   radial-gradient(farthest-side at 50% 0, rgba(0, 0, 0, .5), rgba(0, 0, 0, 0)),
   radial-gradient(farthest-side at 50% 100%, rgba(0, 0, 0, .5), rgba(0, 0, 0, 0)) 0 100%;
   background-repeat: no-repeat;
   background-color: $bgcolor;
   background-size: 100% 40px, 100% 40px, 100% 14px, 100% 14px;
 
-  /* Opera doesn't support this in the shorthand */
+  //Opera doesn't support this in the shorthand
   background-attachment: local, local, scroll, scroll;
 }
 
@@ -173,10 +173,9 @@
     }
 }
 
-/*
-from
-http://codepen.io/chriscoyier/blog/some-mini-sass-mixins-i-like
-*/
+
+//from http://codepen.io/chriscoyier/blog/some-mini-sass-mixins-i-like
+
 @mixin coverer {
   position: absolute;
   top: 0;

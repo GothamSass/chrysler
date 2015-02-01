@@ -76,6 +76,17 @@
 
 .colortest {
   @include grid(7, 0);
+
+  @include unless(touch) {
+    input {
+      @include opacity(0);
+    }
+
+    &:hover input {
+      @include opacity(100);
+    }
+  }
+
   ul {
     @include reset(all);
     li {
@@ -94,15 +105,7 @@
         width: 100%;
       }
 
-      @include unless(touch) {
-        input {
-          @include opacity(0);
-        }
 
-        &:hover input {
-          @include opacity(100);
-        }
-      }
     }
   }
 
