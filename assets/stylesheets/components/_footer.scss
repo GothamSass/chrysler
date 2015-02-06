@@ -1,26 +1,11 @@
-footer.footer {
-  padding: $gap-1;
-  a {
-    background-color: $color-prime;
-    color: white;
-    margin-right: 2px;
-    text-align: center;
-    display: inline-block;
-    @include radius(50%);
-    i {
-      font-size: 20px;
-      padding: 8px 0 0 4px;
-    }
-    @include square(35px);
-    @include media(600px, max) {
-      i {
-        font-size: 15px;
-        padding: 5px 0 0 3px;
-      }
-      @include square(25px);
-    }
-    &:hover {
-      background-color: $color-sec;
+.footer {
+  @extend .content;
+  ul {
+    display: flex;
+    align-content: flex-start;
+
+    li {
+      flex: 1 25em;
     }
   }
 }
