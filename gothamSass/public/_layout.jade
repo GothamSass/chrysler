@@ -1,0 +1,19 @@
+extends _base
+
+block main
+  .container
+    != partial('_nav')
+
+    main.content
+      if current.path[0] === "index"
+        != yield
+
+      else
+        if current.path[0] === "blog"
+          //- Show blog post
+          if current.path[1] === "posts"
+            != partial("/blog/_blog")
+          else
+            //- show blog teaser
+            != yield
+

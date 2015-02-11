@@ -1,0 +1,56 @@
+{
+  "1": {
+      "name": "Robert Anthony Bellamy",
+      "role": "Developer",
+      "photo": "https://pbs.twimg.com/profile_images/488829281561112576/VaBLKvWY.jpeg",
+      "social": {
+        "twitter": "rabellamy",
+        "github": "rabellamy"
+      }
+    },
+  "2": {
+    "name": "Nicholas Frota",
+    "role": "Interface Designer",
+    "photo": "https://pbs.twimg.com/profile_images/461495643291140096/td52Mi15.jpeg",
+    "social": {
+      "twitter": "nonlinear",
+      "github": "nonlinear"
+    }
+  },
+  "3": {
+    "name": "Aisha Green",
+    "role": "Front-End Developer",
+    "photo": "https://pbs.twimg.com/profile_images/487299875071983616/lUCC6fIy.jpeg",
+    "social": {
+      "twitter": "skyefaerie",
+      "github": "skyfaerie"
+    }
+  },
+  "4": {
+    "name": "Robert James",
+    "role": "Developer",
+    "photo": "https://media.licdn.com/media/p/7/005/08a/131/33fafc8.jpg",
+    "social": {
+      "twitter": "bkrjames",
+      "github": "rmjames"
+    }
+  },
+  "5": {
+    "name": "Adekunyle Oduye",
+    "role": "Product Designer",
+    "photo": "https://s-media-cache-ec0.pinimg.com/avatars/adekunleoduye_1346033824_600.jpg",
+    "social": {
+      "twitter": "adekunleoduye",
+      "github": "adekunleoduye"
+    }
+  },
+  "6": {
+    "name": "Claudina Sarahe",
+    "role": "Front-End Developer",
+    "photo": "https://pbs.twimg.com/profile_images/495784294204194817/loX5dUlx.jpeg",
+    "social": {
+      "twitter": "itsmisscs",
+      "github": "misscs"
+    }
+  }
+}
