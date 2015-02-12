@@ -4,6 +4,7 @@ var reload = browserSync.reload;
 var harp = require('harp');
 var scsslint = require('gulp-scss-lint');
 var cache = require('gulp-cached');
+var nodemon = require('gulp-nodemon');
 
 var paths = {
   templates: '**/*.{jade, md}',
@@ -16,14 +17,26 @@ var paths = {
 
 
 /**
+ * Nodemon
+ */
+gulp.task('nodemon', function() {
+  nodemon({script: 'app.js'})
+    .on('start', function(){
+      console.log('nodemon started');
+    })
+    .on('change', ['serve'])
+    .on('crash', function(){
+      console.log('nodemon crashed');
+    });
+});
+
+
+/**
  * Serve the Harp Site root directory
  */
-gulp.task('serve', function () {
-  harp.server(__dirname, {
-    port: 9000
-  }, function () {
+gulp.task('serve',['nodemon'], function () {
     browserSync({
-      proxy: "localhost:9000",
+      proxy: "localhost:4000",
       open: false,
       ghostMode: {
         clicks: true,
@@ -43,7 +56,7 @@ gulp.task('serve', function () {
     gulp.watch(paths.templates, reload);
     gulp.watch(paths.images, reload);
     gulp.watch(paths.js, reload)
-  })
+  // })
 });
 
 
