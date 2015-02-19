@@ -38,10 +38,12 @@
 
 .footer {
 
-  .logo {
-    width: 5em;
+  .icon-logo {
+    height: 6em;
+    width: 6em;
     float: left;
-    margin-right: 2em;}
+    margin-right: 2em;
+  }
 
   .description {
     margin-top: 0em;
@@ -61,13 +63,12 @@
       padding-bottom:0.5em;
 
       a {
-        color:$color-white;
-        text-decoration: none;
+        border-bottom: none;
         opacity: 0.5;
 
         &:hover{
-          color:$color-prime;
-          text-decoration: underline;
+          color:$color-white;
+          border-bottom: 2px solid $color-prime;
           opacity: 1.0;
         }
       }
@@ -90,5 +91,5 @@
     @extend %text-small;
   }
 
-  a {color: color($color-sec, l2);}
+  //a {color: color($color-sec, l2);}
 }

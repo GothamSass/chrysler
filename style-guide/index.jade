@@ -18,9 +18,15 @@ ul.style-guide
         h2 Logo
         ul
           li
-            img(src='../assets/logo/logo.svg')
+            //- img(src='../assets/logo/logo.svg')
+            svg.icon.icon-logo
+              use(xlink:href='#icon-logo')
+            p Logo
           li
-            img(class='icon' src='../assets/logo/GothamSass__icon--color.svg')
+            svg.icon.icon-logo-icon
+              use(xlink:href='#icon-logo-icon')
+            p Icon
+            //- img(class='icon' src='../assets/logo/GothamSass__icon--color.svg')
 
       //- section.heading
       //-   h2 Heading
