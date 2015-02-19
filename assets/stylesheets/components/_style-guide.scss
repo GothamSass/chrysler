@@ -1,32 +1,8 @@
-// ----- Flex-box mixin (work in progress)
-@mixin grid($flex, $direction:column) {
-  flex-direction: $direction;
-  display:flex;
-
-.container, footer.footer {
-  margin: 0 auto;
-  @include media(600px, max) {
-    padding: 0 $gap-1;
-  }
-
-  @media all and (min-width: 480px) {
-  & {flex-direction: row;}
-  }
-}
-
-// ----- Main Layout styles
-
-.content {
-  margin:0 auto;
-  max-width: 60em;
-  padding: 2em 1em;
-}
-
 .style-guide{
   section ~ section {padding-top:1em;}
 
-  .logo ul{@include grid(50%);}
-  .fontFamily ul {@include grid(33%);}
+	.logo ul{@include grid(50%);}
+	.fontFamily ul {@include grid(33%);}
   .colors ul {@include grid(33%);}
 
 }
@@ -88,4 +64,3 @@
   margin: 0 auto;
   display: block;
 }
-

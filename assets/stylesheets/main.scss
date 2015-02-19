@@ -2,10 +2,10 @@
 // ==============
 
 @import 'vendors/normalize'; // @@@ use via bower
+@import 'base/fonts';
 @import 'base/fonts.config';
 @import 'base/colors.config';
 @import 'base/scale.config';
-@import 'base';
 
 
 // Plugins
@@ -15,6 +15,7 @@
 @import 'plugins/colors';
 @import 'plugins/colortest';
 
+@import 'base';
 
 
 // Layout
@@ -24,8 +25,12 @@
 
 // Components
 // ----------
+@import 'components/nav';
+@import 'components/footer';
 @import 'components/team';
-@import 'components/form';
+@import 'components/forms';
 @import 'components/buttons';
+@import 'components/style-guide';
+
 
 
