@@ -30,7 +30,7 @@
   },
   "homepage": "https://github.com/GothamSass/chrysler",
   "devDependencies": {
-    "browser-sync": "2.0.1",   //"^1.9.0",
+    "browser-sync": "2.0.1",
     "gulp": "^3.8.10",
     "gulp-cached": "^1.0.2",
     "gulp-scss-lint": "^0.1.4",
