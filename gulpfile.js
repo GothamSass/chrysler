@@ -52,13 +52,10 @@ gulp.task('serve', function () {
  * Lint files
  */
 gulp.task('lint', function() {
-  var filter = gulpFilter(['assets/stylesheets/vendors/**/.scss','assets/stylesheets/vendors/*.scss']);
 
   gulp.src(paths.sass)
-    .pipe(filter)
     .pipe(cache('scsslint'))
     .pipe(scsslint({'config': 'lint.yml',}))
-    .pipe(filter.restore())
     .pipe(reload({stream: true}));
 });
 
