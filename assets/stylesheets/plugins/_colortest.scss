@@ -1,4 +1,4 @@
-@mi                                                 xin colortest($function: light, $color: #fff) {
+@mixin colortest($function: light, $color: #fff) {
   @if $function == 'light' {
     li:nth-of-type(1) {
       background-color: color($color, l1);
@@ -98,7 +98,7 @@
         @include box;
         background-color: rgba(0, 0, 0, .3);
         border: 0;
-        font-family: $font-text;
+        font-family: $font-body;
         padding: 5px;
         width: 100%;
       }
