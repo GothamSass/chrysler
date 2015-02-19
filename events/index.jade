@@ -1,0 +1,21 @@
+
+h2 Upcoming Events
+
+for event, slug in public.events.event._data
+  if event.layout !== false
+    .h-event
+      h1.p-name: a(href="/events/event/#{slug}")= event.name
+      p #{event.description}
+        time.dt-start(datetime="#{event.start_date}")
+          sup #{event.start_date}
+        time.dt-end(datetime="#{event.end_date}")
+          sup #{event.end_date}
+        span.p-location #{event.venue.name}
+
+h2 Past Events
+
+for event in public.events.archive._data.results
+  .h-event
+    h3.p-name= event.name
+    div.p-summary !{event.description}
+
