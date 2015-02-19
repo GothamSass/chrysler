@@ -2,46 +2,46 @@
 for event, slug in public.events.event._data
 
   if current.source === slug
+    .h-event
+      h1 #{event.name}
+      time.dt-start(datetime="#{event.start_date}")
+        sup #{event.start_date}
+      time.dt-end(datetime="#{event.end_date}")
+        sup #{event.end_date}
 
-    h1 #{event.name}
-    time.dt-start(datetime="2013-06-30 12:00")
-      sup #{event.start_date}
-    time.dt-end(datetime="2013-06-30 18:00")
-      sup #{event.end_date}
+      .p-location
+        span.name #{event.venue.name}
+        span.venue-address-1 #{event.venue.address_1}
+        if event.venue.address_2 !== null
+          span.venue-address-2 #{event.venue.address_2}
+        span.venue-city #{event.venue.city}
 
-    .venue
-      span.name #{event.venue.name}
-      span.venue-address-1 #{event.venue.address_1}
-      if event.venue.address_2 !== null
-        span.venue-address-2 #{event.venue.address_2}
-      span.venue-city #{event.venue.city}
+      //- content
+      .event-content
+        != yield
 
-    //- content
-    .event-content
-      != yield
+      .speakers
+        each speaker, index in event.speakers
+          .speaker
+            h3.talk-title #{event.speakers[index].title}
+            p.talk-description #{event.speakers[index].description}
+            span.speaker-name #{event.speakers[index].name}
 
-    .speakers
-      each speaker, index in event.speakers
-        .speaker
-          h3.talk-title #{event.speakers[index].title}
-          p.talk-description #{event.speakers[index].description}
-          span.speaker-name #{event.speakers[index].name}
-
-          if event.speakers[index].photo.path !== null
-            if event.speakers[index].photo.alt === null
-              alt = ''
+            if event.speakers[index].photo.path !== null
+              if event.speakers[index].photo.alt === null
+                alt = ''
+              else
+                alt = event.speakers[index].photo.alt
+              img(src="#{event.speakers[index].photo.path}", alt="#{alt}")
             else
-              alt = event.speakers[index].photo.alt
-            img(src="#{event.speakers[index].photo.path}", alt="#{alt}")
-          else
 
-          p.bio #{event.speakers[index].bio}
-          .social
-            span.twitter #{event.speakers[index].social.twitter}
-            span.github #{event.speakers[index].social.github}
+            p.bio #{event.speakers[index].bio}
+            .social
+              span.twitter #{event.speakers[index].social.twitter}
+              span.github #{event.speakers[index].social.github}
 
-    .sponsors
-      h4 Sponsors
-      each sponsor, delta in event.sponsors
-        .sponsor
-          span.sponsor-name: a(href="#{event.sponsors[delta].url}")= event.sponsors[delta].name
+      .sponsors
+        h4 Sponsors
+        each sponsor, delta in event.sponsors
+          .sponsor
+            span.sponsor-name: a(href="#{event.sponsors[delta].url}")= event.sponsors[delta].name
