@@ -9,25 +9,46 @@
       @extend .content;
       display: flex;
       align-content: flex-start;
+      flex-wrap: wrap;
+
+      @media screen and (max-width: 930px) {
+        padding: 0em 1em;
+      }
 
       & > li {
-        margin: 0 0.5em;
-        flex: 1 1;
-        border-right: 1px solid color($color-sec, l1);
+        padding: 0.5em 0;
+        //flex: 1 25em;
+        border-bottom: 1px solid color($color-sec, l1);
+
+          h3 {
+              text-align: center;
+              @media screen and (min-width: 930px) {
+                margin-top: 0em;
+                text-align: left;
+              }
+            }
+
+        @media screen and (min-width: 930px) {
+          border-right: 1px solid color($color-sec, l1);
+          border-bottom: none;
+          padding: 0 1em;
+        }
 
         &:first-child{
-          flex: 4 6;
+          flex: 2 32em;
           margin-left: 0em;
+
         }
 
         &:nth-child(2){
-          flex: 2 6;
+          flex: 1 12em;
         }
 
         &:last-child{
-          flex: 2 6;
+          flex: 1 12em;
           margin-right: 0em;
           border-right: none;
+          border-bottom: none;
         }
 
       }
@@ -39,16 +60,32 @@
 .footer {
 
   .icon-logo {
-    height: 6em;
-    width: 6em;
-    float: left;
-    margin-right: 2em;
+    min-height: 6em;
+    min-width: 6em;
+    margin: 0 auto;
+    display: block;
+
+     @media screen and (min-width: 930px) {
+      float: left;
+      margin-right: 2em;
+     }
+
+    p & {
+      width: 100%;
+      @media screen and (min-width: 930px) {
+        width: auto;
+      }
+    }
+
   }
 
-  .description {
+  .footer__description {
     margin-top: 0em;
-    max-width: 20em;
-    float:left;
+    max-width: 32em;
+
+    @media screen and (min-width: 930px) {
+      float:left;max-width: 22em;
+    }
   }
 
   p, h3 {color: $color-white;}
@@ -58,6 +95,11 @@
 
 .footer__links {
     padding-top:0.5em;
+    text-align: center;
+
+    @media screen and (min-width: 930px) {
+      text-align: left;
+    }
 
     li {
       padding-bottom:0.5em;
@@ -91,5 +133,12 @@
     @extend %text-small;
   }
 
-  //a {color: color($color-sec, l2);}
+  a {
+    color: $color-white;
+
+    //border-bottom-color:color($color-quat);
+    &:hover {
+      color:color($color-quat, d1)
+    }
+  }
 }

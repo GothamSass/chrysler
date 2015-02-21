@@ -10,10 +10,16 @@ body {
 	outline-style: none;
 }
 a {
-	color: $color-white;
+	color: color($color-tert,l1);
 	@include trans;
 	text-decoration: none;
 	border-bottom: 2px solid $color-prime;
+}
+
+*,
+:before,
+:after {
+box-sizing: border-box;
 }
 
 .hidden {
