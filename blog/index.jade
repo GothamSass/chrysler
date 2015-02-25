@@ -4,22 +4,22 @@ p Some stuff we want to say about our blog.
 //- show blog teaser roll
 for post, slug in public.blog.posts._data
   if post.layout !== false
-    article.h-entry
-      a.u-url(href= "#{ post.properties.permalink[0].url }")
-        h2.p-name= post.properties.name
+    article.h-entry.blog-teaser
+      a.u-url.blog-teaser--url(href= "#{ post.properties.permalink[0].url }")
+        h2.p-name.blog-teaser--title= post.properties.name
       p
         | Published by
         =' '
 
         each author, index in post.properties.author
-          a.p-author.h-card(href= post.properties.author[index].properties.url)= post.properties.author[index].properties.name
+          a.p-author.blog-teaser--author(href= post.properties.author[index].properties.url)= post.properties.author[index].properties.name
           =' '
 
         |  on
         =' '
-        time.dt-published= post.properties.published
+        time.dt-published.blog-teaser--time= post.properties.published
 
-      p.p-summary= post.properties.summary
+      p.p-summary.blog-teaser--summary= post.properties.summary
 
 
 
