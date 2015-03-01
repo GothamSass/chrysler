@@ -5,21 +5,18 @@ p Some stuff we want to say about our blog.
 for post, slug in public.blog.posts._data
   if post.layout !== false
     article.h-entry
-      a.u-url(href= "#{ post.properties.permalink[0].url }")
-        h2.p-name= post.properties.name
+      a.u-url(href= "#{slug}")
+        h2.p-name= post.title
       p
         | Published by
         =' '
 
-        each author, index in post.properties.author
-          a.p-author.h-card(href= post.properties.author[index].properties.url)= post.properties.author[index].properties.name
+        each author, index in post.author
+          a.p-author.h-card(href= post.author[index].website)= post.author[index].name
           =' '
 
         |  on
         =' '
-        time.dt-published= post.properties.published
+        time.dt-published= post.published
 
-      p.p-summary= post.properties.summary
-
-
-
+      p.p-summary= post.summary

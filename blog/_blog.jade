@@ -1,29 +1,29 @@
 article.h-entry
-  a.u-url(href= "")
-    h2.p-name= properties.name
+  a.u-url(href= "#{slug}")
+    h2.p-name= title
   p
     | Published by
     =' '
 
-    each author, index in properties.author
-      a.p-author.h-card(href= properties.author[index].properties.url)= properties.author[index].properties.name
+    each author, index in author
+      a.p-author.h-card(href= author[index].website)= author[index].name
       =' '
 
     =' '
-    time.dt-published= properties.published
+    time.dt-published= published
 
 
   .e-content
     != yield
 
   .p-category
-    = properties.category[0].category
+    = category[0].category
     =' '
-    = properties.category[0].tags
+    = category[0].tags
 
 
   h3 About the Author
-  each author, index in properties.author
+  each author, index in author
     p
-      a.p-author.h-card(href= properties.author[index].properties.url)= properties.author[index].properties.name
-    p= properties.author[index].properties.description
+      a.p-author.h-card(href= author[index].website)= author[index].name
+    p= author[index].description
