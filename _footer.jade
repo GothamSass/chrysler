@@ -1,36 +1,34 @@
 footer.footer(role="contentinfo")
-  .footer--top
-    ul
-      li
-        h3 About Us
-        //- img.logo(src="/assets/logo/logo.svg" alt="Gotham Sass")
-        p
-          <svg class="icon icon-logo"><use xlink:href="#icon-logo"></use></svg><span class="mls"></span>
-        p.footer--description GothamSass meetup serves front end developers, CSS ninjas, UX mavens, and Sass lovers where you come to learn the latest Sass news, meet other Sass enthusiasts, and find out about how to make your teams more effective.
-      li
-        h3 Connect With Us
+  .footer__top
+    .block
+      h3.block-title About Us
+      //- img.logo(src="/assets/logo/logo.svg" alt="Gotham Sass")
+      p
+        <svg class="icon icon-logo"><use xlink:href="#icon-logo"></use></svg><span class="mls"></span>
+      p.footer__description #{short_description}
+    .block
+      h3.block-title Connect With Us
+
+      ul.footer__links.content
+        li
+          a(href="http://twitter.com/#{data.twitter}") Twitter
+        li
+          a(href="http://meetup.com/#{data.meetup}") Meetup
+        li
+          a(href="http://github.com/#{data.github}") Github
+
+    .block
+      h3.block-title Links
+      nav.nav.footer-nav(role="navigation", class="banner")
         ul.footer__links
           li
-            a(href="#") Twitter
+            a(href="/about") About
           li
-            a(href="#") Meetup
+            a(href="/events") Events
           li
-            a(href="#") Github
-      li
-        h3 Links
-        nav.nav.footer-nav(role="navigation", class="banner")
-          ul.footer__links
-            li
-              a(href="/about") About
-            li
-              a(href="/events") Events
-            li
-              a(href="/blog") Blog
-            li
-              a(href="/resources") Resources
-            li
-              a(href="/sponsors") Sponsors
-  .footer__bottom
-    ul
-      li
-        p © <span class="copyright__year">2014</span> GothamSass. All rights reserved. Find an error or want to add something? Send pull requests at <a href="https://github.com/GothamSass/chrysler">Github</a>. Kindly refer to our <a href="https://github.com/GothamSass/chrysler">styleguide</a>.
+            a(href="/blog") Blog
+          li
+            a(href="/sponsors") Sponsors
+  .footer__bottom.content
+    != partial('_copyright-colophon.jade')
+    != partial('_contributing.jade')
