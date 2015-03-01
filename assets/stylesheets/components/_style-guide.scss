@@ -18,7 +18,7 @@
   }
 }
 
-.style-guide{
+.style-guide {
   section ~ section { padding-top: 1em;}
 
   .logo ul{ @include grid(50%);}
@@ -35,7 +35,7 @@
 
   &:first-child { background: $color-prime;
 
-    &:after{
+    &:after {
       content: "$color-prime \A #{$color-prime}";
       white-space: pre;
       font-size: 1.2em;
@@ -45,7 +45,7 @@
 
   &:nth-child(2) { background :$color-sec;
 
-    &:after{
+    &:after {
       content: "$color-sec \A #{$color-sec}";
       white-space: pre;
       font-size: 1.2em;
@@ -55,7 +55,7 @@
 
   &:nth-child(3) { background :$color-tert;
 
-    &:after{
+    &:after {
       content: "$color-tert \A #{$color-tert}";
       white-space: pre;
       font-size: 1.2em;
@@ -65,7 +65,7 @@
 
   &:nth-child(4) { background :$color-quat;
 
-    &:after{
+    &:after {
       content: "$color-quat \A #{$color-quat}";
       white-space: pre;
       font-size: 1.2em;
@@ -75,7 +75,7 @@
 
   &:nth-child(5) { background :$color-qui;
 
-    &:after{
+    &:after {
       color: $color-white;
       content: "$color-qui \A #{$color-qui}";
       white-space: pre;
