@@ -2,13 +2,13 @@
 .footer {
   border-top: 5px solid color($color-sec, l1);
 
-  .footer__top  {
+  .footer--top {
     background: $color-sec;
 
     & > ul {
-      @extend .content;
-      display: flex;
+      @extend %container--content;
       align-content: flex-start;
+      display: flex;
       flex-wrap: wrap;
 
       @media screen and (max-width: 930px) {
@@ -16,14 +16,13 @@
       }
 
       & > li {
-        padding: 0.5em 0;
-        //flex: 1 25em;
+        padding: .5em 0;
         border-bottom: 1px solid color($color-sec, l1);
 
           h3 {
               text-align: center;
               @media screen and (min-width: 930px) {
-                margin-top: 0em;
+                margin-top: 0;
                 text-align: left;
               }
             }
@@ -34,21 +33,21 @@
           padding: 0 1em;
         }
 
-        &:first-child{
+        &:first-child {
           flex: 2 32em;
-          margin-left: 0em;
+          margin-left: 0;
 
         }
 
-        &:nth-child(2){
+        &:nth-child(2) {
           flex: 1 12em;
         }
 
-        &:last-child{
+        &:last-child {
+          border-right: 0;
+          border-bottom: 0;
           flex: 1 12em;
-          margin-right: 0em;
-          border-right: none;
-          border-bottom: none;
+          margin-right: 0;
         }
 
       }
@@ -79,49 +78,51 @@
 
   }
 
-  .footer__description {
-    margin-top: 0em;
+  .footer--description {
+    margin-top: 0;
     max-width: 32em;
 
     @media screen and (min-width: 930px) {
-      float:left;max-width: 22em;
+      float: left;
+      max-width: 22em;
     }
   }
 
-  p, h3 {color: $color-white;}
+  p,
+  h3 {color: $color-white;}
 
 }
 
 
 .footer__links {
-    padding-top:0.5em;
-    text-align: center;
+  padding-top: .5em;
+  text-align: center;
 
-    @media screen and (min-width: 930px) {
-      text-align: left;
-    }
+  @media screen and (min-width: 930px) {
+    text-align: left;
+  }
 
-    li {
-      padding-bottom:0.5em;
+  li {
+    padding-bottom: .5em;
 
-      a {
-        border-bottom: none;
-        opacity: 0.5;
+    a {
+      border-bottom: 0;
+      opacity: .5;
 
-        &:hover{
-          color:$color-white;
-          border-bottom: 2px solid $color-prime;
-          opacity: 1.0;
-        }
+      &:hover {
+        border-bottom: 2px solid $color-prime;
+        color: $color-white;
+        opacity: 1.0;
       }
     }
   }
+}
 
 
 .footer__bottom {
   background: $color-qui;
 
-  & > ul{
+  & > ul {
     @extend .content;
     padding-top: 0em;
     padding-bottom: 0em;
@@ -136,7 +137,6 @@
   a {
     color: $color-white;
 
-    //border-bottom-color:color($color-quat);
     &:hover {
       color:color($color-quat, d1)
     }

@@ -1,7 +1,11 @@
 // ----- Main Layout styles
 
-.content {
+%container--content {
   margin: 0 auto;
   max-width: 60em;
   padding: 2em 1em;
+}
+
+.content {
+  @extend %container--content;  
 }
