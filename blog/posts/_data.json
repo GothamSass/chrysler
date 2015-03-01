@@ -1,63 +1,48 @@
 {
-  "post-2": {
-    "title":"Sample Post 2",
-    "author": [
+  "styleguide-02": {
+    "title":"The Styleguide",
+    "published":"2015-01-03",
+    "authors": [
       {
-        "name":"John Doe",
-        "website":"http://www.google.com",
-        "description":"lobortis viverra dolor tincidunt eu. Pellentesque nec ma"
+        "name": "Gotham Organizers",
+        "website": "gothamsass.org/about",
+        "photo": null,
+        "description": "We're a collective of volunteers that have somehow or another found ourselves organizing together for many years.",
+        "data": {
+          "url": "gothamsass.org",
+          "twitter": "gothamsass",
+          "hashtag": null,
+          "github": "github.com/gothamsass"
+        }
       },
       {
-        "name":"Kevin Doe",
-        "url":"www.blackle.com",
-        "description":"lobortis viverra dolor tincidunt eu. Pellentesque nec ma"
+        "name":"Rad Community Member",
+        "website":"github.com",
+        "description":"Contributing is super easy. You just need a Github account. We've got direction publshed. If you need help, contact the organizers."
       }
     ],
-    "published":"2015-01-04 12:00:00",
-    "summary":"Sed elementum consectetur sem, lobortis viverra dolor tincidunt eu. Pellentesque nec malesuada tortor, nec rutrum est. Donec fermentum ut nunc at scelerisque. Morbi elementum, lacus at bibendum vehicula, neque felis semper urna, at auctor mi lorem nec ex.",
-    "category": [
-      {
-        "category": "cat1",
-        "tags": "tag1, tag2, tag3"
-      }
-    ]
+    "summary":"Another sample blog post used to demonstrate the blog styleguide. This one has multiple authors.",
+    "categories": [ "sample", "styleguide"]
   },
 
   "styleguide": {
-    "title":"The Styleguide",
-    "author": [
+    "title":"GothamSass Blog Styleguide!",
+    "published":"2015-01-03",
+    "authors": [
       {
-        "name":"Jane Doe",
-        "website":"http://www.yahoo.com",
-        "description":"lobortis viverra dolor tincidunt eu. Pellentesque nec ma"
+        "name": "Gotham Organizers",
+        "website": "gothamsass.org/about",
+        "photo": "/assets/logo/logo.svg",
+        "description": "We're a collective of volunteers that have somehow or another found ourselves organizing together for many years.",
+        "data": {
+          "url": "gothamsass.org",
+          "twitter": "gothamsass",
+          "hashtag": null,
+          "github": "github.com/gothamsass"
+        }
       }
     ],
-    "published":"2015-01-03 12:00:00",
-    "summary":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas id tortor feugiat, mollis urna non, viverra lectus. Sed fringilla rutrum orci eu volutpat. Donec viverra enim vitae purus bibendum, quis euismod ligula ultricies.",  
-    "category": [
-      {
-        "category": "cat1",
-        "tags": "tag2"
-      }
-    ]
-  },
-
-  "welcome": {
-    "title":"Welcome to GothamSass!",
-    "author": [
-      {
-        "name":"Team GothamSass",
-        "website":"http://www.gothamsass.org",
-        "description":"We are Gothamsass!"
-      }
-    ],
-    "published":"2015-01-01 12:00:00",
-    "summary": "GothamSass for the New Year!",
-    "category": [
-      {
-        "category": "category",
-        "tags": "tag1, tag2, tag3"
-      }
-    ]
+    "summary": "Welcome to GothamSass. You've stumbled across one of our styleguide posts. We use these posts to demonstrate the possibilities you have with your posts. Hopefully you find them helpful. If you still have questions, tweet at us or email the organizers.",
+    "categories": [ "news", "sass", "js", "stlyeguide", "sample"]
   }
 }

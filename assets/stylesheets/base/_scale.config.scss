@@ -1,6 +1,10 @@
 // Size & Scale
 // ============
 
+[data-size="thumbnail"] {
+  width: 75px;
+}
+
 // gap variations
 // @@@ refactor
 $gap-1: 10px;
