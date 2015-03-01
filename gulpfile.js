@@ -4,9 +4,11 @@ var reload = browserSync.reload;
 var harp = require('harp');
 var scsslint = require('gulp-scss-lint');
 var cache = require('gulp-cached');
+var jshint = require('gulp-jshint');
 
 var paths = {
   templates: '**/*.{jade, md}',
+  json: '**/_data.json',
   css: 'assets/stylesheets/*.css',
   sass: ['assets/stylesheets/**/*.scss', 'assets/stylesheets/*.scss'],
   images: 'assets/stylesheets/img/**/*',
@@ -50,11 +52,19 @@ gulp.task('serve', function () {
 /**
  * Lint files
  */
-gulp.task('lint', function() {
+gulp.task('lint-sass', function() {
   gulp.src(paths.sass)
     .pipe(cache('scsslint'))
     .pipe(scsslint({'config': 'lint.yml',}))
     .pipe(reload({stream: true}));
+});
+
+gulp.task('lint-js', function() {
+  return gulp.src([
+    paths.json
+    ])
+    .pipe(jshint())
+    .pipe(jshint.reporter('default'));
 });
 
 
