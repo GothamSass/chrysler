@@ -1,7 +1,5 @@
 .nav--main {
-  display: -webkit-flex;
   display: flex;
-  -webkit-flex-wrap: wrap;
   flex-wrap: wrap;
   flex-direction: row;
   background: blue;
@@ -10,11 +8,11 @@
   margin: 0px;
 
   li {
-  //-webkit-flex: 1 20em;
   flex: 1 10em;
   background: #aaa;
   padding: 1em;
   text-align:center;
+
     a {
     color:white;
     text-decoration:none;
@@ -22,4 +20,3 @@
     }
   }
 }
-
