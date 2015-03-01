@@ -5,7 +5,7 @@
 
 .nav-item {
   background: $color-quat;
-  padding: 0.5em;
+  padding: .5em;
   align-self: flex-start;
 
   &:last-child {
@@ -16,7 +16,7 @@
   a {
     color: $color-tert;
     border-bottom: none;
-    opacity: 0.5;
+    opacity: .5;
 
     &:hover {
       opacity: 1;
@@ -36,4 +36,3 @@
     align-content: flex-end;
   }
 }
-
