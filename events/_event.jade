@@ -1,47 +1,108 @@
+article.h-event
+  h1.p-name=name
+  p.duration
+    time.dt-start(datetime="#{start_date}")
+      #{start_date}
+    time.dt-end(datetime="#{end_date}")
+      #{end_date}
 
-for event, slug in public.events.event._data
+  if venue
+    .p-location.h-card
+      p.p-name #{venue.name}
+      p.p-adr
+        span.p-street-address #{venue.address_1}
 
-  if current.source === slug
-    .h-event
-      h1 #{event.name}
-      time.dt-start(datetime="#{event.start_date}")
-        sup #{event.start_date}
-      time.dt-end(datetime="#{event.end_date}")
-        sup #{event.end_date}
+        if venue.address_2
+          span.p-extended-address #{venue.address_2}
+        span.locality #{venue.city}
+      if venue.accessible
+        p.accessibility= venue.accessibie
 
-      .p-location
-        span.name #{event.venue.name}
-        span.venue-address-1 #{event.venue.address_1}
-        if event.venue.address_2 !== null
-          span.venue-address-2 #{event.venue.address_2}
-        span.venue-city #{event.venue.city}
+  else
+    .p-location.is-empty
+      p VENUE TBD
 
-      //- content
-      .event-content
-        != yield
+  //- content
+  .event-content
+    != yield
 
-      .speakers
-        each speaker, index in event.speakers
-          .speaker
-            h3.talk-title #{event.speakers[index].title}
-            p.talk-description #{event.speakers[index].description}
-            span.speaker-name #{event.speakers[index].name}
+  if participants
+    section.partcipants
+      h2.is-hidden Cast
 
-            if event.speakers[index].photo.path !== null
-              if event.speakers[index].photo.alt === null
-                alt = ''
-              else
-                alt = event.speakers[index].photo.alt
-              img(src="#{event.speakers[index].photo.path}", alt="#{alt}")
-            else
+      h3 Speakers
 
-            p.bio #{event.speakers[index].bio}
-            .social
-              span.twitter #{event.speakers[index].social.twitter}
-              span.github #{event.speakers[index].social.github}
+      each person, index in participants
+        if person.role == "speaker"
+          article.Speaker
+            h4.talk-title #{person.title}
+            p.byline by #{person.name}
+            p.talk-description #{person.description}
 
-      .sponsors
-        h4 Sponsors
-        each sponsor, delta in event.sponsors
-          .sponsor
-            span.sponsor-name: a(href="#{event.sponsors[delta].url}")= event.sponsors[delta].name
+            if person.photo
+              img(src="#{person.photo.path}", alt="#{person.photo.alt}")
+
+            p.bio #{person.bio}
+
+            if person.data
+              ul.List.List--stacked
+                for data, info in person.data
+                  if data !== null
+                    li(class="item-#{info}")
+                      case info
+                        when "hashtag"
+                          a(href="https://twitter.com/hashtag/#{data}") ##{data}
+                        when "twitter"
+                          a(href="https://twitter.com/#{twitter}")@#{data}
+                        default
+                          a(href=data)= data
+
+        if person.role == "emcee"
+
+          h3 Emcee
+
+          article.Speaker--emcee.Speaker
+            span.speaker-name #{person.name}
+
+          if person.photo
+            img(src="#{person.photo.path}", alt="#{person.photo.alt}")
+
+        if person.role == "greeter"
+
+          h3 Greeters
+
+          article.Speaker--emcee.Speaker
+            span.speaker-name #{person.name}
+
+            if person.photo
+              img(src="#{person.photo.path}", alt="#{person.photo.alt}", data-size="thumbnail")
+
+
+
+
+
+
+  if sponsors
+    section.sponsors
+      h2 Sponsors
+      each sponsor, delta in sponsors
+        article.Sponsor
+          span.sponsor-name: a(href="#{sponsor.url}")= sponsor.name
+        if sponsor.data
+          ul.List.List--stacked
+            for data, info in sponsor.data
+              if data !== null
+                li(class="item-#{info}")
+                  case info
+                    when "hashtag"
+                      a(href="https://twitter.com/hashtag/#{data}") ##{data}
+                    when "twitter"
+                      a(href="https://twitter.com/#{twitter}")@#{data}
+                    default
+                      a(href=data)= data
+
+
+
+  section.coc
+    h2 Event Code of Conduct
+    p All events abide by our code of conduct and the Sass Community Guidelines. Event hosts, sponsors, attendees, speakers, guests, and employees are expected to commit to our mission and values of fighing oppression in tech
