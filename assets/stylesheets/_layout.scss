@@ -1,13 +1,14 @@
 // ----- Main Layout styles
 
 .content {
-  margin:0 auto;
+  margin: 0 auto;
   max-width: 60em;
   padding: 2em 1em;
 }
 
-.style-guide{
-  section ~ section { padding-top:1em; }
+.style-guide {
+
+  section ~ section { padding-top: 1em; }
 
   .logo ul { @include grid(50%); }
   .fontFamily ul { @include grid(33%); }
@@ -18,54 +19,60 @@
 // Needs to be Refactored in mixins - AO
 .colors ul {
   li {
-      text-align: center;
-      color: white;
+    color: #fff;
+    text-align: center;
 
     &:first-child {
       background: $color-prime;
-      &:after{
+
+      &:after {
+        color: $color-white;
         content: "$color-prime \A #{$color-prime}";
-        white-space: pre;
         font-size: 1.2em;
-        color: $color-white;
+        white-space: pre;
       }
     }
 
-    &:nth-child(2) { background:$color-sec;
-       &:after{
+    &:nth-child(2) {
+      background: $color-sec;
+
+      &:after {
+        color: $color-white;
         content: "$color-sec \A #{$color-sec}";
-        white-space: pre;
         font-size: 1.2em;
-        color: $color-white;
+        white-space: pre;
       }
     }
 
-    &:nth-child(3) { background:$color-tert;
-       &:after{
-        content: "$color-tert \A #{$color-tert}";
-        white-space: pre;
-        font-size: 1.2em;
+    &:nth-child(3) { background: $color-tert;
+
+      &:after {
         color: $color-white;
+        content: "$color-tert \A #{$color-tert}";
+        font-size: 1.2em;
+        white-space: pre;
       }
     }
 
     &:nth-child(4) {
-      background:$color-quat;
-       &:after{
-        content: "$color-quat \A #{$color-quat}";
-        white-space: pre;
-        font-size: 1.2em;
+      background: $color-quat;
+
+      &:after {
         color: $color-white;
+        content: "$color-quat \A #{$color-quat}";
+        font-size: 1.2em;
+        white-space: pre;
       }
     }
 
-     &:nth-child(5) {
-        background: $color-qui;
-        &:after{
-          content: "$color-qui \A #{$color-qui}";
-          white-space: pre;
-          font-size: 1.2em;
-          color: $color-white;
+    &:nth-child(5) {
+      background: $color-qui;
+
+      &:after {
+        color: $color-white;
+        content: "$color-qui \A #{$color-qui}";
+        font-size: 1.2em;
+        white-space: pre;
       }
     }
   }
@@ -76,8 +83,7 @@
 }
 
 .icon {
-  max-width: 4em;
-  margin: 0 auto;
   display: block;
+  margin: 0 auto;
+  max-width: 4em;
 }
-
