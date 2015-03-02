@@ -96,7 +96,7 @@
       input {
         @include trans;
         @include box;
-        background-color: rgba(0, 0, 0, .3);
+        background-color: rgba(0, 0, 0, 0.3);
         border: 0;
         font-family: $font-body;
         padding: 5px;

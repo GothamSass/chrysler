@@ -12,7 +12,7 @@
   &:focus::-webkit-input-placeholder {
     opacity: 0;
     text-indent: -50%;
-    transition: all .5s .1s ease;
+    transition: all 0.5s 0.1s ease;
 
   }
 }
@@ -37,7 +37,7 @@
   background-clip: padding-box;
 }
 
-@mixin shadow($shadow: 0 1px 3px rgba(0, 0, 0, .25), $mode: normal) {
+@mixin shadow($shadow: 0 1px 3px rgba(0, 0, 0, 0.25), $mode: normal) {
   @if $mode == text {
     text-shadow: $shadow;
   } @else {
@@ -138,14 +138,14 @@
   linear-gradient(rgba(255, 255, 255, 0), $bgcolor 90%) 0 100%,
 
   // Shadows
-  radial-gradient(50% 0, farthest-side, rgba(0, 0, 0, .2), rgba(0, 0, 0, 0)),
-  radial-gradient(50% 100%, farthest-side, rgba(0, 0, 0, .2), rgba(0, 0, 0, 0)) 0 100%;
+  radial-gradient(50% 0, farthest-side, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)),
+  radial-gradient(50% 100%, farthest-side, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)) 0 100%;
   background: linear-gradient($bgcolor 30%, rgba(255, 255, 255, 0)),
   linear-gradient(rgba(255, 255, 255, 0), $bgcolor 90%) 0 100%,
 
   // Shadows
-  radial-gradient(farthest-side at 50% 0, rgba(0, 0, 0, .5), rgba(0, 0, 0, 0)),
-  radial-gradient(farthest-side at 50% 100%, rgba(0, 0, 0, .5), rgba(0, 0, 0, 0)) 0 100%;
+  radial-gradient(farthest-side at 50% 0, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)),
+  radial-gradient(farthest-side at 50% 100%, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)) 0 100%;
   background-repeat: no-repeat;
   background-color: $bgcolor;
   background-size: 100% 40px, 100% 40px, 100% 14px, 100% 14px;
