@@ -19,8 +19,8 @@
     text-decoration: none;
 
     &:hover {
-      opacity: 1;
       color: $color-prime;
+      opacity: 1;
       text-decoration: underline;
     }
   }
