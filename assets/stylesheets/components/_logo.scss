@@ -1,12 +1,12 @@
 .icon {
   display: inline-block;
-  width: 1em;
-  height: 1em;
   fill: currentColor;
+  height: 1em;
+  width: 1em;
 }
 
-.icon-logo {
-}
+// .icon-logo {
+// }
 
 // Needs to be Refactored in mixins - AO
 #icon-logo-icon .path1 {
@@ -26,6 +26,7 @@
 #icon-logo .path1 {
   fill: $color-prime;
 }
+
 #icon-logo .path2,
 #icon-logo .path3,
 #icon-logo .path4,

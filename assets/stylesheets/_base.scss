@@ -2,79 +2,79 @@ h1,
 h2,
 h3,
 h4 {
-	color: $color-tert;
-	font-weight: normal;
+  color: $color-tert;
+  font-weight: normal;
 }
 
 body {
-	font-family: $font-body;
+  font-family: $font-body;
 }
 
 :focus {
-	outline-color: transparent;
-	outline-style: none;
+  outline-color: transparent;
+  outline-style: none;
 }
 
 a {
-	@include trans;
-	border-bottom: 2px solid $color-prime;
-	color: color($color-tert,l1);
-	text-decoration: none;
+  @include trans;
+  border-bottom: 2px solid $color-prime;
+  color: color($color-tert, l1);
+  text-decoration: none;
 }
 
 *,
 :before,
 :after {
-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .hidden {
-	display: none;
+  display: none;
 }
 
 h1 {
-	margin: 0;
-	font-family: $font-title;
-	font-size: 4.5em;
+  font-family: $font-title;
+  font-size: 4.5em;
+  margin: 0;
 }
 
 h2 {
-	color: #036;
-	font-size: 2.1em;
-	margin: .5em 0;
+  color: #036;
+  font-size: 2.1em;
+  margin: .5em 0;
 }
 
 h3 {
-	color: #3d4049;
-	font-weight: bold;
-	margin: .5em 0;
-	text-transform: uppercase;
+  color: #3d4049;
+  font-weight: bold;
+  margin: .5em 0;
+  text-transform: uppercase;
 }
 
 //Refactor accessibly
 .is-hidden {
-	display: none;
+  display: none;
 }
 
 img,
 svg {
-	max-width: 100%;
-	display: block;
+  display: block;
+  max-width: 100%;
 }
 
 ul {
-	list-style: none;
-	padding: 0;
-	margin: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 p {
-	color: #3d4049;
-	font-family: $font-body;
-	font-size: 1em;
-	line-height: 1.3em;
+  color: #3d4049;
+  font-family: $font-body;
+  font-size: 1em;
+  line-height: 1.3em;
 }
 
 %text-small {
-	font-size: .8em;
+  font-size: .8em;
 }

@@ -1,23 +1,23 @@
 .btn {
-	text-decoration: none;
-	padding: .6em;
+  background-color: #eee;
+  border: solid 1px #ccc;
   border-radius: 5px;
-	border: solid 1px #ccc;
-	background-color: #eee;
-  font-size: .5em;
   font-family: $font-body;
+  font-size: .5em;
+  padding: .6em;
+  text-decoration: none;
 
-	& + .btn {
-		border-left: 0;
-	}
+  + .btn {
+    border-left: 0;
+  }
 }
 
 .btn-prime {
-	background-color: $color-sec;
+  background-color: $color-sec;
   color: $color-white;
 }
 
 .btn-sec {
-	background-color: $color-tert;
+  background-color: $color-tert;
   color: $color-white;
 }
