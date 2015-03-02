@@ -1,39 +1,39 @@
 .logo {
-  width: 8em;
   margin-right: auto;
+  width: 8em;
 }
 
 .nav-item {
+  align-self: flex-start;
   background: $color-quat;
   padding: 0.5em;
-  align-self: flex-start;
 
   &:last-child {
-    border-top-right-radius: 3px;
     border-bottom-right-radius: 3px;
+    border-top-right-radius: 3px;
   }
 
   a {
     color: $color-tert;
-    text-decoration:none;
     opacity: 0.5;
+    text-decoration: none;
 
     &:hover {
       opacity: 1;
       color: $color-prime;
-      text-decoration:underline;
+      text-decoration: underline;
     }
   }
 }
 
 nav {
-  max-width: 60em;
   margin: 0 auto;
+  max-width: 60em;
 
   ul {
-    margin-top: 1em;
-    display: flex;
     align-content: flex-end;
+    display: flex;
+    margin-top: 1em;
   }
 }
 
