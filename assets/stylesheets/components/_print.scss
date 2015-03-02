@@ -97,7 +97,7 @@
   size: 5.5in 8.5in;
   margin: 70pt 60pt;
   @footnotes {
-    border-top: .6pt solid #000;
+    border-top: 0.6pt solid #000;
     padding-top: 8pt;
   }
 }
@@ -106,7 +106,7 @@
 @page :right {
   @bottom-left {
     margin: 10pt 0 30pt;
-    border-top: .25pt solid #666;
+    border-top: 0.25pt solid #666;
     content: 'Our Cats';
     font-size: 9pt;
     color: #333;
@@ -115,7 +115,7 @@
   @bottom-right {
     margin: 10pt 0 30pt;
     border-top: .25pt solid #666;
-    content: counter(page);
+    content: counter0(page);
     font-size: 9pt;
   }
 
@@ -133,7 +133,7 @@
 @page :left {
   @bottom-right {
     margin: 10pt 0 30pt;
-    border-top: .25pt solid #666;
+    border-top: 0.25pt solid #666;
     content: 'Our Cats';
     font-size: 9pt;
     color: #333;
@@ -141,7 +141,7 @@
 
   @bottom-left {
     margin: 10pt 0 30pt;
-    border-top: .25pt solid #666;
+    border-top: 0.25pt solid #666;
     content: counter(page);
     font-size: 9pt;
   }
