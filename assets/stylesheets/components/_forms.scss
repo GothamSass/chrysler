@@ -29,14 +29,14 @@
 }
 
 .input__label {
-  display: inline-block;
-  padding: 0 1em;
-  width: 40%;
   color: #6a7989;
-  font-weight: bold;
+  display: inline-block;
   font-size: 70.25%;
+  font-weight: bold;
+  padding: 0 1em;
   -webkit-touch-callout: none;
   user-select: none;
+  width: 40%;
 }
 
 .input__label-content {
