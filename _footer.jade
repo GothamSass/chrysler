@@ -1,6 +1,6 @@
 footer.footer(role="contentinfo")
   .footer__top
-    .block
+    .block.block--about
       h3.block-title About Us
       //- img.logo(src="/assets/logo/logo.svg" alt="Gotham Sass")
       p
@@ -29,6 +29,6 @@ footer.footer(role="contentinfo")
             a(href="/blog") Blog
           li
             a(href="/sponsors") Sponsors
-  .footer__bottom.content
+  .footer__bottom
     != partial('_copyright-colophon.jade')
     != partial('_contributing.jade')
