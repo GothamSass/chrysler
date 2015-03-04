@@ -1,9 +1,10 @@
 // Layout
 .footer {
   border-top: 5px solid color($color-sec, l1);
+  background: $color-sec;
 
   .footer--top {
-    background: $color-sec;
+    @extend .content;
 
     & > ul {
       @extend %container--content;
@@ -81,6 +82,7 @@
   .footer--description {
     margin-top: 0;
     max-width: 32em;
+    font-size: 95%;
 
     @media screen and (min-width: 930px) {
       float: left;
@@ -94,7 +96,7 @@
 }
 
 
-.footer__links {
+.footer--links {
   padding-top: .5em;
   text-align: center;
 
@@ -119,7 +121,7 @@
 }
 
 
-.footer__bottom {
+.footer--bottom {
   background: $color-qui;
 
   & > ul {

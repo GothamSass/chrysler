@@ -1,0 +1,60 @@
+//Layout
+.home-content {
+  @extend %content;
+  display: flex;
+  align-content: flex-start;
+  flex-wrap: wrap;
+
+  .home-content--description{
+    flex: 2;
+  }
+
+  .meetup--upcoming{
+    flex: 2;
+  }
+
+  .meetup--past{
+    flex: 2;
+    //background: green;
+  }
+}
+
+
+
+
+.home-content{
+  article {
+    padding: 1em;
+  }
+}
+
+//Modules
+.home-content--description {
+
+  .logo-wrapper {
+    text-align: center;
+
+  .icon-logo {
+      min-width: 10em;
+      min-height: 10em;
+    }
+  }
+}
+
+.home-content-middle {
+  background: $color-tert;
+  color: $color-white;
+
+  .meetup--past-group {
+    display:flex;
+
+    .meetup--past {
+      flex:3;
+      padding-right: 1em;
+
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+  }
+}
