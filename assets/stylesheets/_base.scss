@@ -1,17 +1,31 @@
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
 	color: $color-tert;
 	font-weight: normal;
 }
+
 body {
 	font-family: $font-body;
 }
+
 :focus {
 	outline-color: transparent;
 	outline-style: none;
 }
+
 a {
-	color: $color-prime;
 	@include trans;
+	border-bottom: 2px solid $color-prime;
+	color: color($color-tert,l1);
+	text-decoration: none;
+}
+
+*,
+:before,
+:after {
+box-sizing: border-box;
 }
 
 .hidden {
@@ -19,22 +33,21 @@ a {
 }
 
 h1 {
-	font-size: 4.5em;
 	margin: 0;
 	font-family: $font-title;
+	font-size: 4.5em;
 }
 
 h2 {
-	font-size: 3em;
-	margin: 0.5em 0;
-	color:#036;
+	color: #036;
+	font-size: 2.1em;
+	margin: .5em 0;
 }
 
 h3 {
-	font-size: 1.5em;
-	margin: 0.5em 0;
+	color: #3d4049;
 	font-weight: bold;
-	color:#3D4049;
+	margin: .5em 0;
 	text-transform: uppercase;
 }
 
@@ -43,20 +56,25 @@ h3 {
 	display: none;
 }
 
-img {
+img,
+svg {
 	max-width: 100%;
 	display: block;
 }
 
 ul {
-	list-style:none;
-	padding: 0em;
+	list-style: none;
+	padding: 0;
 	margin: 0;
 }
 
 p {
-	line-height: 1.5em;
-	font-size: 1.2em;
-	color:#3D4049;
+	color: #3d4049;
 	font-family: $font-body;
+	font-size: 1em;
+	line-height: 1.3em;
+}
+
+%text-small {
+	font-size: .8em;
 }

@@ -2,21 +2,24 @@ h1 Blog
 p Some stuff we want to say about our blog.
 
 //- show blog teaser roll
-.h-feed.u-list
-  for post, slug in public.blog.posts._data
-    if post.layout !== false
-      article.h-entry
-        a.u-url(href= "posts/#{slug}")
-          h2.p-name= post.title
-        p.byline Published by
+for post, slug in public.blog.posts._data
+  if post.layout !== false
+    article.h-entry.blog-teaser
+      a.u-url.blog-teaser--url(href= "#{ post.properties.permalink[0].url }")
+        h2.p-name.blog-teaser--title= post.properties.name
+      p
+        | Published by
+        =' '
 
-          each author, index in post.authors
-            span.p-author.h-card
-              if author.website
-                a.u-url(href= author.website)= author.name
-              else
-                author.name
+        each author, index in post.properties.author
+          a.p-author.blog-teaser--author(href= post.properties.author[index].properties.url)= post.properties.author[index].properties.name
+          =' '
 
-          time.dt-published=moment(post.published).format("MMM Do, YYYY")
+        |  on
+        =' '
+        time.dt-published.blog-teaser--time= post.properties.published
 
-        p.p-summary= post.summary
+      p.p-summary.blog-teaser--summary= post.properties.summary
+
+
+

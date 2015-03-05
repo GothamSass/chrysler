@@ -1,49 +1,29 @@
-article.h-entry
-  h1.p-name= title
+article.h-entry.blog-article
+  a.u-url.blog-article--url(href= "")
+    h2.p-name.blog-article--title= properties.name
+  p
+    | Published by
+    =' '
 
-  p.byline Published by
+    each author, index in properties.author
+      a.p-author.blog-article--author(href= properties.author[index].properties.url)= properties.author[index].properties.name
+      =' '
 
-    each author, index in authors
-      span.p-author.h-card
-        if author.website
-          a.u-url(href= author.website)= author.name
-        else
-          author.name
-
-    time.dt-published= moment(published).format("MMM Do, YYYY")
+    =' '
+    time.dt-published.blog-article--time= properties.published
 
 
-  .e-content
+  .e-content.blog-article--content
     != yield
 
-  .p-category= categories
+  .p-category.blog-article--category
+    = properties.category[0].category
+    =' '
+    = properties.category[0].tags
 
-  p.permalink
-    a.u-url(href= "/posts/#{slug}") Permalink
 
-  aside(role="contentinfo", class="Authors u-list")
-
-    - var size = authors._size
-
-    h3 About the Author #{size}
-
-    each author, index in authors
-      article.Author
-        div(data-size="thumbnail")
-          img(src=author.photo)
-        h3.p-author.h-card
-          a.u-url(href= author.website)= author.name
-        p= author.description
-
-        if author.data
-          ul.List.List--inline
-            for data, info in author.data
-              if data !== null
-                li(class="item-#{info}")
-                  case info
-                    when "hashtag"
-                      a(href="https://twitter.com/hashtag/#{data}") ##{data}
-                    when "twitter"
-                      a(href="https://twitter.com/#{twitter}")@#{data}
-                    default
-                      a(href=data)= data
+  h3 About the Author
+  each author, index in properties.author
+    p
+      a.p-author.h-card.blog-article--author(href= properties.author[index].properties.url)= properties.author[index].properties.name
+    p= properties.author[index].properties.description

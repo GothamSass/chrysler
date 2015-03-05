@@ -1,0 +1,19 @@
+.blog .content {
+  display: flex;
+  align-content: flex-start;
+  flex-wrap: wrap;
+
+  .blog-teaser {
+    background-color: red;
+
+    &:first-child {
+      background-color: pink;
+
+      // @media screen and (min-width: 930px) {
+      //   flex: 2 32em;
+      // }
+    }
+  }
+
+
+}

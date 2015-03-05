@@ -1,26 +1,142 @@
-footer.footer {
-  padding: $gap-1;
-  a {
-    background-color: $color-prime;
-    color: white;
-    margin-right: 2px;
-    text-align: center;
-    display: inline-block;
-    @include radius(50%);
-    i {
-      font-size: 20px;
-      padding: 8px 0 0 4px;
-    }
-    @include square(35px);
-    @include media(600px, max) {
-      i {
-        font-size: 15px;
-        padding: 5px 0 0 3px;
+// Layout
+.footer {
+  border-top: 5px solid color($color-sec, l1);
+
+  .footer__top  {
+    background: $color-sec;
+
+    & > ul {
+      @extend .content;
+      display: flex;
+      align-content: flex-start;
+      flex-wrap: wrap;
+
+     @media screen and (min-width: 930px) {
+      float: left;
+      margin-right: 2em;
+     }
+
+      & > li {
+        padding: 0.5em 0;
+        //flex: 1 25em;
+        border-bottom: 1px solid color($color-sec, l1);
+
+          h3 {
+              text-align: center;
+              @media screen and (min-width: 930px) {
+                margin-top: 0em;
+                text-align: left;
+              }
+            }
+
+        @media screen and (min-width: 930px) {
+          border-right: 1px solid color($color-sec, l1);
+          border-bottom: none;
+          padding: 0 1em;
+        }
+
+        &:first-child{
+          flex: 2 32em;
+          margin-left: 0;
+
+  .block {
+    padding: 0.5em 0;
+    //flex: 1 25em;
+    border-bottom: 1px solid color($color-sec, l1);
+
+        &:nth-child(2){
+          flex: 1 12em;
+        }
+
+        &:last-child{
+          flex: 1 12em;
+          margin-right: 0em;
+          border-right: none;
+          border-bottom: none;
+        }
+
+
+    .block-title {
+      text-align: center;
+      @media screen and (min-width: 930px) {
+        margin-top: 0em;
+        text-align: left;
       }
-      @include square(25px);
     }
-    &:hover {
-      background-color: $color-sec;
+
+    @media screen and (min-width: 930px) {
+      border-right: 1px solid color($color-sec, l1);
+      border-bottom: none;
+      padding: 0 1em;
+    }
+  } // blocks in footer_top
+}
+
+
+
+  .footer__description {
+    margin-top: 0;
+    max-width: 32em;
+
+    @media screen and (min-width: 930px) {
+      float:left;max-width: 22em;
     }
   }
+
+.footer__links {
+    padding-top:0.5em;
+    text-align: center;
+
+  @media screen and (min-width: 930px) {
+    text-align: left;
+  }
+
+    li {
+      padding-bottom: 0.5em;
+
+      a {
+        border-bottom: 0;
+        opacity: 0.5;
+
+        &:hover{
+          color:$color-white;
+          border-bottom: 2px solid $color-prime;
+          opacity: 1.0;
+        }
+      }
+    }
+  }
+
+
+.footer__bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: $color-qui;
+
+  & > ul{
+    @extend .content;
+    padding-top: 0em;
+    padding-bottom: 0em;
+    display: flex;
+    align-content: flex-start;
+  }
+
+  p {
+    // @@@ refactor to use a mixin for font-size
+    @extend %text-small;
+  }
+
+  a {
+    color: $color-white;
+
+    &:hover {
+      color:color($color-quat, d1)
+    }
+  }
+}
+
+.block--about {
+  flex: 2 32em;
+  margin-left: 0em;
 }
