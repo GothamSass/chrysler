@@ -1,29 +1,49 @@
 article.h-entry
-  a.u-url(href= "")
-    h2.p-name= properties.name
-  p
-    | Published by
-    =' '
+  h1.p-name= title
 
-    each author, index in properties.author
-      a.p-author.h-card(href= properties.author[index].properties.url)= properties.author[index].properties.name
-      =' '
+  p.byline Published by
 
-    =' '
-    time.dt-published= properties.published
+    each author, index in authors
+      span.p-author.h-card
+        if author.website
+          a.u-url(href= author.website)= author.name
+        else
+          author.name
+
+    time.dt-published= moment(published).format("MMM Do, YYYY")
 
 
   .e-content
     != yield
 
-  .p-category
-    = properties.category[0].category
-    =' '
-    = properties.category[0].tags
+  .p-category= categories
 
+  p.permalink
+    a.u-url(href= "/posts/#{slug}") Permalink
 
-  h3 About the Author
-  each author, index in properties.author
-    p
-      a.p-author.h-card(href= properties.author[index].properties.url)= properties.author[index].properties.name
-    p= properties.author[index].properties.description
+  aside(role="contentinfo", class="Authors u-list")
+
+    - var size = authors._size
+
+    h3 About the Author #{size}
+
+    each author, index in authors
+      article.Author
+        div(data-size="thumbnail")
+          img(src=author.photo)
+        h3.p-author.h-card
+          a.u-url(href= author.website)= author.name
+        p= author.description
+
+        if author.data
+          ul.List.List--inline
+            for data, info in author.data
+              if data !== null
+                li(class="item-#{info}")
+                  case info
+                    when "hashtag"
+                      a(href="https://twitter.com/hashtag/#{data}") ##{data}
+                    when "twitter"
+                      a(href="https://twitter.com/#{twitter}")@#{data}
+                    default
+                      a(href=data)= data
