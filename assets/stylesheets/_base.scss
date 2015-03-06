@@ -1,9 +1,11 @@
-h1,
-h2,
-h3,
-h4 {
-	color: $color-tert;
-	font-weight: normal;
+@mixin text( $size, $margin, $line: normal, $text-transform: initial, $family: $font-body, $weight: normal, $color: $color-tert) {
+	font-size: $size;
+	line-height: $line;
+	margin: 0 0 $margin 0;
+	font-family: $family;
+	font-weight: $weight;
+	text-transform: $text-transform;
+	color: $color;
 }
 
 body {
@@ -33,22 +35,15 @@ box-sizing: border-box;
 }
 
 h1 {
-	margin: 0;
-	font-family: $font-title;
-	font-size: 4.5em;
+	@include text(4.5em, .5em, $family: $font-title, $text-transform: uppercase)
 }
 
 h2 {
-	color: #036;
-	font-size: 2.1em;
-	margin: .5em 0;
+	@include text( 2.1em, .5em, $color: $color-sec, $text-transform: capitalize)
 }
 
 h3 {
-	color: #3d4049;
-	font-weight: bold;
-	margin: .5em 0;
-	text-transform: uppercase;
+	@include text( $text-size__body, .5em, $color: #3d4049, $text-transform: uppercase, $weight: bold)
 }
 
 //Refactor accessibly
@@ -69,10 +64,12 @@ ul {
 }
 
 p {
-	color: #3d4049;
-	font-family: $font-body;
-	font-size: 1.2em;
-	line-height: 1.4em;
+	@include text( $text-size__body, 0.5, $line: 1.4em, $color: $color-text);
+
+	 &:first-child {
+		margin: 0;
+	}
+
 }
 
 %text-small {
