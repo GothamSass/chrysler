@@ -1,35 +1,41 @@
-section.section.home-content-top
-  div.content
-    article.home-content--description
-      p.logo-wrapper
-        <svg class="icon icon-logo"><use xlink:href="#icon-logo"></use></svg><span class="mls"></span>
-      p GothamSass meetup serves front end developers, CSS ninjas, UX mavens, and Sass lovers where you come to learn the latest Sass news, meet other Sass enthusiasts, and find out about how to make your teams more effective.
-      a Join Us on meetup
+section.section.l-home-content__top
+  div.content.home-content__hero
+    //- article.home-content__description
+    //-   p.logo-wrapper
+    //-     <svg class="icon icon-logo"><use xlink:href="#icon-logo"></use></svg><span class="mls"></span>
+    //-   p GothamSass meetup serves front end developers, CSS ninjas, UX mavens, and Sass lovers where you come to learn the latest Sass news, meet other Sass enthusiasts, and find out about how to make your teams more effective.
+    //-   a Join Us on meetup
 
-    article.home-content--meetup.meetup--upcoming
-      span.next-meetup-title Next Meetup:
-      h2 Battle of the Grids pt. 1
-      p September 16, 2014
-      p So. Many. Grid. Frameworks. #mindexploding
+    article.home-content__meetup.meetup--upcoming
+      span.upcoming-meetup__section-title Next Meetup:
+      h2.upcoming-meetup__title Using Bootstrap + Sass Effectively
+      span September 16, 2014
       p
-        | This month we will hear from few speakers on their grid framework of choice. Lightening talk style.
+        | Working with a framework like Bootstrap with Sass doesn't have to be a messy nightmare... We are going to talk about best practices for using Bootstrap in your Sass project including:
+        ul.ul-bullet
+          li how to avoid css bloat
+          li setting up your project for maximum effectiveness
+          li overriding bootstrap variables for your own
+          li managing a large sass + bootstrap project
+          li some live examples!
+          
       
-section.section.home-content-middle
-  .content
-    h3 Past Meetups:
+section.section.l-home-content__middle
+  .content.content__middle
+    h3.upcoming-meetup__section-title Past Meetups:
     .meetup--past-group
-      article.home-content--meetup.meetup--past
+      article.home-content__meetup.meetup--past
         h4.meetup--past--title On Constraints with Shay Howe, Jon Buda &amp; JC Grubbs
-        span.meetup--past--date May 22, 2014
-        p.meetup--past--description
+        span.meetup--past__date May 22, 2014
+        p.meetup--past__description
           | Joining us from Chicago GothamSass gives a very special welcome to Shay Howe, Jon Buda and JC Grubbs. The trio are taking a five day road trip across the country spending time with the local community of designers and developers.
-      article.home-content--meetup.meetup--past
+      article.home-content__meetup.meetup--past
         h4.meetup--past--title On Constraints with Shay Howe, Jon Buda &amp; JC Grubbs
-        span.meetup--past--date May 22, 2014
-        p.meetup--past--description
+        span.meetup--past__date May 22, 2014
+        p.meetup--past__description
           | Joining us from Chicago GothamSass gives a very special welcome to Shay Howe, Jon Buda and JC Grubbs. The trio are taking a five day road trip across the country spending time with the local community of designers and developers.
-      article.home-content--meetup.meetup--past
+      article.home-content__meetup.meetup--past
         h4.meetup--past--title On Constraints with Shay Howe, Jon Buda &amp; JC Grubbs
-        span.meetup--past--date May 22, 2014
-        p.meetup--past--description
+        span.meetup--past__date May 22, 2014
+        p.meetup--past__description
           | Joining us from Chicago GothamSass gives a very special welcome to Shay Howe, Jon Buda and JC Grubbs. The trio are taking a five day road trip across the country spending time with the local community of designers and developers.

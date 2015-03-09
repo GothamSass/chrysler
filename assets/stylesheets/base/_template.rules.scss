@@ -3,3 +3,11 @@
 %text__color--tert { color: $color-tert;}
 
 %text-size--small { font-size: .8em;}
+
+
+.ul-bullet {
+	list-style: disc;
+	padding-left: 2em;
+  line-height: 1.5em;
+  font-size: 1.2em;
+}
