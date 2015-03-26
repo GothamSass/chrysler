@@ -1,0 +1,13 @@
+{
+  "globals": {
+    "title": "GothamSass",
+    "description"  : "New York City's Sass community. We hold monthly meetups and events for front-end developers and designers.",
+    "uri": "http://gothamsass.com",
+    "manifesto": {
+      "title": "Manifesto"
+    }
+  },
+    "resources": {
+      "title": "Booo"
+    }
+}

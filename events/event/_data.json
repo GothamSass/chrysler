@@ -1,0 +1,138 @@
+{
+  "guidelines": {
+    "name": "Event Guidelines",
+    "description":"An event on our guidelines. If you're new, attend by reading through and asking questions.",
+    "start_date": "2050-04-23 19:00",
+    "end_date": "2050-04-23 21:00",
+    "categories": ["hacking", "lightning talks"],
+    "venue": null,
+    "sponsors": {
+      "sponsor-1": {
+        "name": "Pivotal Labs",
+        "description": "Sponsors can display short descriptions and any social media icons.",
+        "logo": null,
+        "data": {
+          "url": "pivotal.com",
+          "twitter": "pivotal",
+          "hashtag": null,
+          "github": null
+        }
+      }
+    },
+    "participants": [
+      {
+        "name": "GothamSass Unicorn",
+        "role": ["speaker"],
+        "photo": {
+          "path": "/assets/img/logo/png",
+          "alt": "Avatar for our first speaker"
+          },
+        "bio": "Organizing team of GothamSass",
+        "title": "title of the speaker's presentation",
+        "description": "this is a longer description for a speaker's topic if we have multiple speakers",
+        "data": {
+          "url": "gothamsass.org",
+          "twitter": "gothamsass",
+          "github": "github.com/gothamsass"
+        }
+      },
+      {
+        "name": "GothamSass Unicorn II",
+        "role": ["speaker"],
+        "photo": {
+          "path": "/assets/img/logo/png",
+          "alt": "Avatar for our first speaker"
+          },
+        "bio": "Bio Organizing team of GothamSass",
+        "title": "title of the speaker's presentation",
+        "description": "this is a longer description for a speaker's topic if we have multiple speakers",
+        "data": {
+          "url": "gothamsass.org",
+          "twitter": "gothamsass",
+          "github": "github.com/gothamsass"
+        }
+      },
+      {
+        "name": "The Mic",
+        "role": ["emcee"],
+        "photo": {
+          "path": "/assets/img/logo/png",
+          "alt": "Avatar for our first speaker"
+          },
+        "data": {
+          "url": "gothamsass.org",
+          "twitter": "gothamsass",
+          "github": "github.com/gothamsass"
+        }
+      },
+      {
+        "name": "Salutations",
+        "role": ["greeter"],
+        "photo": {
+          "path": "/assets/img/logo/png",
+          "alt": "Avatar for our first speaker"
+          },
+        "data": {
+          "url": "gothamsass.org",
+          "twitter": "gothamsass"
+        }
+      }
+    ]
+  },
+  "styleguide": {
+    "name": "Styleguide for Events",
+    "description":"This is the events styleguide. This is the first post. There are two posts.",
+    "start_date": "2012-04-23 19:00",
+    "end_date": "2012-04-23 9:00",
+    "categories": ["talks", "styleguides"],
+    "venue": {
+      "name": "Pivotal Labs",
+      "address_1": "625 Avenue of Americas, 2nd Floor",
+      "address_2": null,
+      "city": "New York",
+      "accessbile": "Event is accessible via elevators"
+    },
+    "sponsors": {
+      "sponsor-1": {
+        "name": "Pivotal Labs",
+        "description": "Short description about sponsor",
+        "logo": null,
+        "url": "http://pivotal.com",
+        "data": {
+          "url": "gothamsass.org",
+          "twitter": "gothamsass",
+          "github": "github.com/gothamsass"
+        }
+
+      }
+    },
+    "participants": [
+      {
+        "name": "GothamSass Unicorn",
+        "role": ["speaker"],
+        "photo": {
+          "path": "/assets/img/logo/png",
+          "alt": "Avatar for our first speaker"
+          },
+        "bio": "Organizing team of GothamSass",
+        "title": "title of the speaker's presentation",
+        "description": "this is a longer description for a speaker's topic if we have multiple speakers",
+        "data": {
+          "url": "gothamsass.org",
+          "twitter": "gothamsass",
+          "github": "github.com/gothamsass"
+        }
+      },
+      {
+        "name": "Radical Member-Greeter",
+        "role": ["greeter"],
+        "photo": null,
+        "data": {
+          "url": "gothamsass.org",
+          "twitter": "gothamsass",
+          "github": "github.com/gothamsass"
+        }
+      }
+    ]
+  }
+}
