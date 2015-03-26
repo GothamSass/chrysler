@@ -1,48 +1,47 @@
 .team-grid {
-	@include micro-clearfix;
+  @include micro-clearfix;
 }
 
 .member {
-	@include box;
-	float: left;
-	width: (100% / 3);
-	padding: 10px;
-	text-align: center;
-	border-left: solid 1px #ccc;
-	border-top: solid 1px #ccc;
+  @include box;
+  border-left: solid 1px #ccc;
+  border-top: solid 1px #ccc;
+  float: left;
+  padding: 10px;
+  text-align: center;
+  width: (100% / 3);
 
-	&:nth-of-type(3n+1) {
-		border-left: none;
-	}
+  &:nth-of-type(3n+1) {
+    border-left: 0;
+  }
 
-	&:first-of-type,
-	&:nth-of-type(2),
-	&:nth-of-type(3) {
-		border-top: none;
-	}
+  &:first-of-type,
+  &:nth-of-type(2),
+  &:nth-of-type(3) {
+    border-top: 0;
+  }
 
-	h3 {
-		@include ellipsis;
-		@include reset(all);
+  h3 {
+    @include ellipsis;
+    @include reset(all);
+  }
 
-	}
+  p {
+    margin-top: 0;
+  }
 
-	p {
-		margin-top: 0;
-	}
-
-	a {
-		&:not(:first-of-type) {
-			margin-left: 10px;
-		}
-	}
+  a {
+    &:not(:first-of-type) {
+      margin-left: 10px;
+    }
+  }
 }
 
 
 .member-photo {
-	@include square(100px);
-	@include radius(50%);
-	background-size: contain;
-	display: block;
-	margin: 0 auto 10px auto;
+  @include square(100px);
+  @include radius(50%);
+  background-size: contain;
+  display: block;
+  margin: 0 auto 10px auto;
 }

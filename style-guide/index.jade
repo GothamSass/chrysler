@@ -18,15 +18,19 @@ ul.style-guide
         h2 Logo
         ul
           li
-            img(src='../assets/logo/logo.svg')
+            svg.icon.icon-logo
+              use(xlink:href='#icon-logo')
+            p Logo
           li
-            img(class='icon' src='../assets/logo/GothamSass__icon--color.svg')
+            svg.icon.icon-logo-icon
+              use(xlink:href='#icon-logo-icon')
+            p Icon
 
       //- section.heading
       //-   h2 Heading
       //-   div
       //-
-      section.fontFamily
+      section.font-family
         h2 Font Family
         ul
           li
@@ -67,7 +71,7 @@ ul.style-guide
         for post, slug in public.blog.posts._data
           article.h-entry
             a.u-url(href= "#{ post.properties.permalink[0].url }")
-              h1.p-name= post.properties.name
+              h2.p-name= post.properties.name
             p
               | Published by
               =' '
@@ -95,4 +99,3 @@ ul.style-guide
               label.input__label.input__label--ichiro(for='textarea-25')
                 span.input__label-content.input__label-content--ichiro Textarea
           li
-

@@ -1,25 +1,22 @@
 .nav--main {
-  display: -webkit-flex;
+  background: #00f;
   display: flex;
-  -webkit-flex-wrap: wrap;
-  flex-wrap: wrap;
   flex-direction: row;
-  background: blue;
-  list-style:none;
-  padding: 0px;
-  margin: 0px;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 
   li {
-  //-webkit-flex: 1 20em;
-  flex: 1 10em;
-  background: #aaa;
-  padding: 1em;
-  text-align:center;
+    background: #aaa;
+    flex: 1 10em;
+    padding: 1em;
+    text-align: center;
+
     a {
-    color:white;
-    text-decoration:none;
-    text-transform: uppercase;
+      color: #fff;
+      text-decoration: none;
+      text-transform: uppercase;
     }
   }
 }
-

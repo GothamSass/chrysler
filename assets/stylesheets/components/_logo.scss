@@ -1,0 +1,48 @@
+.icon {
+  display: inline-block;
+  fill: currentColor;
+  height: 1em;
+  width: 1em;
+}
+
+// .icon-logo {
+// }
+
+// Needs to be Refactored in mixins - AO
+#icon-logo-icon .path1 {
+  fill: rgb(255, 255, 255);
+}
+
+#icon-logo-icon .path2 {
+  fill: rgb(68, 68, 68);
+}
+
+#icon-logo-icon .path3,
+#icon-logo-icon .path4,
+#icon-logo-icon .path5 {
+  fill: rgb(93, 93, 93);
+}
+
+#icon-logo .path1 {
+  fill: $color-prime;
+}
+
+#icon-logo .path2,
+#icon-logo .path3,
+#icon-logo .path4,
+#icon-logo .path5,
+#icon-logo .path6,
+#icon-logo .path7,
+#icon-logo .path8,
+#icon-logo .path9,
+#icon-logo .path10,
+#icon-logo .path11,
+#icon-logo .path12,
+#icon-logo .path13,
+#icon-logo .path14,
+#icon-logo .path15,
+#icon-logo .path16,
+#icon-logo .path17,
+#icon-logo .path18 {
+  fill: $color-white;
+}
