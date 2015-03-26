@@ -2,6 +2,8 @@
 
 scss_files: "**/*.scss"
 
+exclude: 'assets/stylesheets/vendors/**'
+
 linters:
   BangFormat:
     enabled: true
@@ -74,7 +76,7 @@ linters:
 
   LeadingZero:
     enabled: true
-    style: exclude_zero # or 'include_zero'
+    style: include_zero
 
   MergeableSelector:
     enabled: true
@@ -83,11 +85,11 @@ linters:
   NameFormat:
     enabled: true
     allow_leading_underscore: true
-    convention: hyphenated_lowercase # or 'BEM', or a regex pattern
+    convention: BEM # 'hyphenated_lowercase' or 'BEM', or a regex pattern
 
   NestingDepth:
     enabled: true
-    max_depth: 3
+    max_depth: 4
 
   PlaceholderInExtend:
     enabled: true
@@ -118,7 +120,7 @@ linters:
 
   SelectorFormat:
     enabled: true
-    convention: hyphenated_lowercase # or 'BEM', or 'hyphenated_BEM', or 'snake_case', or 'camel_case', or a regex pattern
+    convention: BEM # or 'hyphenated_lowercas', or 'hyphenated_BEM', or 'snake_case', or 'camel_case', or a regex pattern
 
   Shorthand:
     enabled: true

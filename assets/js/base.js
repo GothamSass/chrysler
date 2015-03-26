@@ -6,3 +6,6 @@ $(window).scroll(function() {
     $('html').removeClass('trans');
   };
 });
+
+var m = moment().format();
+console.log(m);

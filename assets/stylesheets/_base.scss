@@ -1,12 +1,5 @@
-h1,
-h2,
-h3,
-h4 {
-  color: $color-tert;
-  font-weight: normal;
-}
-
 body {
+  background-color: $color-white;
   font-family: $font-body;
 }
 
@@ -17,19 +10,15 @@ body {
 
 a {
   @include trans;
-  border-bottom: 2px solid $color-prime;
-  color: color($color-tert, l1);
-  text-decoration: none;
+  color: $color-prime;
 }
 
-*,
-:before,
-:after {
-  box-sizing: border-box;
-}
-
-.hidden {
-  display: none;
+h1,
+h2,
+h3,
+h4 {
+  $font-family: $font-title;
+  font-weight: normal;
 }
 
 h1 {
@@ -40,14 +29,15 @@ h1 {
 
 h2 {
   color: #036;
-  font-size: 2.1em;
-  margin: .5em 0;
+  font-size: 3em;
+  margin: 0.5em 0;
 }
 
 h3 {
   color: #3d4049;
+  font-size: 1.5em;
   font-weight: bold;
-  margin: .5em 0;
+  margin: 0.5em 0;
   text-transform: uppercase;
 }
 
@@ -56,8 +46,7 @@ h3 {
   display: none;
 }
 
-img,
-svg {
+img {
   display: block;
   max-width: 100%;
 }
@@ -71,10 +60,6 @@ ul {
 p {
   color: #3d4049;
   font-family: $font-body;
-  font-size: 1em;
-  line-height: 1.3em;
-}
-
-%text-small {
-  font-size: .8em;
+  font-size: 1.2em;
+  line-height: 1.5em;
 }

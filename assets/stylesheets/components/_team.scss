@@ -24,6 +24,7 @@
   h3 {
     @include ellipsis;
     @include reset(all);
+
   }
 
   p {
@@ -43,5 +44,5 @@
   @include radius(50%);
   background-size: contain;
   display: block;
-  margin: 0 auto 10px auto;
+  margin: 0 auto 10px;
 }

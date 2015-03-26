@@ -6,7 +6,7 @@
 .nav-item {
   align-self: flex-start;
   background: $color-quat;
-  padding: .5em;
+  padding: 0.5em;
 
   &:last-child {
     border-bottom-right-radius: 3px;
@@ -14,19 +14,19 @@
   }
 
   a {
-    border-bottom: 0;
     color: $color-tert;
-    opacity: .5;
+    opacity: 0.5;
+    text-decoration: none;
 
     &:hover {
-      border-bottom: 2px solid $color-prime;
       color: $color-prime;
       opacity: 1;
+      text-decoration: underline;
     }
   }
 }
 
-.main-nav {
+nav {
   margin: 0 auto;
   max-width: 60em;
 

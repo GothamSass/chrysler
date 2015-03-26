@@ -4,6 +4,7 @@ var reload = browserSync.reload;
 var harp = require('harp');
 var scsslint = require('gulp-scss-lint');
 var cache = require('gulp-cached');
+var gulpFilter = require('gulp-filter');
 
 var paths = {
   templates: '**/*.{jade, md}',
@@ -51,6 +52,7 @@ gulp.task('serve', function () {
  * Lint files
  */
 gulp.task('lint', function() {
+
   gulp.src(paths.sass)
     .pipe(cache('scsslint'))
     .pipe(scsslint({'config': 'lint.yml',}))

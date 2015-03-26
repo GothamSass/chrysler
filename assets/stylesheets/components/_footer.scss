@@ -1,136 +1,35 @@
-// Layout
 .footer {
-  border-top: 5px solid color($color-sec, l1);
-
-  .footer--top {
-    background: $color-sec;
-
-    > ul {
-      @extend %container--content;
-      align-content: flex-start;
-      display: flex;
-      flex-wrap: wrap;
-
-      @media screen and (max-width: 930px) {
-        padding: 0 1em;
-      }
-
-      > li {
-        border-bottom: 1px solid color($color-sec, l1);
-        padding: .5em 0;
-
-        h3 {
-          text-align: center;
-          @media screen and (min-width: 930px) {
-            margin-top: 0;
-            text-align: left;
-          }
-        }
-
-        @media screen and (min-width: 930px) {
-          border-bottom: 0;
-          border-right: 1px solid color($color-sec, l1);
-          padding: 0 1em;
-        }
-
-        &:first-child {
-          flex: 2 32em;
-          margin-left: 0;
-        }
-
-        &:nth-child(2) {
-          flex: 1 12em;
-        }
-
-        &:last-child {
-          border-bottom: 0;
-          border-right: 0;
-          flex: 1 12em;
-          margin-right: 0;
-        }
-      }
-    }
-  }
-
-  .icon-logo {
-    display: block;
-    margin: 0 auto;
-    min-height: 6em;
-    min-width: 6em; 
-
-    @media screen and (min-width: 930px) {
-      float: left;
-      margin-right: 2em;
-    }
-
-    p & {
-      width: 100%;
-      @media screen and (min-width: 930px) {
-        width: auto;
-      }
-    }
-  }
-
-  .footer--description {
-    margin-top: 0;
-    max-width: 32em;
-
-    @media screen and (min-width: 930px) {
-      float: left;
-      max-width: 22em;
-    }
-  }
-
-  p,
-  h3 { 
-    color: $color-white; 
-  }
-}
-
-.footer__links {
-  padding-top: .5em;
-  text-align: center;
-
-  @media screen and (min-width: 930px) {
-    text-align: left;
-  }
-
-  li {
-    padding-bottom: .5em;
-
-    a {
-      border-bottom: 0;
-      opacity: .5;
-
-      &:hover {
-        border-bottom: 2px solid $color-prime;
-        color: $color-white;
-        opacity: 1;
-      }
-    }
-  }
-}
-
-.footer__bottom {
-  background: $color-qui;
-
-  > ul {
-    @extend .content;
-    align-content: flex-start;
-    display: flex;
-    padding-bottom: 0;
-    padding-top: 0;
-  }
-
-  p {
-    @extend %text-small;
-  }
+  padding: $gap-1;
 
   a {
-    color: $color-white;
+    background-color: $color-prime;
+    color: #fff;
+    display: inline-block;
+    margin-right: 2px;
+    text-align: center;
+
+    @include radius(50%);
+
+    i {
+      font-size: 20px;
+      padding: 8px 0 0 4px;
+    }
+
+    @include square(35px);
+
+    @include media(600px, max) {
+
+      i {
+        font-size: 15px;
+        padding: 5px 0 0 3px;
+      }
+
+      @include square(25px);
+
+    }
 
     &:hover {
-      color: color($color-quat, d1);
+      background-color: $color-sec;
     }
   }
 }

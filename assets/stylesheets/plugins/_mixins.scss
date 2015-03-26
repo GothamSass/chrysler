@@ -8,14 +8,12 @@
 }
 
 @mixin placeholder {
-  &.placeholder { 
-    @content 
-  }
-  
+  &.placeholder { @content }
   &:focus::-webkit-input-placeholder {
     opacity: 0;
     text-indent: -50%;
-    transition: all .5s .1s ease;
+    transition: all 0.5s 0.1s ease;
+
   }
 }
 
@@ -39,7 +37,7 @@
   background-clip: padding-box;
 }
 
-@mixin shadow($shadow: 0 1px 3px rgba(0, 0, 0, .25), $mode: normal) {
+@mixin shadow($shadow: 0 1px 3px rgba(0, 0, 0, 0.25), $mode: normal) {
   @if $mode == text {
     text-shadow: $shadow;
   } @else {
@@ -82,19 +80,15 @@
   @media screen and (max-width: 1024px) {
     width: (1024px - $minus);
   }
-  
   @media screen and (max-width: 768px) {
     width: (768px - $minus);
   }
-  
   @media screen and (max-width: 568px) {
     width: (568px - $minus);
   }
-  
   @media screen and (max-width: 480px) {
     width: (480px - $minus);
   }
-  
   @media screen and (max-width: 768px) {
     width: (768px - $minus);
   }
@@ -108,27 +102,26 @@
 }
 
 @mixin grid($cell: 2, $gutter: 20px, $border: false, $border-color: #ccc) {
+  width: 100%;
   @include box;
   @include clear;
-  width: 100%;
-
   > .cell,
-  > li,
-  > dt,
-  > section {
+  & > li,
+  & > dt,
+  & > section {
     @include box;
     float: left;
     padding: 0;
     width: (100% / $cell);
-    
+
     &:not(:last-of-type) {
       padding-right: ($gutter / 2);
     }
-    
+
     &:not(:first-of-type) {
       padding-left: ($gutter / 2);
     }
-    
+
     @media screen and (max-width: 767px) {
       @include reset;
       display: block;
@@ -138,61 +131,50 @@
   }
 }
 
+// from http://dabblet.com/gist/2462915
 @mixin scroll-hint($bgcolor: #000) {
-  // from http://dabblet.com/gist/2462915 
   overflow: auto;
-  background: 
-  // Shadow covers
-  linear-gradient($bgcolor 30%, rgba(255, 255, 255, 0)),
+  background: linear-gradient($bgcolor 30%, rgba(255, 255, 255, 0)),
   linear-gradient(rgba(255, 255, 255, 0), $bgcolor 90%) 0 100%,
 
   // Shadows
-  radial-gradient(50% 0, farthest-side, rgba(0, 0, 0, .2), rgba(0, 0, 0, 0)),
-  radial-gradient(50% 100%, farthest-side, rgba(0, 0, 0, .2), rgba(0, 0, 0, 0)) 0 100%;
-  
-  background: 
-  // Shadow covers
-  linear-gradient($bgcolor 30%, rgba(255, 255, 255, 0)),
+  radial-gradient(50% 0, farthest-side, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)),
+  radial-gradient(50% 100%, farthest-side, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)) 0 100%;
+  background: linear-gradient($bgcolor 30%, rgba(255, 255, 255, 0)),
   linear-gradient(rgba(255, 255, 255, 0), $bgcolor 90%) 0 100%,
 
   // Shadows
-  radial-gradient(farthest-side at 50% 0, rgba(0, 0, 0, .5), rgba(0, 0, 0, 0)),
-  radial-gradient(farthest-side at 50% 100%, rgba(0, 0, 0, .5), rgba(0, 0, 0, 0)) 0 100%;
-
+  radial-gradient(farthest-side at 50% 0, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)),
+  radial-gradient(farthest-side at 50% 100%, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)) 0 100%;
   background-repeat: no-repeat;
   background-color: $bgcolor;
   background-size: 100% 40px, 100% 40px, 100% 14px, 100% 14px;
 
-  // Opera doesn't support this in the shorthand
+  //Opera doesn't support this in the shorthand
   background-attachment: local, local, scroll, scroll;
 }
 
 @mixin reset($type: all) {
   @if $type == margin {
     margin: 0 !important;
-
   } @else if $type == padding {
     padding: 0 !important;
-
   } @else if $type == border {
     border: 0;
-
   } @else if $type == bg {
     background: transparent;
-
   } @else if $type == list {
     list-style: none;
-
   } @else {
     background: transparent;
     border: 0;
     margin: 0 !important;
     padding: 0 !important;
-  }
+    }
 }
 
 
-// from http://codepen.io/chriscoyier/blog/some-mini-sass-mixins-i-like
+//from http://codepen.io/chriscoyier/blog/some-mini-sass-mixins-i-like
 
 @mixin coverer {
   position: absolute;
@@ -229,13 +211,13 @@
 
 @mixin clear {
   zoom: 1;
-  
+
   &:before,
   &:after {
     content: '';
     display: table;
   }
-  
+
   &:after {
     clear: both;
   }
@@ -262,85 +244,90 @@
 @mixin unless($unless: mac) {
   html:not(.#{$unless}) & {
     @content
-  }
+      }
 }
 
 @mixin media($device: ipad, $scope: strict, $variation: mini) {
   @if $device == 'ipad' {
     @if $scope == 'min' {
-      @media only screen and (max-width : 768px) {
+      @media only screen and
+      (max-width : 768px) {
         @content
-      }
-    } @else if $scope == 'all' {
-      @media only screen and (max-width : 1024px) {
+     }
+   }
+    @else if $scope == 'all' {
+      @media only screen and
+    (max-width : 1024px) {
         @content
-      }
+   }
     } @else {
-      @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+      @media only screen and
+      (min-device-width : 768px) and
+      (max-device-width : 1024px) {
         @content
-      }
-    }
-
+     }
+}
   } @else if $device == 'iphone5' {
     @if $scope == 'min' {
       @media only screen and
-      (max-width : 320px) {
+        (max-width : 320px) {
         @content
-      }
-    } @else if $scope == 'all' {
+       }
+     }
+    @else if $scope == 'all' {
       @media only screen and
       (max-width : 568px) {
         @content
-      }
-    } @else {
+     }
+}
+    @else {
       @media only screen and
       (min-device-width : 320px) and
       (max-device-width : 568px) {
         @content
-      }
+     }
     }
-
   } @else if $device == 'iphone6' {
     @if $scope == 'min' {
       @media only screen and
       (max-width : 375px) {
         @content
-      }
-    }
+     }
+   }
     @else if $scope == 'all' {
       @media only screen and
-      (max-width : 667px) {
+     (max-width : 667px) {
         @content
-      }
-    }
+ }
+}
     @else {
       @media only screen and
       (min-device-width : 375px) and
       (max-device-width : 667px) {
         @content
-      }
-    }
-
+     }
+}
   } @else if $device == 'iphone4' {
     @if $scope == 'min' {
       @media only screen and
-      (max-width : 320px) {
+     (max-width : 320px) {
         @content
-      }
-    } @else if $scope == 'all' {
+   }
+ }
+    @else if $scope == 'all' {
       @media only screen and
-      (max-width : 480px) {
+  (max-width : 480px) {
         @content
-      }
-    } @else {
+ }
+}
+    @else {
       @media only screen and
-      (min-device-width : 320px) and
-      (max-device-width : 480px) {
+        (min-device-width : 320px) and
+        (max-device-width : 480px) {
         @content
-      }
-    }
-
+ }
+}
   } @else {
 
-  }
+}
 }
