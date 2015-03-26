@@ -1,32 +1,109 @@
-.footer {
-  padding: $gap-1;
+// Footer
+// ======
 
-  a {
-    background-color: $color-prime;
-    color: #fff;
-    display: inline-block;
-    margin-right: 2px;
+.footer {
+  border-top: 5px solid color($color-sec, l1);
+}
+
+.footer__top  {
+  background: $color-sec;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2em 1em;
+
+  .block {
+    padding: 0.5em 0;
+    border-top: 1px solid color($color-sec, l1);
+
+    &:first-child {
+      border-top: 0;
+    }
+  }
+
+  .block-title {
     text-align: center;
 
-    @include radius(50%);
-
-    i {
-      font-size: 20px;
-      padding: 8px 0 0 4px;
+    @include at(footer-triptych) {
+      margin-top: 0em;
+      text-align: left;
     }
+  }
+}
 
-    @include square(35px);
+// individual blocks in the footer_top region
+.block--about {
+  flex: 2 32em;
 
-    @include media(600px, max) {
+  @include at(footer-triptych) {
+    flex: 4;
+  }
 
-      i {
-        font-size: 15px;
-        padding: 5px 0 0 3px;
+}
+
+.block--links,
+.block--connect {
+  border-top: 1px solid color($color-sec, l1);
+  flex: 1 25em;
+
+  @include at(footer-diptych) {
+    flex: 1 50%;
+  }
+
+  @include at(footer-triptych) {
+    border-top: 0 !important;
+    flex: 1 auto;
+  }
+}
+
+.footer__description {
+  margin-top: 0;
+  max-width: 32em;
+
+  @include at(footer-triptych) {
+    float:left;
+    max-width: 22em;
+  }
+}
+
+.footer__links {
+    padding-top:0.5em;
+    text-align: center;
+
+  @include at(footer-triptych) {
+    text-align: left;
+  }
+
+  li {
+    margin-bottom: 0.5em;
+
+    a {
+      border-bottom: 0;
+      opacity: 0.5;
+
+      &:hover{
+        color:$color-white;
+        border-bottom: 2px solid $color-prime;
+        opacity: 1.0;
       }
-
-      @include square(25px);
-
     }
+  }
+}
+
+
+.footer__bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: $color-qui;
+  padding: 2em 1em;
+
+  p {
+    // @@@ refactor to use a mixin for font-size
+    @extend %text-small;
+  }
+
+  a {
+    color: $color-white;
 
     &:hover {
       background-color: $color-sec;

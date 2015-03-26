@@ -1,13 +1,22 @@
 {
   "globals": {
-    "title": "GothamSass",
-    "description"  : "New York City's Sass community. We hold monthly meetups and events for front-end developers and designers.",
-    "uri": "http://gothamsass.com",
-    "manifesto": {
-      "title": "Manifesto"
+    "title": "Gotham Sass Meetup",
+    "short_description": "GothamSass meetup serves front end developers, CSS ninjas, UX mavens, and Sass lovers where you come to learn the latest Sass news, meet other Sass enthusiasts, and find out about how to make your teams more effective.",
+    "email": "gothamsass@gmail.com",
+    "data": {
+      "url": "gothamsass.org",
+      "twitter": "gothamsass",
+      "github": "gothamsass",
+      "meetup": "gothamsass"
+    },
+    "copyright": {
+      "start": "2015",
+      "end": null
+    },
+    "licenses": {
+      "code": "MIT or as licensed",
+      "content": "TODO-Creative-Commons",
+      "logo": "Designed by FILL ME IN"
     }
-  },
-    "resources": {
-      "title": "Booo"
-    }
+  }
 }

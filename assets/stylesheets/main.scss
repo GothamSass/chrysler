@@ -1,12 +1,12 @@
 // Main Manifest
 // ==============
 
-@import 'vendors/normalize'; // @@@ use via bower
-@import 'base/fonts';
+@import 'base/requirements.config';
 @import 'base/fonts.config';
+@import 'base/fonts';
 @import 'base/colors.config';
 @import 'base/scale.config';
-@import 'components/logo';
+@import 'base/breakpoints.config';
 
 
 // Plugins
@@ -26,15 +26,16 @@
 
 // Components
 // ----------
-@import 'components/nav';
-@import 'components/footer';
+
 @import 'components/blog-teaser';
 @import 'components/blog-article';
-@import 'components/team';
-@import 'components/forms';
 @import 'components/buttons';
+@import 'components/footer';
+@import 'components/forms';
+@import 'components/logo';
+@import 'components/nav';
+@import 'components/team';
 @import 'components/style-guide';
-@import 'components/home-content';
 
 
 

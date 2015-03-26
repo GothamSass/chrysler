@@ -15,29 +15,11 @@ article.h-entry.blog-article
   .e-content.blog-article--content
     != yield
 
-  .p-category= categories
-
-  p.permalink
-    a.u-url(href= "/posts/#{slug}") Permalink
-
-  aside(role="contentinfo", class="Authors u-list")
-
-    - var size = authors._size
-
-    h3 About the Author #{size}
-
   .p-category.blog-article--category
     = properties.category[0].category
     =' '
     = properties.category[0].tags
 
-    each author, index in authors
-      article.Author
-        div(data-size="thumbnail")
-          img(src=author.photo)
-        h3.p-author.h-card
-          a.u-url(href= author.website)= author.name
-        p= author.description
 
   h3 About the Author
   each author, index in properties.author
