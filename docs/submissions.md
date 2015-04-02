@@ -24,3 +24,4 @@ To submit you'll need a Github account. If you don't have one, go ahead and [cre
 ## Todos
 
 - [] provide examples of submissions
+- [] update submission process once we've launched to reflect the pull request method
