@@ -1,28 +1,28 @@
 article.h-entry.blog-article
   a.u-url.blog-article--url(href= "")
-    h2.p-name.blog-article--title= properties.name
+    h2.p-name.blog-article--title
+      = title
   p
     | Published by
     =' '
-
-    each author, index in properties.author
-      a.p-author.blog-article--author(href= properties.author[index].properties.url)= properties.author[index].properties.name
-      =' '
-
-    =' '
-    time.dt-published.blog-article--time= properties.published
+    each author in authors
+      //- - if(author.data)
+      a.p-author.blog-article(href= author.website)= author.name 
+      = ' '
+    
+    time.dt-published.blog-article--time
+      = published
 
   .e-content.blog-article--content
     != yield
 
   .p-category.blog-article--category
-    = properties.category[0].category
-    =' '
-    = properties.category[0].tags
-
+    each category in categories 
+      = category + ' '
 
   h3 About the Author
-  each author, index in properties.author
+  each author in authors
     p
-      a.p-author.h-card.blog-article--author(href= properties.author[index].properties.url)= properties.author[index].properties.name
-    p= properties.author[index].properties.description
+      a.p-author.h-card.blog-article--author(href= author.website)= author.name + ' '
+
+    p= author.description      

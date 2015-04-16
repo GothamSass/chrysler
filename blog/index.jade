@@ -14,9 +14,13 @@ p Some stuff we want to say about our blog.
           each author, index in post.authors
             span.p-author.h-card
               if author.website
-                a.u-url(href= author.website)= author.name
+                = ' '
+                a.u-url(href= author.website)= author.name 
+                = ' '
               else
-                author.name
+                = ' '
+                = author.name 
+                = ' '
 
           time.dt-published=moment(post.published).format("MMM Do, YYYY")
 

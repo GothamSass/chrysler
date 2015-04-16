@@ -5,7 +5,7 @@
     "authors": [
       {
         "name": "Gotham Organizers",
-        "website": "gothamsass.org/about",
+        "website": "/about",
         "photo": null,
         "description": "We're a collective of volunteers that have somehow or another found ourselves organizing together for many years.",
         "data": {
@@ -17,7 +17,7 @@
       },
       {
         "name":"Rad Community Member",
-        "website":"github.com",
+        "website":"http://github.com",
         "description":"Contributing is super easy. You just need a Github account. We've got direction publshed. If you need help, contact the organizers."
       }
     ],
