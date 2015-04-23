@@ -1,19 +1,43 @@
 // Footer
 // ======
 
+
+
+
 .footer {
   border-top: 5px solid color($color-sec, l1);
+  @include bgColor($color-sec);
 }
 
 .footer__top  {
-  background: $color-sec;
+  margin: 0 auto;
+  max-width: 60em;
+  padding: 2em 1em;
   display: flex;
   flex-wrap: wrap;
   padding: 2em 1em;
 
   .block {
-    padding: 0.5em 0;
     border-top: 1px solid color($color-sec, l1);
+
+    @include at(footer-triptych) {
+      &:not(:last-child) {
+        border-right: 1px solid color($color-sec, l1);
+      }
+
+      &:first-child {
+        padding-right:1em;
+      }
+
+      &:not(:first-child):not(:last-child) {
+        padding-left:1em;
+        padding-right:1em;
+      }
+
+      &:last-child {
+        padding-left:1em;
+      }
+    }
 
     &:first-child {
       border-top: 0;
@@ -22,6 +46,8 @@
 
   .block-title {
     text-align: center;
+    font-size: 1.2em;
+    margin-bottom: 1em;
 
     @include at(footer-triptych) {
       margin-top: 0em;
@@ -30,14 +56,18 @@
   }
 }
 
-// individual blocks in the footer_top region
+/*------------------------------------*\
+
+  individual blocks in the footer_top region
+
+\*------------------------------------*/
+
 .block--about {
   flex: 2 32em;
 
   @include at(footer-triptych) {
-    flex: 4;
+    flex: 4 25em;
   }
-
 }
 
 .block--links,
@@ -60,10 +90,30 @@
   max-width: 32em;
 
   @include at(footer-triptych) {
-    float:left;
-    max-width: 22em;
+    float: left;
+    max-width: 24em;
+    padding-left: 1.5em;
+    font-size: 1em;
   }
 }
+
+.footer-logo__wrapper {
+  margin-top: 0;
+
+  @include at(footer-triptych) {
+    float:left;
+  }
+
+}
+.footer-logo {
+
+
+  @include at(footer-triptych) {
+    max-height: 4em;
+    max-width: 4em;
+  }
+}
+
 
 .footer__links {
     padding-top:0.5em;
@@ -71,6 +121,7 @@
 
   @include at(footer-triptych) {
     text-align: left;
+    font-size: 1.2em;
   }
 
   li {
@@ -79,6 +130,7 @@
     a {
       border-bottom: 0;
       opacity: 0.5;
+      color:$color-white;
 
       &:hover{
         color:$color-white;
@@ -91,22 +143,43 @@
 
 
 .footer__bottom {
-  display: flex;
-  flex-direction: column;
   justify-content: center;
   background: $color-qui;
-  padding: 2em 1em;
+  padding: 1em;
+
+  .footer__bottom__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    max-width: 60em;
+  }
 
   p {
-    // @@@ refactor to use a mixin for font-size
-    @extend %text-small;
+    width:100%;
+
+    &:first-child {
+      margin-top:0;
+    }
   }
 
   a {
-    color: $color-white;
+    color: color($color-qui, l3);
 
     &:hover {
-      background-color: $color-sec;
+      color: color($color-white);
     }
   }
+}
+
+
+.footer__bottom__copyright-license {
+  font-size:0.7em;
+  text-align: center;
+  width: 100%;
+}
+
+.footer__bottom__colophon-contributing {
+  font-size:0.8em;
+  text-align: center;
+  width: 100%;
 }

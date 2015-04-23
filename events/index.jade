@@ -1,30 +1,30 @@
-section.Events.Events--upcoming
-h2 GothamSass presents
-
-for event, slug in public.events.event._data
-  if event.layout !== false
-    article.h-event.Event
-      h2.p-name: a(href="/events/event/#{slug}")= event.name
-      h3.even-intro
-        span.intro-text A night of
-        span.p-category= event.categories
-        if event.venue
-          span.p-location #{event.venue.name}
-      p.event-details
-        time.dt-start(datetime="#{event.start_date}")
-          #{event.start_date}
-        time.dt-end(datetime="#{event.end_date}")
-          #{event.end_date}
-
-
-      p.p-summary= event.description
+header.page-header
+  h2 GothamSass presents
+.content
+  section.events.events--upcoming
+  for event, slug in public.events.event._data
+    if event.layout !== false
+      article.h-event.Event
+        h2.p-name: a(href="/events/event/#{slug}")= event.name
+        h3.even-intro
+          span.intro-text A night of
+          span.p-category= event.categories
+          if event.venue
+            span.p-location #{event.venue.name}
+        p.event-details
+          time.dt-start(datetime="#{event.start_date}")
+            #{event.start_date}
+          time.dt-end(datetime="#{event.end_date}")
+            #{event.end_date}
 
 
+        p.p-summary= event.description
 
-div.Action-call
-  p Have an idea for event? Is there something you want to learn? <a href="https://github.com/GothamSass/chrysler/blob/master/README.md">Let us know.</a>
 
-section.Events.Events--past
-h2 Past Events
-p We've had so many wonderful speakers contribute to our history and success. We're still working to port over our past events. You're free to browse our <a href="/events/archives">event archives</a>, but please note that is very much under construction. We welcome feedback, ideas, and suggestions via <a href="http://twitter.com/gothamsass">Twitter</a> or <a href="github.com/gothamsass/issues/new">Github</a>.
 
+  div.Action-call
+    p Have an idea for event? Is there something you want to learn? <a href="https://github.com/GothamSass/chrysler/blob/master/README.md">Let us know.</a>
+
+  section.Events.Events--past
+  h2 Past Events
+  p We've had so many wonderful speakers contribute to our history and success. We're still working to port over our past events. You're free to browse our <a href="/events/archives">event archives</a>, but please note that is very much under construction. We welcome feedback, ideas, and suggestions via <a href="http://twitter.com/gothamsass">Twitter</a> or <a href="github.com/gothamsass/issues/new">Github</a>.

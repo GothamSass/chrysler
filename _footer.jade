@@ -3,13 +3,13 @@ footer.footer(role="contentinfo")
     .block.block--about
       h3.block-title About Us
       //- img.logo(src="/assets/logo/logo.svg" alt="Gotham Sass")
-      p
-        <svg class="icon icon-logo"><use xlink:href="#icon-logo"></use></svg><span class="mls"></span>
+      p.footer-logo__wrapper
+        <svg class="icon icon-logo footer-logo"><use xlink:href="#icon-logo"></use></svg><span class="mls"></span>
       p.footer__description #{short_description}
     .block.block--connect
       h3.block-title Connect With Us
 
-      ul.footer__links.content
+      ul.footer__links
         li
           a(href="http://twitter.com/#{data.twitter}") Twitter
         li
@@ -19,16 +19,19 @@ footer.footer(role="contentinfo")
 
     .block.block--links
       h3.block-title Links
-      nav.nav.footer-nav(role="navigation", class="banner")
-        ul.footer__links
-          li
-            a(href="/about") About
-          li
-            a(href="/events") Events
-          li
-            a(href="/blog") Blog
-          li
-            a(href="/sponsors") Sponsors
+      //nav.nav.footer-nav(role="navigation", class="banner")
+      ul.footer__links
+        li
+          a(href="/about") About
+        li
+          a(href="/events") Events
+        li
+          a(href="/blog") Blog
+        li
+          a(href="/sponsors") Sponsors
   .footer__bottom
-    != partial('_copyright-colophon.jade')
-    != partial('_contributing.jade')
+    .block.footer__bottom__wrapper
+      .block.footer__bottom__colophon-contributing
+        != partial('_colophon-contributing.jade')
+      .block.footer__bottom__copyright-license
+        != partial('_copyright-license.jade')

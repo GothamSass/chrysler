@@ -10,6 +10,8 @@ body {
 
 a {
   @include trans;
+  text-decoration:none;
+  border-bottom: 2px solid $color-prime;
   color: $color-prime;
 }
 
@@ -34,7 +36,7 @@ h2 {
 }
 
 h3 {
-  color: #3d4049;
+  color: $color-text;
   font-size: 1.5em;
   font-weight: bold;
   margin: 0.5em 0;

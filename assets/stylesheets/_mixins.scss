@@ -1,0 +1,34 @@
+@mixin bgColor($bg-color: $color-white) {
+  background: $bg-color;
+
+  @if $bg-color == $color-sec {
+    p, h3 { color: $color-white;}
+  } @else {
+    color: $color-text;
+  }
+}
+
+
+@mixin fontSize($fontSize: $baseFontSize) {
+  font-size: $baseFontSize;
+
+  @if $fontSize == 'small' {
+    font-size: 0.9em;
+
+  } @else if $fontSize == 'default'{
+    font-size: $baseFontSize;
+
+  } @else if $fontSize == 'medium'{
+    font-size: 1.5em;
+
+  } @else if $fontSize == 'large'{
+    font-size: 3em;
+
+  } @else if $fontSize == 'xlarge'{
+    font-size: 4.5em;
+
+  } @else {
+    font-size: $baseFontSize;
+     
+  }
+}
