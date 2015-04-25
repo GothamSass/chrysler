@@ -5,8 +5,8 @@
 
 .nav-item {
   align-self: flex-start;
-  background: $color-quat;
-  padding: 0.5em;
+  //background: $color-quat;
+  padding: 1em;
 
   &:last-child {
     border-bottom-right-radius: 3px;
@@ -16,23 +16,27 @@
   a {
     color: $color-tert;
     opacity: 0.5;
-    text-decoration: none;
+    border-bottom: none;
 
     &:hover {
-      color: $color-prime;
+      color: $color-white;
       opacity: 1;
-      text-decoration: underline;
+      border-bottom: 2px solid $color-prime;
     }
   }
 }
 
+.main-nav {
+  padding-top: 1em;
+}
+
 nav {
-  margin: 0 auto;
-  max-width: 60em;
+  @include bgColor($color-sec);
 
   ul {
+    margin: 0 auto;
+    max-width: 60em;
     align-content: flex-end;
     display: flex;
-    margin-top: 1em;
   }
 }

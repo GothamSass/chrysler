@@ -2,7 +2,7 @@
   background: $bg-color;
 
   @if $bg-color == $color-sec {
-    p, h3 { color: $color-white;}
+    p, h1, h3 { color: $color-white;}
   } @else {
     color: $color-text;
   }
@@ -29,6 +29,6 @@
 
   } @else {
     font-size: $baseFontSize;
-     
+
   }
 }

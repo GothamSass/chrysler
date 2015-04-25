@@ -1,7 +1,8 @@
 header.page-header
-  h2 GothamSass presents
-.content
-  section.events.events--upcoming
+  .block.content
+    h1 GothamSass presents
+
+section.events.events--upcoming.page-content
   for event, slug in public.events.event._data
     if event.layout !== false
       article.h-event.Event
