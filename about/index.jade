@@ -1,17 +1,17 @@
-h1 About
+header.page-header
+  .block.content
+    h1 About Us
 
-!= partial('_overview')
+section.page-content
 
-section
-  h2 Manifesto
+  != partial('_overview')
 
-  != partial('../manifesto')
+  section
+    h2 Manifesto
 
-section.team-grid
-  h2 Organizing Team
+    != partial('../manifesto')
 
-  != partial('_member')
+  section.team-grid
+    h2 Organizing Team
 
-
-
-
+    != partial('_member')

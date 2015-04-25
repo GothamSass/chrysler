@@ -1,0 +1,12 @@
+.page-header {
+  @include bgColor($color-sec);
+  padding-bottom: 3em;
+}
+
+.page-content {
+  background: $color-white;
+  margin: -3em auto 0;
+  max-width: 60em;
+  padding: 1em 2em;
+  border-top: 5px solid $color-tert;
+}

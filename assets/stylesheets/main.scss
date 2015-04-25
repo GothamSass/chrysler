@@ -7,6 +7,8 @@
 @import 'base/colors.config';
 @import 'base/scale.config';
 @import 'base/breakpoints.config';
+@import 'mixins';
+@import 'global';
 
 
 // Plugins
@@ -35,6 +37,3 @@
 @import 'components/nav';
 @import 'components/team';
 @import 'components/style-guide';
-
-
-

@@ -1,101 +1,106 @@
-ul.style-guide
-  li
-    .main-content
-      section.colors
-        h2 Colors
-        ul
-          li
+header.page-header
+  .block.content
+    h1 Style Guide
 
-          li
-
-          li
-
-          li
-
-          li
-
-      section.logo
-        h2 Logo
-        ul
-          li
-            svg.icon.icon-logo
-              use(xlink:href='#icon-logo')
-            p Logo
-          li
-            svg.icon.icon-logo-icon
-              use(xlink:href='#icon-logo-icon')
-            p Icon
-
-      //- section.heading
-      //-   h2 Heading
-      //-   div
-      //-
-      section.font-family
-        h2 Font Family
-        ul
-          li
-            h1 Page Heading
-            h2 Section Heading
-            h3 Sub-Section Heading
-            p
-             a(href='#') Link
-          li
-             p ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam culpa, tempora soluta consequatur saepe autem eum, quisquam nam ipsam explicabo iusto magnam expedita voluptatem error asperiores et incidunt harum quam rerum dolorum illo voluptatibus corporis necessitatibus.
-      //- section
-      //-   h2 List Items
-      //-   ul
-      //-     li
-      //-     li
-      //- section.font
-      //-   h2 Font Families
-      //-   ul
-      //-     li Title
-      //-     li Body
-      //- section
-      //-   h2 Buttons
-      //-   ul
-      //-     li Title
-      //-     li Body
-      section.button
-        h2 Buttons
+section.page-content
+  ul.style-guide
+    li
+      .main-content
+        section.colors
+          h2 Colors
           ul
             li
-              button.btn.btn-prime Primary Button
-            li
-              button.btn.btn-sec Secondary Button
-            li
-              button.btn.btn-tert Tertiary Button
-      //- section.blog
-      //-   h2 Blog
-      //- 
-      //-   for post, slug in public.blog.posts._data
-      //-     article.h-entry
-      //-       a.u-url(href= "#{ post.properties.permalink[0].url }")
-      //-         h2.p-name= post.properties.name
-      //-       p
-      //-         | Published by
-      //-         =' '
-      //- 
-      //-         each author, index in post.properties.author
-      //-           a.p-author.h-card(href= post.properties.author[index].properties.url)= post.properties.author[index].properties.name
-      //-           =' '
-      //- 
-      //-         |  on
-      //-         =' '
-      //-         time.dt-published= post.properties.published
-      //- 
-      //-       p.p-summary= post.properties.summary
 
-      section
-        h2 Forms
-        ul
-          li
-             span.input.input--ichiro
-              input#input-25.input__field.input__field--ichiro(type='text')
-              label.input__label.input__label--ichiro(for='input-25')
-                span.input__label-content.input__label-content--ichiro Input
-            span.input.input--ichiro
-              textarea#textarea-25.input__field.input__field--ichiro(type='text')
-              label.input__label.input__label--ichiro(for='textarea-25')
-                span.input__label-content.input__label-content--ichiro Textarea
-          li
+            li
+
+            li
+
+            li
+
+            li
+
+        section.logo
+          h2 Logo
+          ul
+            li
+              svg.icon.icon-logo
+                use(xlink:href='#icon-logo')
+              p Logo
+            li
+              svg.icon.icon-logo-icon
+                use(xlink:href='#icon-logo-icon')
+              p Icon
+
+        //- section.heading
+        //-   h2 Heading
+        //-   div
+        //-
+        section.font-family
+          h2 Font Family
+          ul
+            li
+              h1 Page Heading
+              h2 Section Heading
+              h3 Sub-Section Heading
+              p
+               a(href='#') Link
+            li
+               p ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam culpa, tempora soluta consequatur saepe autem eum, quisquam nam ipsam explicabo iusto magnam expedita voluptatem error asperiores et incidunt harum quam rerum dolorum illo voluptatibus corporis necessitatibus.
+        //- section
+        //-   h2 List Items
+        //-   ul
+        //-     li
+        //-     li
+        //- section.font
+        //-   h2 Font Families
+        //-   ul
+        //-     li Title
+        //-     li Body
+        //- section
+        //-   h2 Buttons
+        //-   ul
+        //-     li Title
+        //-     li Body
+        section.button
+          h2 Buttons
+            ul
+              li
+                button.btn.btn-prime Primary Button
+              li
+                button.btn.btn-sec Secondary Button
+              li
+                button.btn.btn-tert Tertiary Button
+        //- section.blog
+        //-   h2 Blog
+        //- 
+        //-   for post, slug in public.blog.posts._data
+        //-     article.h-entry
+        //-       a.u-url(href= "#{ post.properties.permalink[0].url }")
+        //-         h2.p-name= post.properties.name
+        //-       p
+        //-         | Published by
+        //-         =' '
+        //- 
+        //-         each author, index in post.properties.author
+        //-           a.p-author.h-card(href= post.properties.author[index].properties.url)= post.properties.author[index].properties.name
+        //-           =' '
+        //- 
+        //-         |  on
+        //-         =' '
+        //-         time.dt-published= post.properties.published
+        //- 
+        //-       p.p-summary= post.properties.summary
+
+        section
+          h2 Forms
+          ul
+            li
+               span.input.input--ichiro
+                input#input-25.input__field.input__field--ichiro(type='text')
+                label.input__label.input__label--ichiro(for='input-25')
+                  span.input__label-content.input__label-content--ichiro Input
+              span.input.input--ichiro
+                textarea#textarea-25.input__field.input__field--ichiro(type='text')
+                label.input__label.input__label--ichiro(for='textarea-25')
+                  span.input__label-content.input__label-content--ichiro Textarea
+            li

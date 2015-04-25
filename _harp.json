@@ -16,7 +16,10 @@
     "licenses": {
       "code": "MIT or as licensed",
       "content": "TODO-Creative-Commons",
-      "logo": "Designed by FILL ME IN"
+      "logo": {
+        "designer":"Anthony Cangelosi",
+        "website": "http://www.anthonyc.me/"
+      }
     }
   }
 }
