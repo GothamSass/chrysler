@@ -1,0 +1,136 @@
+
+@mixin bgColor($bg-color: white) {
+  background: $bg-color;
+
+  @if $bg-color == $color-prime {
+    color: $color-white;
+    /* h1 { color: $color-white;}
+    p { color: $color-white;} */
+  }
+};
+
+
+//Layout
+.home-content {
+  @extend %content;
+  /* display: flex;
+  align-content: flex-start;
+  flex-wrap: wrap; */
+}
+
+.l-home-content__top {
+  //@include bgColor($color-prime);
+
+  .home-content__hero {
+    display: flex;
+    align-content: flex-start;
+    flex-wrap: wrap;
+  }
+}
+
+.l-home-content__middle {
+
+}
+
+
+
+.meetup--upcoming {
+  //flex: 2;
+  /* display: flex;
+  align-content: flex-start;
+  flex-wrap: wrap; */
+}
+
+.upcoming-meetup__content {
+  display: flex;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  padding-top: 1em;
+}
+
+.upcoming-meetup__photo {
+  flex: 2 14em;
+  padding-right: 2em;
+}
+
+.upcoming-meetup__description {
+  flex: 6 10em;
+}
+
+
+
+.meetup--past {
+  flex: 2;
+  //background: green;
+}
+
+
+
+
+/* .home-content{
+  article {
+    padding: 1em;
+  }
+}
+ */
+//Modules
+.home-content__description {
+  flex: 1 18em;
+  padding-bottom: 1em;
+
+  @media screen and (min-width: 930px) {
+    padding-right: 1em;
+    padding-bottom: 0em;
+  }
+}
+
+.home-content__description .logo-wrapper {
+  text-align: center;
+
+  .icon-logo {
+    min-width: 10em;
+    min-height: 10em;
+  }
+}
+
+.l-home-content__middle {
+  /* background: $color-tert;
+  color: $color-white; */
+}
+
+.meetup--past-group { display:flex;}
+
+.meetup--past {
+  flex:3;
+  padding-right: 1em;
+
+  &:last-child {
+    padding-right: 0;
+  }
+}
+
+
+
+// conponents styles
+.upcoming-meetup__section-title {
+  text-transform: uppercase;
+}
+
+.upcoming-meetup__title {
+  margin-top: 0.5em;
+  margin-bottom: 0;
+}
+
+.upcoming-meetup__date {
+  margin-bottom: 0;
+  margin-top: 0.5em;
+}
+
+.upcoming-meetup__location {
+  margin-top: 0.25em;
+  margin-bottom: 0;
+}
+
+.meetup__description--bullets {
+  margin-top: 0.5em;
+}

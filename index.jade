@@ -1,8 +1,45 @@
-section.ct
-  h1 Upcoming events
+section.section.l-home-content__top
+  div.content.home-content__hero
+    //- article.home-content__description
+    //-   p.logo-wrapper
+    //-     <svg class="icon icon-logo"><use xlink:href="#icon-logo"></use></svg><span class="mls"></span>
+    //-   p GothamSass meetup serves front end developers, CSS ninjas, UX mavens, and Sass lovers where you come to learn the latest Sass news, meet other Sass enthusiasts, and find out about how to make your teams more effective.
+    //-   a Join Us on meetup
 
-  p How do events display on the home page? What does 1 event look like? what
-    about multiple events?
-  p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque recusandae assumenda expedita impedit. Sed illum quae explicabo debitis obcaecati corporis maiores, expedita fugit accusamus id praesentium mollitia! Inventore est iure laborum nulla animi nisi officiis quia modi dolore autem aliquid enim alias harum vitae quae corporis, eum unde, culpa laudantium.
-  p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque omnis autem culpa quidem sint, tempora saepe quam aliquam veritatis repudiandae nobis ab iure pariatur, quod unde cupiditate excepturi quia nemo itaque fuga consequatur eum necessitatibus voluptatum molestias. Suscipit, nisi ipsum. Consequatur quia iste voluptatum nisi molestiae sit hic aspernatur magni!
-  p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat facilis, nisi corrupti rem, illum aliquam deserunt minima sint cumque quidem, repellendus aperiam ea? Perferendis quisquam, ex provident, iusto tempore ad nostrum. Reprehenderit ullam similique eaque adipisci dolore qui at, officia sunt reiciendis, provident inventore sed. Est vel rem, sit earum.
+    article.home-content__meetup.meetup--upcoming
+      span.upcoming-meetup__section-title Next Meetup: 
+      h2.upcoming-meetup__title Using Bootstrap + Sass Effectively with <span class="upcoming-meetup__speaker">Nicole Dominguez</span>
+      p.upcoming-meetup__date 
+        | September 16, 7:00pm - 9:00pm, Pivotal Labs
+      //- p.upcoming-meetup__location 
+      //-   | Pivotal Labs
+      .upcoming-meetup__content
+        .upcoming-meetup__photo
+          img(src="assets/img/nicole-d.jpg")
+        .upcoming-meetup__description
+          p
+            | Working with a framework like Bootstrap with Sass doesn't have to be a messy nightmare... We are going to talk about best practices for using Bootstrap in your Sass project including:
+            ul.ul-bullet.meetup__description--bullets
+              li how to avoid css bloat
+              li setting up your project for maximum effectiveness
+              li overriding bootstrap variables for your own
+              li managing a large sass + bootstrap project
+              li some live examples!
+          
+      
+section.section.l-home-content__middle
+  .content.content__middle
+    h3.upcoming-meetup__section-title Past Meetups:
+    .meetup--past-group
+      article.home-content__meetup.meetup--past
+        img(src="assets/img/Dale-Sande-Headshot.jpg")
+        h4.meetup--past__title On Battle of the Grids pt. 1
+        span.meetup--past__speaker Nick Hehr 
+      article.home-content__meetup.meetup--past
+        img(src="assets/img/Dale-Sande-Headshot.jpg")
+        h4.meetup--past__title Mastering Vertical Rhythm & Modular Scale
+        span.meetup--past__speaker Ian Rose
+      article.home-content__meetup.meetup--past
+        img(src="assets/img/Dale-Sande-Headshot.jpg")
+        h4.meetup--past__title All the cool kids are talking about LibSass
+        span.meetup--past__speaker Dale Sande

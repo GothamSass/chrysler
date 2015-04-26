@@ -1,22 +1,36 @@
 footer.footer(role="contentinfo")
-
-  a.icon(href="#")
-    i.fa.fa-info
-  a.icon(href="#")
-    i.fa.fa-envelope
-  a.icon(href="#")
-    i.fa.fa-twitter
-  a.icon(href="#")
-    i.fa.fa-github-alt
-  //- .ct
-  //-   p Short description with logo, contact info, social media icons. (links to about)
-
-
-  //- p Creative Commons. Want to contribute? Github!
-  //- p Made in NYC with <3 Colophon!
-
-  //- .ct
-  //-   p All site links (expand hidden pages like code of conduct
-
-
-  //- != partial('_newsletter')
+  .footer--top
+    ul
+      li
+        h3 About Us
+        //- img.logo(src="/assets/logo/logo.svg" alt="Gotham Sass")
+        p
+          <svg class="icon icon-logo"><use xlink:href="#icon-logo"></use></svg><span class="mls"></span>
+        p.footer--description GothamSass meetup serves front end developers, CSS ninjas, UX mavens, and Sass lovers where you come to learn the latest Sass news, meet other Sass enthusiasts, and find out about how to make your teams more effective.
+      li
+        h3 Connect With Us
+        ul.footer--links
+          li
+            a(href="#") Twitter
+          li
+            a(href="#") Meetup
+          li
+            a(href="#") Github
+      li
+        h3 Links
+        nav.nav.footer--nav(role="navigation", class="banner")
+          ul.footer--links
+            li
+              a(href="/about") About
+            li
+              a(href="/events") Events
+            li
+              a(href="/blog") Blog
+            li
+              a(href="/resources") Resources
+            li
+              a(href="/sponsors") Sponsors
+  .footer--bottom
+    ul
+      li
+        p © <span class="copyright__year">2014</span> GothamSass. All rights reserved. Find an error or want to add something? Send pull requests at <a href="https://github.com/GothamSass/chrysler">Github</a>. Kindly refer to our <a href="https://github.com/GothamSass/chrysler">styleguide</a>.

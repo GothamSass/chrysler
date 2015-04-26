@@ -2,6 +2,7 @@ h1 Blog
 p Some stuff we want to say about our blog.
 
 //- show blog teaser roll
+<<<<<<< HEAD
 for post, slug in public.blog.posts._data
   if post.layout !== false
     article.h-entry.blog-teaser
@@ -23,3 +24,23 @@ for post, slug in public.blog.posts._data
 
 
 
+=======
+.h-feed.u-list
+  for post, slug in public.blog.posts._data
+    if post.layout !== false
+      article.h-entry
+        a.u-url(href= "posts/#{slug}")
+          h2.p-name= post.title
+        p.byline Published by
+
+          each author, index in post.authors
+            span.p-author.h-card
+              if author.website
+                a.u-url(href= author.website)= author.name
+              else
+                author.name
+
+          time.dt-published=moment(post.published).format("MMM Do, YYYY")
+
+        p.p-summary= post.summary
+>>>>>>> master

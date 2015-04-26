@@ -1,41 +1,49 @@
-h1, h2, h3, h4 {
-	color: $color-tert;
-	font-weight: normal;
+@mixin text( $size, $margin, $line: normal, $text-transform: initial, $family: $font-body, $weight: normal, $color: $color-tert) {
+	font-size: $size;
+	line-height: $line;
+	margin: 0 0 $margin 0;
+	font-family: $family;
+	font-weight: $weight;
+	text-transform: $text-transform;
+	color: $color;
 }
+
 body {
 	font-family: $font-body;
 }
+
 :focus {
 	outline-color: transparent;
 	outline-style: none;
 }
+
 a {
-	color: $color-prime;
 	@include trans;
+	border-bottom: 2px solid $color-prime;
+	color: color($color-tert,l1);
+	text-decoration: none;
 }
 
-.hidden {
+*,
+:before,
+:after {
+box-sizing: border-box;
+}
+
+.is-hidden {
 	display: none;
 }
 
 h1 {
-	font-size: 4.5em;
-	margin: 0;
-	font-family: $font-title;
+	@include text(4.5em, .5em, $family: $font-title, $text-transform: uppercase)
 }
 
 h2 {
-	font-size: 3em;
-	margin: 0.5em 0;
-	color:#036;
+	@include text( 2.1em, .5em, $color: $color-sec, $text-transform: capitalize)
 }
 
 h3 {
-	font-size: 1.5em;
-	margin: 0.5em 0;
-	font-weight: bold;
-	color:#3D4049;
-	text-transform: uppercase;
+	@include text( $text-size__body, .5em, $color: #3d4049, $text-transform: uppercase, $weight: bold)
 }
 
 //Refactor accessibly
@@ -43,20 +51,27 @@ h3 {
 	display: none;
 }
 
-img {
+img,
+svg {
 	max-width: 100%;
 	display: block;
 }
 
 ul {
-	list-style:none;
-	padding: 0em;
+	list-style: none;
+	padding: 0;
 	margin: 0;
 }
 
 p {
-	line-height: 1.5em;
-	font-size: 1.2em;
-	color:#3D4049;
-	font-family: $font-body;
+	@include text( $text-size__body, 0.5, $line: 1.4em, $color: $color-text);
+
+	 &:first-child {
+		margin: 0;
+	}
+
+}
+
+%text-small {
+	font-size: .8em;
 }

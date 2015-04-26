@@ -6,6 +6,8 @@
 @import 'base/fonts.config';
 @import 'base/colors.config';
 @import 'base/scale.config';
+@import 'base/template.rules';
+@import 'components/logo';
 
 
 // Plugins
@@ -27,10 +29,10 @@
 // ----------
 @import 'components/nav';
 @import 'components/footer';
+@import 'components/blog-teaser';
+@import 'components/blog-article';
 @import 'components/team';
 @import 'components/forms';
 @import 'components/buttons';
 @import 'components/style-guide';
-
-
-
+@import 'components/home-content';

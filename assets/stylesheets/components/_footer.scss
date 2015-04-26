@@ -1,26 +1,146 @@
-footer.footer {
-  padding: $gap-1;
-  a {
-    background-color: $color-prime;
-    color: white;
-    margin-right: 2px;
-    text-align: center;
-    display: inline-block;
-    @include radius(50%);
-    i {
-      font-size: 20px;
-      padding: 8px 0 0 4px;
-    }
-    @include square(35px);
-    @include media(600px, max) {
-      i {
-        font-size: 15px;
-        padding: 5px 0 0 3px;
+// Layout
+.footer {
+  border-top: 5px solid color($color-sec, l1);
+  background: $color-sec;
+
+  .footer--top {
+    @extend .content;
+
+    & > ul {
+      @extend %container--content;
+      align-content: flex-start;
+      display: flex;
+      flex-wrap: wrap;
+
+      @media screen and (max-width: 930px) {
+        padding: 0em 1em;
       }
-      @include square(25px);
+
+      & > li {
+        padding: .5em 0;
+        border-bottom: 1px solid color($color-sec, l1);
+
+          h3 {
+              text-align: center;
+              @media screen and (min-width: 930px) {
+                margin-top: 0;
+                text-align: left;
+              }
+            }
+
+        @media screen and (min-width: 930px) {
+          border-right: 1px solid color($color-sec, l1);
+          border-bottom: none;
+          padding: 0 1em;
+        }
+
+        &:first-child {
+          flex: 2 32em;
+          margin-left: 0;
+
+        }
+
+        &:nth-child(2) {
+          flex: 1 12em;
+        }
+
+        &:last-child {
+          border-right: 0;
+          border-bottom: 0;
+          flex: 1 12em;
+          margin-right: 0;
+        }
+
+      }
     }
+  }
+}
+
+
+.footer {
+
+  .icon-logo {
+    min-height: 6em;
+    min-width: 6em;
+    margin: 0 auto;
+    display: block;
+
+     @media screen and (min-width: 930px) {
+      float: left;
+      margin-right: 2em;
+     }
+
+    p & {
+      width: 100%;
+      @media screen and (min-width: 930px) {
+        width: auto;
+      }
+    }
+
+  }
+
+  .footer--description {
+    margin-top: 0;
+    max-width: 32em;
+    font-size: 95%;
+
+    @media screen and (min-width: 930px) {
+      float: left;
+      max-width: 22em;
+    }
+  }
+
+  p,
+  h3 {color: $color-white;}
+
+}
+
+
+.footer--links {
+  padding-top: .5em;
+  text-align: center;
+
+  @media screen and (min-width: 930px) {
+    text-align: left;
+  }
+
+  li {
+    padding-bottom: .5em;
+
+    a {
+      border-bottom: 0;
+      opacity: .5;
+
+      &:hover {
+        border-bottom: 2px solid $color-prime;
+        color: $color-white;
+        opacity: 1.0;
+      }
+    }
+  }
+}
+
+
+.footer--bottom {
+  background: $color-qui;
+
+  & > ul {
+    @extend .content;
+    padding-top: 0em;
+    padding-bottom: 0em;
+    display: flex;
+    align-content: flex-start;
+  }
+
+  p {
+    @extend %text-small;
+  }
+
+  a {
+    color: $color-white;
+
     &:hover {
-      background-color: $color-sec;
+      color:color($color-quat, d1)
     }
   }
 }

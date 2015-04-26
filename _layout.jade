@@ -4,9 +4,8 @@ block main
   .container
     != partial('_nav')
 
-    main.content
-
-      if current.path[1] === "index"
+    main.container--content
+      if current.path[1] === "index" || current.source === "index"
         != yield
 
       else
@@ -17,11 +16,3 @@ block main
           else
             //- show blog teaser
             != yield
-
-        //- Events
-        if current.path[0] === "events"
-          if current.path[1] === "event"
-            != partial("/events/_event")
-          else
-            != yield
-
