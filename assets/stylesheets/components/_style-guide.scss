@@ -21,21 +21,36 @@
 
 .style-guide {
   section ~ section {
-    padding-top: 1em;
-  }
-  .logo ul {
-    @include grid(50%);
+    padding-top: 2em;
   }
   .fontFamily ul {
     @include grid(33%);
   }
-  .colors ul {
+  .section-colors ul {
     @include grid(33%);
   }
 }
 
+.section-logo ul {
+  display: flex;
+  flex-wrap: wrap;
+
+  li {
+    flex: 1 25em;
+  }
+}
+
+
+.icon-logo-icon {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  display: block;
+}
+
+
 // Needs to be Refactored in mixins - AO
-.colors ul li {
+.section-colors ul li {
   color: $color-white;
   text-align: center;
   &:first-child {

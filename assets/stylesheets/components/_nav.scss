@@ -1,12 +1,19 @@
-.logo {
+.logo-item {
   margin-right: auto;
   width: 8em;
+
+  a { border-bottom: none; }
+}
+
+.nav__logo {
+  width: 90px;
+  height: 90px;
 }
 
 .nav-item {
   align-self: flex-start;
-  //background: $color-quat;
   padding: 1em;
+  margin-top: 1.2em;
 
   &:last-child {
     border-bottom-right-radius: 3px;

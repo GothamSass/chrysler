@@ -1,9 +1,10 @@
 nav.nav.main-nav(role="navigation", class="banner")
   ul
-    li.logo
+    li.logo-item
       a(href="/")
-        img(src="/assets/logo/logo.svg" alt="Gotham Sass")
-        span.is-hidden Home
+        svg.icon.icon-logo.nav__logo
+          use(xlink:href='#icon-logo')
+          span.is-hidden Home
     li.nav-item
       a(href="/about") About
     li.nav-item
