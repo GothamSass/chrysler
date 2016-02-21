@@ -16,8 +16,8 @@ GitHub: github.com/[url]
 
 Website: [if provided]
 
-<insert speaker photo here>
+[insert speaker photo here]
 
 Huge shout out to our meetup host ThoughtWorks for providing their amazing space! 
 
-<insert ThoughtWorks logo here>
+[insert ThoughtWorks logo here]
