@@ -2,7 +2,7 @@
 
 Talk Meetups: 
 
-<Insert talk description here. This may or may not be the issue description verbatim. If description is long add the following sentence: For full details check out [speaker name] talk submission here.>
+Insert talk description here. This may or may not be the issue description verbatim. If description is long add the following sentence: For full details check out [speaker name] talk submission here.
 
 About the Speaker: 
 
