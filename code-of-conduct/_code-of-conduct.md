@@ -1,5 +1,3 @@
-# Code of Conduct
-
 GothamSass is dedicated and committed to providing a harassment-free meetup experience for everyone, regardless of gender, gender identity and expression, sexual orientation, disability, physical appearance, body size, race, or religion. Sexual and discriminating language and imagery is not appropriate for any meetup venue, including talks.
 
 We expect participants to follow these rules at all meetup venues and meetup-related social events. Sponsor or vendor booths, booth staff and volunteers are also subject to the anti-harassment policy.
