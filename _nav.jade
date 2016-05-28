@@ -5,6 +5,9 @@ nav.nav.main-nav(role="navigation", class="banner")
         svg.icon.icon-logo.nav__logo
           use(xlink:href='#icon-logo')
           span.is-hidden Home
+    if current.path[1] === "index"
+      li.nav-item
+        a(href="/") Home
     li.nav-item
       a(href="/about") About
     li.nav-item
