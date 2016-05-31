@@ -1,9 +1,0 @@
-for member, item in public.about._data
-  article.member.h-card
-    span.member-photo(style="background-image:url(#{member.photo})")
-    h3.p-name #{member.name}
-    p.p-job-title #{member.role}
-
-    for identity, social in member.social
-      a(href="http://#{social}.com/#{identity}", rel="me", class="u-url")<i class="fa fa-#{social}"></i>#{social}
-

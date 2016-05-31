@@ -1,3 +1,0 @@
-#Sponsor form
-
-	pending
