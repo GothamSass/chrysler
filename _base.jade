@@ -16,7 +16,8 @@ html.no-js
       //- script window.jQuery || document.write('<script src="/assets/js/vendor/modernizr.js"><\/script>')
       //- script(src='/assets/js/vendor/detectizr.js')
 
-  body(class="#{ current.path[0] }")
+  //- body(class="#{ current.path[0] }")
+  body(style='width: 100%; height:100%; background: #036; position: relative; padding-top: 16em; text-align: center;')
     != partial('_logo-svg')
     <!--[if lt IE 8]>
     p.browsehappy
@@ -25,9 +26,14 @@ html.no-js
       | to improve your experience.
     <![endif]-->
 
-    block main
+    //- block main
+    div(class='width: 98%;')
+      h3(style='color: #efefef;') The GothamSass Website is Under Construction and will be available soon
+      != partial('_logo-svg')
+      p(style='color: #efefef;') Until then find us on 
+        a(href='http://www.meetup.com/gothamsass/') Meetup
 
-    != partial('_footer')
+    //- != partial('_footer')
 
     != partial('_scripts')
 
